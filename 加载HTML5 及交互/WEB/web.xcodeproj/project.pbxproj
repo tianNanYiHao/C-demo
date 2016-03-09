@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		877D1AB51C449A75008CC2C0 /* 1280-720产品详情_PxCook.png in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AA71C449A75008CC2C0 /* 1280-720产品详情_PxCook.png */; };
+		877D1AB61C449A75008CC2C0 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AA91C449A75008CC2C0 /* base.css */; };
+		877D1AB71C449A75008CC2C0 /* product.css in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AAA1C449A75008CC2C0 /* product.css */; };
+		877D1AB81C449A75008CC2C0 /* financial_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AAC1C449A75008CC2C0 /* financial_add.png */; };
+		877D1AB91C449A75008CC2C0 /* financial_add_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AAD1C449A75008CC2C0 /* financial_add_disable.png */; };
+		877D1ABA1C449A75008CC2C0 /* financial_js.png in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AAE1C449A75008CC2C0 /* financial_js.png */; };
+		877D1ABB1C449A75008CC2C0 /* financial_jsdisable.png in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AAF1C449A75008CC2C0 /* financial_jsdisable.png */; };
+		877D1ABC1C449A75008CC2C0 /* financial_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AB01C449A75008CC2C0 /* financial_share.png */; };
+		877D1ABD1C449A75008CC2C0 /* jquery-1.11.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AB21C449A75008CC2C0 /* jquery-1.11.3.min.js */; };
+		877D1ABE1C449A75008CC2C0 /* product.js in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AB31C449A75008CC2C0 /* product.js */; };
+		877D1ABF1C449A75008CC2C0 /* product.html in Resources */ = {isa = PBXBuildFile; fileRef = 877D1AB41C449A75008CC2C0 /* product.html */; };
+		877D1AC11C449B76008CC2C0 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877D1AC01C449B76008CC2C0 /* JavaScriptCore.framework */; };
+		877D1AC41C449D1E008CC2C0 /* twoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877D1AC31C449D1E008CC2C0 /* twoViewController.m */; };
+		D5F6FDE31C435E67009A4C12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6FDE21C435E67009A4C12 /* main.m */; };
+		D5F6FDE61C435E67009A4C12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6FDE51C435E67009A4C12 /* AppDelegate.m */; };
+		D5F6FDE91C435E67009A4C12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6FDE81C435E67009A4C12 /* ViewController.m */; };
+		D5F6FDEC1C435E67009A4C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FDEA1C435E67009A4C12 /* Main.storyboard */; };
+		D5F6FDEE1C435E67009A4C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FDED1C435E67009A4C12 /* Assets.xcassets */; };
+		D5F6FDF11C435E67009A4C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FDEF1C435E67009A4C12 /* LaunchScreen.storyboard */; };
+		D5F6FDFC1C435E67009A4C12 /* webTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6FDFB1C435E67009A4C12 /* webTests.m */; };
+		D5F6FE071C435E67009A4C12 /* webUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6FE061C435E67009A4C12 /* webUITests.m */; };
+		D5F6FE2D1C435E91009A4C12 /* 1280-720我的理财—赎回_PxCook.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE151C435E91009A4C12 /* 1280-720我的理财—赎回_PxCook.png */; };
+		D5F6FE2E1C435E91009A4C12 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE171C435E91009A4C12 /* base.css */; };
+		D5F6FE2F1C435E91009A4C12 /* Finance.css in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE181C435E91009A4C12 /* Finance.css */; };
+		D5F6FE301C435E91009A4C12 /* Finance.html in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE191C435E91009A4C12 /* Finance.html */; };
+		D5F6FE311C435E91009A4C12 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE1B1C435E91009A4C12 /* arrow.png */; };
+		D5F6FE321C435E91009A4C12 /* financial_hot_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE1C1C435E91009A4C12 /* financial_hot_normal.png */; };
+		D5F6FE331C435E91009A4C12 /* financial_hot_press.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE1D1C435E91009A4C12 /* financial_hot_press.png */; };
+		D5F6FE341C435E91009A4C12 /* financial_ksh.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE1E1C435E91009A4C12 /* financial_ksh.png */; };
+		D5F6FE351C435E91009A4C12 /* financial_my_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE1F1C435E91009A4C12 /* financial_my_normal.png */; };
+		D5F6FE361C435E91009A4C12 /* financial_my_press.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE201C435E91009A4C12 /* financial_my_press.png */; };
+		D5F6FE371C435E91009A4C12 /* financial_safe.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE211C435E91009A4C12 /* financial_safe.png */; };
+		D5F6FE381C435E91009A4C12 /* financial_wei@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE221C435E91009A4C12 /* financial_wei@2x.png */; };
+		D5F6FE391C435E91009A4C12 /* financial_wei@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE231C435E91009A4C12 /* financial_wei@3x.png */; };
+		D5F6FE3A1C435E91009A4C12 /* financial_yi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE241C435E91009A4C12 /* financial_yi@2x.png */; };
+		D5F6FE3B1C435E91009A4C12 /* financial_yi@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE251C435E91009A4C12 /* financial_yi@3x.png */; };
+		D5F6FE3C1C435E91009A4C12 /* line_1080.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE261C435E91009A4C12 /* line_1080.png */; };
+		D5F6FE3D1C435E91009A4C12 /* line_720.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE271C435E91009A4C12 /* line_720.png */; };
+		D5F6FE3E1C435E91009A4C12 /* Finance.js in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE291C435E91009A4C12 /* Finance.js */; };
+		D5F6FE3F1C435E91009A4C12 /* jquery-1.11.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE2A1C435E91009A4C12 /* jquery-1.11.3.min.js */; };
+		D5F6FE401C435E91009A4C12 /* 我的理财_持有中.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE2B1C435E91009A4C12 /* 我的理财_持有中.png */; };
+		D5F6FE411C435E91009A4C12 /* 理财_PxCook.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F6FE2C1C435E91009A4C12 /* 理财_PxCook.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5F6FDF81C435E67009A4C12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5F6FDD61C435E67009A4C12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5F6FDDD1C435E67009A4C12;
+			remoteInfo = web;
+		};
+		D5F6FE031C435E67009A4C12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5F6FDD61C435E67009A4C12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5F6FDDD1C435E67009A4C12;
+			remoteInfo = web;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		877D1AA71C449A75008CC2C0 /* 1280-720产品详情_PxCook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1280-720产品详情_PxCook.png"; sourceTree = "<group>"; };
+		877D1AA91C449A75008CC2C0 /* base.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = base.css; sourceTree = "<group>"; };
+		877D1AAA1C449A75008CC2C0 /* product.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = product.css; sourceTree = "<group>"; };
+		877D1AAC1C449A75008CC2C0 /* financial_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_add.png; sourceTree = "<group>"; };
+		877D1AAD1C449A75008CC2C0 /* financial_add_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_add_disable.png; sourceTree = "<group>"; };
+		877D1AAE1C449A75008CC2C0 /* financial_js.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_js.png; sourceTree = "<group>"; };
+		877D1AAF1C449A75008CC2C0 /* financial_jsdisable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_jsdisable.png; sourceTree = "<group>"; };
+		877D1AB01C449A75008CC2C0 /* financial_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_share.png; sourceTree = "<group>"; };
+		877D1AB21C449A75008CC2C0 /* jquery-1.11.3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.3.min.js"; sourceTree = "<group>"; };
+		877D1AB31C449A75008CC2C0 /* product.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = product.js; sourceTree = "<group>"; };
+		877D1AB41C449A75008CC2C0 /* product.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = product.html; sourceTree = "<group>"; };
+		877D1AC01C449B76008CC2C0 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		877D1AC21C449D1E008CC2C0 /* twoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twoViewController.h; sourceTree = "<group>"; };
+		877D1AC31C449D1E008CC2C0 /* twoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twoViewController.m; sourceTree = "<group>"; };
+		D5F6FDDE1C435E67009A4C12 /* web.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = web.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F6FDE21C435E67009A4C12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D5F6FDE41C435E67009A4C12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D5F6FDE51C435E67009A4C12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D5F6FDE71C435E67009A4C12 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D5F6FDE81C435E67009A4C12 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D5F6FDEB1C435E67009A4C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5F6FDED1C435E67009A4C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5F6FDF01C435E67009A4C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5F6FDF21C435E67009A4C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5F6FDF71C435E67009A4C12 /* webTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F6FDFB1C435E67009A4C12 /* webTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webTests.m; sourceTree = "<group>"; };
+		D5F6FDFD1C435E67009A4C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5F6FE021C435E67009A4C12 /* webUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F6FE061C435E67009A4C12 /* webUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webUITests.m; sourceTree = "<group>"; };
+		D5F6FE081C435E67009A4C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5F6FE151C435E91009A4C12 /* 1280-720我的理财—赎回_PxCook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1280-720我的理财—赎回_PxCook.png"; sourceTree = "<group>"; };
+		D5F6FE171C435E91009A4C12 /* base.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = base.css; sourceTree = "<group>"; };
+		D5F6FE181C435E91009A4C12 /* Finance.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Finance.css; sourceTree = "<group>"; };
+		D5F6FE191C435E91009A4C12 /* Finance.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Finance.html; sourceTree = "<group>"; };
+		D5F6FE1B1C435E91009A4C12 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		D5F6FE1C1C435E91009A4C12 /* financial_hot_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_hot_normal.png; sourceTree = "<group>"; };
+		D5F6FE1D1C435E91009A4C12 /* financial_hot_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_hot_press.png; sourceTree = "<group>"; };
+		D5F6FE1E1C435E91009A4C12 /* financial_ksh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_ksh.png; sourceTree = "<group>"; };
+		D5F6FE1F1C435E91009A4C12 /* financial_my_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_my_normal.png; sourceTree = "<group>"; };
+		D5F6FE201C435E91009A4C12 /* financial_my_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_my_press.png; sourceTree = "<group>"; };
+		D5F6FE211C435E91009A4C12 /* financial_safe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financial_safe.png; sourceTree = "<group>"; };
+		D5F6FE221C435E91009A4C12 /* financial_wei@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financial_wei@2x.png"; sourceTree = "<group>"; };
+		D5F6FE231C435E91009A4C12 /* financial_wei@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financial_wei@3x.png"; sourceTree = "<group>"; };
+		D5F6FE241C435E91009A4C12 /* financial_yi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financial_yi@2x.png"; sourceTree = "<group>"; };
+		D5F6FE251C435E91009A4C12 /* financial_yi@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financial_yi@3x.png"; sourceTree = "<group>"; };
+		D5F6FE261C435E91009A4C12 /* line_1080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_1080.png; sourceTree = "<group>"; };
+		D5F6FE271C435E91009A4C12 /* line_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_720.png; sourceTree = "<group>"; };
+		D5F6FE291C435E91009A4C12 /* Finance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Finance.js; sourceTree = "<group>"; };
+		D5F6FE2A1C435E91009A4C12 /* jquery-1.11.3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.3.min.js"; sourceTree = "<group>"; };
+		D5F6FE2B1C435E91009A4C12 /* 我的理财_持有中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的理财_持有中.png"; sourceTree = "<group>"; };
+		D5F6FE2C1C435E91009A4C12 /* 理财_PxCook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "理财_PxCook.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5F6FDDB1C435E67009A4C12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877D1AC11C449B76008CC2C0 /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F6FDF41C435E67009A4C12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F6FDFF1C435E67009A4C12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		877D1AA61C449A75008CC2C0 /* 产品详情（安卓） */ = {
+			isa = PBXGroup;
+			children = (
+				877D1AA71C449A75008CC2C0 /* 1280-720产品详情_PxCook.png */,
+				877D1AA81C449A75008CC2C0 /* css */,
+				877D1AAB1C449A75008CC2C0 /* images */,
+				877D1AB11C449A75008CC2C0 /* js */,
+				877D1AB41C449A75008CC2C0 /* product.html */,
+			);
+			path = "产品详情（安卓）";
+			sourceTree = "<group>";
+		};
+		877D1AA81C449A75008CC2C0 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				877D1AA91C449A75008CC2C0 /* base.css */,
+				877D1AAA1C449A75008CC2C0 /* product.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		877D1AAB1C449A75008CC2C0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				877D1AAC1C449A75008CC2C0 /* financial_add.png */,
+				877D1AAD1C449A75008CC2C0 /* financial_add_disable.png */,
+				877D1AAE1C449A75008CC2C0 /* financial_js.png */,
+				877D1AAF1C449A75008CC2C0 /* financial_jsdisable.png */,
+				877D1AB01C449A75008CC2C0 /* financial_share.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		877D1AB11C449A75008CC2C0 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				877D1AB21C449A75008CC2C0 /* jquery-1.11.3.min.js */,
+				877D1AB31C449A75008CC2C0 /* product.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		D5F6FDD51C435E67009A4C12 = {
+			isa = PBXGroup;
+			children = (
+				877D1AC01C449B76008CC2C0 /* JavaScriptCore.framework */,
+				877D1AA61C449A75008CC2C0 /* 产品详情（安卓） */,
+				D5F6FE141C435E91009A4C12 /* 理财 */,
+				D5F6FDE01C435E67009A4C12 /* web */,
+				D5F6FDFA1C435E67009A4C12 /* webTests */,
+				D5F6FE051C435E67009A4C12 /* webUITests */,
+				D5F6FDDF1C435E67009A4C12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5F6FDDF1C435E67009A4C12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FDDE1C435E67009A4C12 /* web.app */,
+				D5F6FDF71C435E67009A4C12 /* webTests.xctest */,
+				D5F6FE021C435E67009A4C12 /* webUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5F6FDE01C435E67009A4C12 /* web */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FDE41C435E67009A4C12 /* AppDelegate.h */,
+				D5F6FDE51C435E67009A4C12 /* AppDelegate.m */,
+				D5F6FDE71C435E67009A4C12 /* ViewController.h */,
+				D5F6FDE81C435E67009A4C12 /* ViewController.m */,
+				877D1AC21C449D1E008CC2C0 /* twoViewController.h */,
+				877D1AC31C449D1E008CC2C0 /* twoViewController.m */,
+				D5F6FDEA1C435E67009A4C12 /* Main.storyboard */,
+				D5F6FDED1C435E67009A4C12 /* Assets.xcassets */,
+				D5F6FDEF1C435E67009A4C12 /* LaunchScreen.storyboard */,
+				D5F6FDF21C435E67009A4C12 /* Info.plist */,
+				D5F6FDE11C435E67009A4C12 /* Supporting Files */,
+			);
+			path = web;
+			sourceTree = "<group>";
+		};
+		D5F6FDE11C435E67009A4C12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FDE21C435E67009A4C12 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D5F6FDFA1C435E67009A4C12 /* webTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FDFB1C435E67009A4C12 /* webTests.m */,
+				D5F6FDFD1C435E67009A4C12 /* Info.plist */,
+			);
+			path = webTests;
+			sourceTree = "<group>";
+		};
+		D5F6FE051C435E67009A4C12 /* webUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FE061C435E67009A4C12 /* webUITests.m */,
+				D5F6FE081C435E67009A4C12 /* Info.plist */,
+			);
+			path = webUITests;
+			sourceTree = "<group>";
+		};
+		D5F6FE141C435E91009A4C12 /* 理财 */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FE151C435E91009A4C12 /* 1280-720我的理财—赎回_PxCook.png */,
+				D5F6FE161C435E91009A4C12 /* css */,
+				D5F6FE191C435E91009A4C12 /* Finance.html */,
+				D5F6FE1A1C435E91009A4C12 /* images */,
+				D5F6FE281C435E91009A4C12 /* js */,
+				D5F6FE2B1C435E91009A4C12 /* 我的理财_持有中.png */,
+				D5F6FE2C1C435E91009A4C12 /* 理财_PxCook.png */,
+			);
+			path = "理财";
+			sourceTree = "<group>";
+		};
+		D5F6FE161C435E91009A4C12 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FE171C435E91009A4C12 /* base.css */,
+				D5F6FE181C435E91009A4C12 /* Finance.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		D5F6FE1A1C435E91009A4C12 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FE1B1C435E91009A4C12 /* arrow.png */,
+				D5F6FE1C1C435E91009A4C12 /* financial_hot_normal.png */,
+				D5F6FE1D1C435E91009A4C12 /* financial_hot_press.png */,
+				D5F6FE1E1C435E91009A4C12 /* financial_ksh.png */,
+				D5F6FE1F1C435E91009A4C12 /* financial_my_normal.png */,
+				D5F6FE201C435E91009A4C12 /* financial_my_press.png */,
+				D5F6FE211C435E91009A4C12 /* financial_safe.png */,
+				D5F6FE221C435E91009A4C12 /* financial_wei@2x.png */,
+				D5F6FE231C435E91009A4C12 /* financial_wei@3x.png */,
+				D5F6FE241C435E91009A4C12 /* financial_yi@2x.png */,
+				D5F6FE251C435E91009A4C12 /* financial_yi@3x.png */,
+				D5F6FE261C435E91009A4C12 /* line_1080.png */,
+				D5F6FE271C435E91009A4C12 /* line_720.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		D5F6FE281C435E91009A4C12 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6FE291C435E91009A4C12 /* Finance.js */,
+				D5F6FE2A1C435E91009A4C12 /* jquery-1.11.3.min.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5F6FDDD1C435E67009A4C12 /* web */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5F6FE0B1C435E67009A4C12 /* Build configuration list for PBXNativeTarget "web" */;
+			buildPhases = (
+				D5F6FDDA1C435E67009A4C12 /* Sources */,
+				D5F6FDDB1C435E67009A4C12 /* Frameworks */,
+				D5F6FDDC1C435E67009A4C12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = web;
+			productName = web;
+			productReference = D5F6FDDE1C435E67009A4C12 /* web.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D5F6FDF61C435E67009A4C12 /* webTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5F6FE0E1C435E67009A4C12 /* Build configuration list for PBXNativeTarget "webTests" */;
+			buildPhases = (
+				D5F6FDF31C435E67009A4C12 /* Sources */,
+				D5F6FDF41C435E67009A4C12 /* Frameworks */,
+				D5F6FDF51C435E67009A4C12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5F6FDF91C435E67009A4C12 /* PBXTargetDependency */,
+			);
+			name = webTests;
+			productName = webTests;
+			productReference = D5F6FDF71C435E67009A4C12 /* webTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5F6FE011C435E67009A4C12 /* webUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5F6FE111C435E67009A4C12 /* Build configuration list for PBXNativeTarget "webUITests" */;
+			buildPhases = (
+				D5F6FDFE1C435E67009A4C12 /* Sources */,
+				D5F6FDFF1C435E67009A4C12 /* Frameworks */,
+				D5F6FE001C435E67009A4C12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5F6FE041C435E67009A4C12 /* PBXTargetDependency */,
+			);
+			name = webUITests;
+			productName = webUITests;
+			productReference = D5F6FE021C435E67009A4C12 /* webUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5F6FDD61C435E67009A4C12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = kuailefu;
+				TargetAttributes = {
+					D5F6FDDD1C435E67009A4C12 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D5F6FDF61C435E67009A4C12 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D5F6FDDD1C435E67009A4C12;
+					};
+					D5F6FE011C435E67009A4C12 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D5F6FDDD1C435E67009A4C12;
+					};
+				};
+			};
+			buildConfigurationList = D5F6FDD91C435E67009A4C12 /* Build configuration list for PBXProject "web" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5F6FDD51C435E67009A4C12;
+			productRefGroup = D5F6FDDF1C435E67009A4C12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5F6FDDD1C435E67009A4C12 /* web */,
+				D5F6FDF61C435E67009A4C12 /* webTests */,
+				D5F6FE011C435E67009A4C12 /* webUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5F6FDDC1C435E67009A4C12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877D1ABE1C449A75008CC2C0 /* product.js in Resources */,
+				D5F6FE3C1C435E91009A4C12 /* line_1080.png in Resources */,
+				D5F6FE361C435E91009A4C12 /* financial_my_press.png in Resources */,
+				D5F6FE3B1C435E91009A4C12 /* financial_yi@3x.png in Resources */,
+				D5F6FE411C435E91009A4C12 /* 理财_PxCook.png in Resources */,
+				877D1AB71C449A75008CC2C0 /* product.css in Resources */,
+				877D1AB81C449A75008CC2C0 /* financial_add.png in Resources */,
+				D5F6FE351C435E91009A4C12 /* financial_my_normal.png in Resources */,
+				D5F6FE371C435E91009A4C12 /* financial_safe.png in Resources */,
+				D5F6FE2F1C435E91009A4C12 /* Finance.css in Resources */,
+				D5F6FDF11C435E67009A4C12 /* LaunchScreen.storyboard in Resources */,
+				877D1ABD1C449A75008CC2C0 /* jquery-1.11.3.min.js in Resources */,
+				877D1ABA1C449A75008CC2C0 /* financial_js.png in Resources */,
+				D5F6FE3E1C435E91009A4C12 /* Finance.js in Resources */,
+				D5F6FE341C435E91009A4C12 /* financial_ksh.png in Resources */,
+				D5F6FE401C435E91009A4C12 /* 我的理财_持有中.png in Resources */,
+				D5F6FE301C435E91009A4C12 /* Finance.html in Resources */,
+				D5F6FE3F1C435E91009A4C12 /* jquery-1.11.3.min.js in Resources */,
+				877D1AB91C449A75008CC2C0 /* financial_add_disable.png in Resources */,
+				877D1ABB1C449A75008CC2C0 /* financial_jsdisable.png in Resources */,
+				D5F6FE381C435E91009A4C12 /* financial_wei@2x.png in Resources */,
+				877D1AB51C449A75008CC2C0 /* 1280-720产品详情_PxCook.png in Resources */,
+				D5F6FE3A1C435E91009A4C12 /* financial_yi@2x.png in Resources */,
+				D5F6FE2E1C435E91009A4C12 /* base.css in Resources */,
+				D5F6FDEE1C435E67009A4C12 /* Assets.xcassets in Resources */,
+				877D1AB61C449A75008CC2C0 /* base.css in Resources */,
+				D5F6FE2D1C435E91009A4C12 /* 1280-720我的理财—赎回_PxCook.png in Resources */,
+				D5F6FE391C435E91009A4C12 /* financial_wei@3x.png in Resources */,
+				877D1ABF1C449A75008CC2C0 /* product.html in Resources */,
+				D5F6FE3D1C435E91009A4C12 /* line_720.png in Resources */,
+				D5F6FDEC1C435E67009A4C12 /* Main.storyboard in Resources */,
+				D5F6FE311C435E91009A4C12 /* arrow.png in Resources */,
+				877D1ABC1C449A75008CC2C0 /* financial_share.png in Resources */,
+				D5F6FE321C435E91009A4C12 /* financial_hot_normal.png in Resources */,
+				D5F6FE331C435E91009A4C12 /* financial_hot_press.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F6FDF51C435E67009A4C12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F6FE001C435E67009A4C12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5F6FDDA1C435E67009A4C12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5F6FDE91C435E67009A4C12 /* ViewController.m in Sources */,
+				D5F6FDE61C435E67009A4C12 /* AppDelegate.m in Sources */,
+				D5F6FDE31C435E67009A4C12 /* main.m in Sources */,
+				877D1AC41C449D1E008CC2C0 /* twoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F6FDF31C435E67009A4C12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5F6FDFC1C435E67009A4C12 /* webTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F6FDFE1C435E67009A4C12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5F6FE071C435E67009A4C12 /* webUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5F6FDF91C435E67009A4C12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5F6FDDD1C435E67009A4C12 /* web */;
+			targetProxy = D5F6FDF81C435E67009A4C12 /* PBXContainerItemProxy */;
+		};
+		D5F6FE041C435E67009A4C12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5F6FDDD1C435E67009A4C12 /* web */;
+			targetProxy = D5F6FE031C435E67009A4C12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D5F6FDEA1C435E67009A4C12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5F6FDEB1C435E67009A4C12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5F6FDEF1C435E67009A4C12 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5F6FDF01C435E67009A4C12 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5F6FE091C435E67009A4C12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D5F6FE0A1C435E67009A4C12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5F6FE0C1C435E67009A4C12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = web/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = map.web;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D5F6FE0D1C435E67009A4C12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = web/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = map.web;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D5F6FE0F1C435E67009A4C12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = webTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = map.webTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/web.app/web";
+			};
+			name = Debug;
+		};
+		D5F6FE101C435E67009A4C12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = webTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = map.webTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/web.app/web";
+			};
+			name = Release;
+		};
+		D5F6FE121C435E67009A4C12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = webUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = map.webUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = web;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D5F6FE131C435E67009A4C12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = webUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = map.webUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = web;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5F6FDD91C435E67009A4C12 /* Build configuration list for PBXProject "web" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5F6FE091C435E67009A4C12 /* Debug */,
+				D5F6FE0A1C435E67009A4C12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5F6FE0B1C435E67009A4C12 /* Build configuration list for PBXNativeTarget "web" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5F6FE0C1C435E67009A4C12 /* Debug */,
+				D5F6FE0D1C435E67009A4C12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5F6FE0E1C435E67009A4C12 /* Build configuration list for PBXNativeTarget "webTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5F6FE0F1C435E67009A4C12 /* Debug */,
+				D5F6FE101C435E67009A4C12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5F6FE111C435E67009A4C12 /* Build configuration list for PBXNativeTarget "webUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5F6FE121C435E67009A4C12 /* Debug */,
+				D5F6FE131C435E67009A4C12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5F6FDD61C435E67009A4C12 /* Project object */;
+}

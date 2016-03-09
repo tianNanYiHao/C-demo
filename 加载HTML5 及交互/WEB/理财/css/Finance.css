@@ -1,0 +1,266 @@
+
+html{
+	font-size:20px;
+}
+
+
+
+
+.commonTab{
+	overflow: hidden;
+	background:#fff;
+}
+.commonTab li{
+	width:50%;
+	float:left;
+	height:4.45rem;
+	border-bottom:1px solid #ddd;
+}
+.myTab li{
+	position: relative;
+}
+.commonTab li div{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	width:8rem;
+	height:1.8rem;
+}
+.myTab .first{
+	background: url(../images/financial_hot_normal.png);
+	background-size:100%;
+}
+.myTab .last{
+	background: url(../images/financial_my_normal.png);
+	background-size:100%;
+}
+.commonTab li.current{
+	height:4.3rem;
+	border-bottom:4px solid #47a8ef;
+}
+.myTab li.current .first{
+	background: url(../images/financial_hot_press.png);
+	background-size:100%;
+}
+.myTab li.current .last{
+	background: url(../images/financial_my_press.png);
+	background-size:100%;
+}
+
+/* 热销理财 */
+.contentFin{
+	padding:0 1.5rem;
+	margin-top:1rem;
+	background: #fff;
+}
+.detailFin .contentFin{
+	padding:0 1.5rem 1.5rem;
+}
+.character{
+	padding:1.9rem 0 0 0;
+	height:5rem;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+.contentFin a{
+	display: block;
+	width:100%;
+	height:100%;
+	text-decoration:none;
+}
+.character h3{
+	font-size:1.4rem;
+	color:#333;
+	font-weight: normal;
+} 
+.character p{
+	padding:0.7rem 0 0 1.5rem;
+	font-size:1rem;
+	color:#b3b3b3;
+	position:relative;
+}
+.character p:before{
+	content:'';
+	width:1rem;
+	height:1.1rem;
+	position:absolute;
+	left:0;
+	top:0.8rem;
+	background: url(../images/financial_safe.png);
+	background-size:100%;
+}
+.detailFin .character:after{
+	content:"";
+	width:0.9rem;
+	height:1.6rem;
+	background: url(../images/arrow.png);
+	background-size:100%;
+	position:absolute;
+	right:0;
+	top:2.7rem;	
+}
+
+.date li{
+	padding:2.4rem 0 1.4rem 0;
+	float:left;
+
+
+}
+.date li:nth-child(1){
+	width:40%;
+}
+.date li:nth-child(2){
+	width:40%;
+}
+.date li:nth-child(3){
+	width:20%;
+}
+.detailFin .date li:first-child{padding:1.4rem 0;}
+.detailFin .date li:nth-child(2) span,.date li:nth-child(3) span{
+	height:2rem;
+	line-height:2rem;
+}
+.date li p{
+	font-size:1.8rem;
+	color:#333;
+}
+.date li p.stress{
+	font-size:2.8rem;
+	color:#ff801a;
+}
+.date li span{
+	font-size:1.1rem;
+	color:#999;
+}
+.buy{
+	width:100%;
+	height:4rem;
+	background:#47A8EF;
+	border-radius: 8px;
+	line-height:4rem;
+	text-align: center;
+}
+.buy a{
+	color:#fff;
+	font-size:1.7rem;
+}
+
+
+/* 我的理财 */
+/* 上半部分 */
+.detailMy{
+	display: none;
+}
+.up{
+	background: #47a8ef;
+	color:#fff;
+	text-align:center;
+	padding:5.8rem 0 2.1rem;
+}
+.up .one{
+	font-size: 1.2rem;
+}
+.up .two{
+	font-size:5rem;
+	height:5rem;
+	line-height: 5rem;
+	margin:2rem auto 5.8rem;
+}
+.up img{
+	width:100%;
+	height:0.4rem;
+}
+.up .income{
+	width:33rem;
+	margin:0 auto;
+}
+.up .income li{
+	padding-top:2rem;
+	width:33.3%;
+	float:left;
+}
+.up .income p{
+	font-size:1.1rem;
+}
+.up .income span{
+	margin-top:2.1rem;
+	font-size:1.8rem;
+}
+
+/* 下半部分 */
+.detailMy .downTab li{
+	font-size: 1.5rem;
+	text-align:center;
+	line-height:5rem;
+}
+.detailMy .downTab li.current{
+	color:#47a8ef;
+}
+
+/* 持有中 */
+.downDetail .character{
+	padding:0;
+}
+.downDetail .character h3{
+	width:60%;
+	height:5rem;
+	line-height: 5rem;
+	overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+}
+.hold .date li{
+	width:50%;
+	padding:2rem 0;
+}
+.downDetail .date li p.stress{
+	font-size:1.8rem;
+}
+.downDetail .date li p{
+	margin-bottom:0.9rem;
+}
+.hold li:nth-child(2) .character{
+	position:relative;
+}
+.hold li:nth-child(2) .character:after{
+	content:"";
+	width:5rem;
+	height:4.5rem;
+	background: url(../images/financial_ksh.png);
+	background-size:100%;
+	position:absolute;
+	right:1.5rem;
+	top:0.3rem;
+}
+
+/* 已赎回 */
+.redeem{
+	display: none;
+}
+.redeem .character{
+	position:relative;
+}
+.redeem .character:after{
+	content:"";
+	width:4rem;
+	height:1.5rem;
+	position:absolute;
+	right:1.5rem;
+	top:1.75rem;
+}
+.account .character:after{
+	background:url(../images/financial_yi@2x.png) no-repeat;
+	background-size:100%;
+}
+.noAccount .character:after{
+	background:url(../images/financial_wei@2x.png) no-repeat;
+	background-size:100%;
+}
+.noAccount .state{
+	height:3rem;
+	line-height: 3rem;
+	font-size: 1.2rem;
+	color:#b3b3b3;
+	background:#f8f8f8;
+}
