@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		877251641C3F64C200E4185A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251631C3F64C200E4185A /* main.m */; };
+		877251671C3F64C200E4185A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251661C3F64C200E4185A /* AppDelegate.m */; };
+		8772516D1C3F64C200E4185A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8772516B1C3F64C200E4185A /* Main.storyboard */; };
+		877251701C3F64C200E4185A /* _____GKIimage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8772516E1C3F64C200E4185A /* _____GKIimage.xcdatamodeld */; };
+		877251721C3F64C200E4185A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 877251711C3F64C200E4185A /* Assets.xcassets */; };
+		877251751C3F64C200E4185A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877251731C3F64C200E4185A /* LaunchScreen.storyboard */; };
+		877251801C3F64C200E4185A /* _____GKIimageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772517F1C3F64C200E4185A /* _____GKIimageTests.m */; };
+		8772518B1C3F64C200E4185A /* _____GKIimageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772518A1C3F64C200E4185A /* _____GKIimageUITests.m */; };
+		8772519A1C3F650A00E4185A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251991C3F650A00E4185A /* ViewController.m */; };
+		877251A81C3F651300E4185A /* GKCropBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772519D1C3F651300E4185A /* GKCropBorderView.m */; };
+		877251A91C3F651300E4185A /* GKImageCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772519F1C3F651300E4185A /* GKImageCropOverlayView.m */; };
+		877251AA1C3F651300E4185A /* GKImageCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251A11C3F651300E4185A /* GKImageCropView.m */; };
+		877251AB1C3F651300E4185A /* GKImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251A31C3F651300E4185A /* GKImageCropViewController.m */; };
+		877251AC1C3F651300E4185A /* GKImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251A51C3F651300E4185A /* GKImagePicker.m */; };
+		877251AD1C3F651300E4185A /* GKResizeableCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251A71C3F651300E4185A /* GKResizeableCropOverlayView.m */; };
+		877251AF1C3F652900E4185A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877251AE1C3F652900E4185A /* Foundation.framework */; };
+		877251B11C3F653700E4185A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877251B01C3F653700E4185A /* CoreGraphics.framework */; };
+		877251B31C3F654300E4185A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877251B21C3F654300E4185A /* UIKit.framework */; };
+		877251B51C3F654C00E4185A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877251B41C3F654C00E4185A /* AVFoundation.framework */; };
+		877251B71C3F655300E4185A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877251B61C3F655300E4185A /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8772517C1C3F64C200E4185A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 877251571C3F64C200E4185A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8772515E1C3F64C200E4185A;
+			remoteInfo = "第三方相机GKIimage";
+		};
+		877251871C3F64C200E4185A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 877251571C3F64C200E4185A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8772515E1C3F64C200E4185A;
+			remoteInfo = "第三方相机GKIimage";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8772515F1C3F64C200E4185A /* 第三方相机GKIimage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "第三方相机GKIimage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		877251631C3F64C200E4185A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		877251651C3F64C200E4185A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		877251661C3F64C200E4185A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8772516C1C3F64C200E4185A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8772516F1C3F64C200E4185A /* _____GKIimage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "_____GKIimage.xcdatamodel"; sourceTree = "<group>"; };
+		877251711C3F64C200E4185A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		877251741C3F64C200E4185A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		877251761C3F64C200E4185A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8772517B1C3F64C200E4185A /* 第三方相机GKIimageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "第三方相机GKIimageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8772517F1C3F64C200E4185A /* _____GKIimageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____GKIimageTests.m"; sourceTree = "<group>"; };
+		877251811C3F64C200E4185A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877251861C3F64C200E4185A /* 第三方相机GKIimageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "第三方相机GKIimageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8772518A1C3F64C200E4185A /* _____GKIimageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____GKIimageUITests.m"; sourceTree = "<group>"; };
+		8772518C1C3F64C200E4185A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877251981C3F650A00E4185A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		877251991C3F650A00E4185A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8772519C1C3F651300E4185A /* GKCropBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCropBorderView.h; sourceTree = "<group>"; };
+		8772519D1C3F651300E4185A /* GKCropBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCropBorderView.m; sourceTree = "<group>"; };
+		8772519E1C3F651300E4185A /* GKImageCropOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImageCropOverlayView.h; sourceTree = "<group>"; };
+		8772519F1C3F651300E4185A /* GKImageCropOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImageCropOverlayView.m; sourceTree = "<group>"; };
+		877251A01C3F651300E4185A /* GKImageCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImageCropView.h; sourceTree = "<group>"; };
+		877251A11C3F651300E4185A /* GKImageCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImageCropView.m; sourceTree = "<group>"; };
+		877251A21C3F651300E4185A /* GKImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImageCropViewController.h; sourceTree = "<group>"; };
+		877251A31C3F651300E4185A /* GKImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImageCropViewController.m; sourceTree = "<group>"; };
+		877251A41C3F651300E4185A /* GKImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKImagePicker.h; sourceTree = "<group>"; };
+		877251A51C3F651300E4185A /* GKImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKImagePicker.m; sourceTree = "<group>"; };
+		877251A61C3F651300E4185A /* GKResizeableCropOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKResizeableCropOverlayView.h; sourceTree = "<group>"; };
+		877251A71C3F651300E4185A /* GKResizeableCropOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKResizeableCropOverlayView.m; sourceTree = "<group>"; };
+		877251AE1C3F652900E4185A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		877251B01C3F653700E4185A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		877251B21C3F654300E4185A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		877251B41C3F654C00E4185A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		877251B61C3F655300E4185A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8772515C1C3F64C200E4185A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877251B71C3F655300E4185A /* MediaPlayer.framework in Frameworks */,
+				877251B51C3F654C00E4185A /* AVFoundation.framework in Frameworks */,
+				877251B31C3F654300E4185A /* UIKit.framework in Frameworks */,
+				877251B11C3F653700E4185A /* CoreGraphics.framework in Frameworks */,
+				877251AF1C3F652900E4185A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877251781C3F64C200E4185A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877251831C3F64C200E4185A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		877251561C3F64C200E4185A = {
+			isa = PBXGroup;
+			children = (
+				877251B61C3F655300E4185A /* MediaPlayer.framework */,
+				877251B41C3F654C00E4185A /* AVFoundation.framework */,
+				877251B21C3F654300E4185A /* UIKit.framework */,
+				877251B01C3F653700E4185A /* CoreGraphics.framework */,
+				877251AE1C3F652900E4185A /* Foundation.framework */,
+				877251611C3F64C200E4185A /* 第三方相机GKIimage */,
+				8772517E1C3F64C200E4185A /* 第三方相机GKIimageTests */,
+				877251891C3F64C200E4185A /* 第三方相机GKIimageUITests */,
+				877251601C3F64C200E4185A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		877251601C3F64C200E4185A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8772515F1C3F64C200E4185A /* 第三方相机GKIimage.app */,
+				8772517B1C3F64C200E4185A /* 第三方相机GKIimageTests.xctest */,
+				877251861C3F64C200E4185A /* 第三方相机GKIimageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		877251611C3F64C200E4185A /* 第三方相机GKIimage */ = {
+			isa = PBXGroup;
+			children = (
+				8772519B1C3F651300E4185A /* GKClasses */,
+				877251651C3F64C200E4185A /* AppDelegate.h */,
+				877251661C3F64C200E4185A /* AppDelegate.m */,
+				877251981C3F650A00E4185A /* ViewController.h */,
+				877251991C3F650A00E4185A /* ViewController.m */,
+				8772516B1C3F64C200E4185A /* Main.storyboard */,
+				877251711C3F64C200E4185A /* Assets.xcassets */,
+				877251731C3F64C200E4185A /* LaunchScreen.storyboard */,
+				877251761C3F64C200E4185A /* Info.plist */,
+				8772516E1C3F64C200E4185A /* _____GKIimage.xcdatamodeld */,
+				877251621C3F64C200E4185A /* Supporting Files */,
+			);
+			path = "第三方相机GKIimage";
+			sourceTree = "<group>";
+		};
+		877251621C3F64C200E4185A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				877251631C3F64C200E4185A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8772517E1C3F64C200E4185A /* 第三方相机GKIimageTests */ = {
+			isa = PBXGroup;
+			children = (
+				8772517F1C3F64C200E4185A /* _____GKIimageTests.m */,
+				877251811C3F64C200E4185A /* Info.plist */,
+			);
+			path = "第三方相机GKIimageTests";
+			sourceTree = "<group>";
+		};
+		877251891C3F64C200E4185A /* 第三方相机GKIimageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8772518A1C3F64C200E4185A /* _____GKIimageUITests.m */,
+				8772518C1C3F64C200E4185A /* Info.plist */,
+			);
+			path = "第三方相机GKIimageUITests";
+			sourceTree = "<group>";
+		};
+		8772519B1C3F651300E4185A /* GKClasses */ = {
+			isa = PBXGroup;
+			children = (
+				8772519C1C3F651300E4185A /* GKCropBorderView.h */,
+				8772519D1C3F651300E4185A /* GKCropBorderView.m */,
+				8772519E1C3F651300E4185A /* GKImageCropOverlayView.h */,
+				8772519F1C3F651300E4185A /* GKImageCropOverlayView.m */,
+				877251A01C3F651300E4185A /* GKImageCropView.h */,
+				877251A11C3F651300E4185A /* GKImageCropView.m */,
+				877251A21C3F651300E4185A /* GKImageCropViewController.h */,
+				877251A31C3F651300E4185A /* GKImageCropViewController.m */,
+				877251A41C3F651300E4185A /* GKImagePicker.h */,
+				877251A51C3F651300E4185A /* GKImagePicker.m */,
+				877251A61C3F651300E4185A /* GKResizeableCropOverlayView.h */,
+				877251A71C3F651300E4185A /* GKResizeableCropOverlayView.m */,
+			);
+			path = GKClasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8772515E1C3F64C200E4185A /* 第三方相机GKIimage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8772518F1C3F64C200E4185A /* Build configuration list for PBXNativeTarget "第三方相机GKIimage" */;
+			buildPhases = (
+				8772515B1C3F64C200E4185A /* Sources */,
+				8772515C1C3F64C200E4185A /* Frameworks */,
+				8772515D1C3F64C200E4185A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "第三方相机GKIimage";
+			productName = "第三方相机GKIimage";
+			productReference = 8772515F1C3F64C200E4185A /* 第三方相机GKIimage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8772517A1C3F64C200E4185A /* 第三方相机GKIimageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877251921C3F64C200E4185A /* Build configuration list for PBXNativeTarget "第三方相机GKIimageTests" */;
+			buildPhases = (
+				877251771C3F64C200E4185A /* Sources */,
+				877251781C3F64C200E4185A /* Frameworks */,
+				877251791C3F64C200E4185A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8772517D1C3F64C200E4185A /* PBXTargetDependency */,
+			);
+			name = "第三方相机GKIimageTests";
+			productName = "第三方相机GKIimageTests";
+			productReference = 8772517B1C3F64C200E4185A /* 第三方相机GKIimageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		877251851C3F64C200E4185A /* 第三方相机GKIimageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877251951C3F64C200E4185A /* Build configuration list for PBXNativeTarget "第三方相机GKIimageUITests" */;
+			buildPhases = (
+				877251821C3F64C200E4185A /* Sources */,
+				877251831C3F64C200E4185A /* Frameworks */,
+				877251841C3F64C200E4185A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				877251881C3F64C200E4185A /* PBXTargetDependency */,
+			);
+			name = "第三方相机GKIimageUITests";
+			productName = "第三方相机GKIimageUITests";
+			productReference = 877251861C3F64C200E4185A /* 第三方相机GKIimageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		877251571C3F64C200E4185A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Aotu;
+				TargetAttributes = {
+					8772515E1C3F64C200E4185A = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					8772517A1C3F64C200E4185A = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 8772515E1C3F64C200E4185A;
+					};
+					877251851C3F64C200E4185A = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 8772515E1C3F64C200E4185A;
+					};
+				};
+			};
+			buildConfigurationList = 8772515A1C3F64C200E4185A /* Build configuration list for PBXProject "第三方相机GKIimage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 877251561C3F64C200E4185A;
+			productRefGroup = 877251601C3F64C200E4185A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8772515E1C3F64C200E4185A /* 第三方相机GKIimage */,
+				8772517A1C3F64C200E4185A /* 第三方相机GKIimageTests */,
+				877251851C3F64C200E4185A /* 第三方相机GKIimageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8772515D1C3F64C200E4185A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877251751C3F64C200E4185A /* LaunchScreen.storyboard in Resources */,
+				877251721C3F64C200E4185A /* Assets.xcassets in Resources */,
+				8772516D1C3F64C200E4185A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877251791C3F64C200E4185A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877251841C3F64C200E4185A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8772515B1C3F64C200E4185A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877251671C3F64C200E4185A /* AppDelegate.m in Sources */,
+				877251AC1C3F651300E4185A /* GKImagePicker.m in Sources */,
+				877251641C3F64C200E4185A /* main.m in Sources */,
+				877251AD1C3F651300E4185A /* GKResizeableCropOverlayView.m in Sources */,
+				8772519A1C3F650A00E4185A /* ViewController.m in Sources */,
+				877251701C3F64C200E4185A /* _____GKIimage.xcdatamodeld in Sources */,
+				877251AA1C3F651300E4185A /* GKImageCropView.m in Sources */,
+				877251A81C3F651300E4185A /* GKCropBorderView.m in Sources */,
+				877251AB1C3F651300E4185A /* GKImageCropViewController.m in Sources */,
+				877251A91C3F651300E4185A /* GKImageCropOverlayView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877251771C3F64C200E4185A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877251801C3F64C200E4185A /* _____GKIimageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877251821C3F64C200E4185A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8772518B1C3F64C200E4185A /* _____GKIimageUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8772517D1C3F64C200E4185A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8772515E1C3F64C200E4185A /* 第三方相机GKIimage */;
+			targetProxy = 8772517C1C3F64C200E4185A /* PBXContainerItemProxy */;
+		};
+		877251881C3F64C200E4185A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8772515E1C3F64C200E4185A /* 第三方相机GKIimage */;
+			targetProxy = 877251871C3F64C200E4185A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8772516B1C3F64C200E4185A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8772516C1C3F64C200E4185A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		877251731C3F64C200E4185A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				877251741C3F64C200E4185A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8772518D1C3F64C200E4185A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8772518E1C3F64C200E4185A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		877251901C3F64C200E4185A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "第三方相机GKIimage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-----GKIimage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		877251911C3F64C200E4185A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "第三方相机GKIimage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-----GKIimage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		877251931C3F64C200E4185A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "第三方相机GKIimageTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-----GKIimageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/第三方相机GKIimage.app/第三方相机GKIimage";
+			};
+			name = Debug;
+		};
+		877251941C3F64C200E4185A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "第三方相机GKIimageTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-----GKIimageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/第三方相机GKIimage.app/第三方相机GKIimage";
+			};
+			name = Release;
+		};
+		877251961C3F64C200E4185A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "第三方相机GKIimageUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-----GKIimageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "第三方相机GKIimage";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		877251971C3F64C200E4185A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "第三方相机GKIimageUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-----GKIimageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "第三方相机GKIimage";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8772515A1C3F64C200E4185A /* Build configuration list for PBXProject "第三方相机GKIimage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8772518D1C3F64C200E4185A /* Debug */,
+				8772518E1C3F64C200E4185A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8772518F1C3F64C200E4185A /* Build configuration list for PBXNativeTarget "第三方相机GKIimage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877251901C3F64C200E4185A /* Debug */,
+				877251911C3F64C200E4185A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		877251921C3F64C200E4185A /* Build configuration list for PBXNativeTarget "第三方相机GKIimageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877251931C3F64C200E4185A /* Debug */,
+				877251941C3F64C200E4185A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		877251951C3F64C200E4185A /* Build configuration list for PBXNativeTarget "第三方相机GKIimageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877251961C3F64C200E4185A /* Debug */,
+				877251971C3F64C200E4185A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8772516E1C3F64C200E4185A /* _____GKIimage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8772516F1C3F64C200E4185A /* _____GKIimage.xcdatamodel */,
+			);
+			currentVersion = 8772516F1C3F64C200E4185A /* _____GKIimage.xcdatamodel */;
+			path = "_____GKIimage.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 877251571C3F64C200E4185A /* Project object */;
+}
