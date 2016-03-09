@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8759EAEE1C5220CC00753534 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8759EAED1C5220CC00753534 /* main.m */; };
+		8759EAF11C5220CC00753534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8759EAF01C5220CC00753534 /* AppDelegate.m */; };
+		8759EAF41C5220CC00753534 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8759EAF31C5220CC00753534 /* ViewController.m */; };
+		8759EAF71C5220CC00753534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8759EAF51C5220CC00753534 /* Main.storyboard */; };
+		8759EAFA1C5220CC00753534 /* _______Quartz2D_______.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8759EAF81C5220CC00753534 /* _______Quartz2D_______.xcdatamodeld */; };
+		8759EAFC1C5220CC00753534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8759EAFB1C5220CC00753534 /* Assets.xcassets */; };
+		8759EAFF1C5220CC00753534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8759EAFD1C5220CC00753534 /* LaunchScreen.storyboard */; };
+		8759EB0A1C5220CC00753534 /* _______Quartz2D_______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8759EB091C5220CC00753534 /* _______Quartz2D_______Tests.m */; };
+		8759EB151C5220CC00753534 /* _______Quartz2D_______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8759EB141C5220CC00753534 /* _______Quartz2D_______UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8759EB061C5220CC00753534 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8759EAE11C5220CC00753534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8759EAE81C5220CC00753534;
+			remoteInfo = "核心动画 - Quartz2D 绘制基本图形";
+		};
+		8759EB111C5220CC00753534 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8759EAE11C5220CC00753534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8759EAE81C5220CC00753534;
+			remoteInfo = "核心动画 - Quartz2D 绘制基本图形";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8759EAE91C5220CC00753534 /* englshinnnnnnn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = englshinnnnnnn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8759EAED1C5220CC00753534 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8759EAEF1C5220CC00753534 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8759EAF01C5220CC00753534 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8759EAF21C5220CC00753534 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8759EAF31C5220CC00753534 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8759EAF61C5220CC00753534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8759EAF91C5220CC00753534 /* _______Quartz2D_______.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "_______Quartz2D_______.xcdatamodel"; sourceTree = "<group>"; };
+		8759EAFB1C5220CC00753534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8759EAFE1C5220CC00753534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8759EB001C5220CC00753534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8759EB051C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "核心动画 - Quartz2D 绘制基本图形Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8759EB091C5220CC00753534 /* _______Quartz2D_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Quartz2D_______Tests.m"; sourceTree = "<group>"; };
+		8759EB0B1C5220CC00753534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8759EB101C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "核心动画 - Quartz2D 绘制基本图形UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8759EB141C5220CC00753534 /* _______Quartz2D_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Quartz2D_______UITests.m"; sourceTree = "<group>"; };
+		8759EB161C5220CC00753534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8759EAE61C5220CC00753534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8759EB021C5220CC00753534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8759EB0D1C5220CC00753534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8759EAE01C5220CC00753534 = {
+			isa = PBXGroup;
+			children = (
+				8759EAEB1C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形 */,
+				8759EB081C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形Tests */,
+				8759EB131C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形UITests */,
+				8759EAEA1C5220CC00753534 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8759EAEA1C5220CC00753534 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8759EAE91C5220CC00753534 /* englshinnnnnnn.app */,
+				8759EB051C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形Tests.xctest */,
+				8759EB101C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8759EAEB1C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形 */ = {
+			isa = PBXGroup;
+			children = (
+				8759EAEF1C5220CC00753534 /* AppDelegate.h */,
+				8759EAF01C5220CC00753534 /* AppDelegate.m */,
+				8759EAF21C5220CC00753534 /* ViewController.h */,
+				8759EAF31C5220CC00753534 /* ViewController.m */,
+				8759EAF51C5220CC00753534 /* Main.storyboard */,
+				8759EAFB1C5220CC00753534 /* Assets.xcassets */,
+				8759EAFD1C5220CC00753534 /* LaunchScreen.storyboard */,
+				8759EB001C5220CC00753534 /* Info.plist */,
+				8759EAF81C5220CC00753534 /* _______Quartz2D_______.xcdatamodeld */,
+				8759EAEC1C5220CC00753534 /* Supporting Files */,
+			);
+			path = "核心动画 - Quartz2D 绘制基本图形";
+			sourceTree = "<group>";
+		};
+		8759EAEC1C5220CC00753534 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8759EAED1C5220CC00753534 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8759EB081C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8759EB091C5220CC00753534 /* _______Quartz2D_______Tests.m */,
+				8759EB0B1C5220CC00753534 /* Info.plist */,
+			);
+			path = "核心动画 - Quartz2D 绘制基本图形Tests";
+			sourceTree = "<group>";
+		};
+		8759EB131C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形UITests */ = {
+			isa = PBXGroup;
+			children = (
+				8759EB141C5220CC00753534 /* _______Quartz2D_______UITests.m */,
+				8759EB161C5220CC00753534 /* Info.plist */,
+			);
+			path = "核心动画 - Quartz2D 绘制基本图形UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8759EAE81C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8759EB191C5220CC00753534 /* Build configuration list for PBXNativeTarget "核心动画 - Quartz2D 绘制基本图形" */;
+			buildPhases = (
+				8759EAE51C5220CC00753534 /* Sources */,
+				8759EAE61C5220CC00753534 /* Frameworks */,
+				8759EAE71C5220CC00753534 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "核心动画 - Quartz2D 绘制基本图形";
+			productName = "核心动画 - Quartz2D 绘制基本图形";
+			productReference = 8759EAE91C5220CC00753534 /* englshinnnnnnn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8759EB041C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8759EB1C1C5220CC00753534 /* Build configuration list for PBXNativeTarget "核心动画 - Quartz2D 绘制基本图形Tests" */;
+			buildPhases = (
+				8759EB011C5220CC00753534 /* Sources */,
+				8759EB021C5220CC00753534 /* Frameworks */,
+				8759EB031C5220CC00753534 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8759EB071C5220CC00753534 /* PBXTargetDependency */,
+			);
+			name = "核心动画 - Quartz2D 绘制基本图形Tests";
+			productName = "核心动画 - Quartz2D 绘制基本图形Tests";
+			productReference = 8759EB051C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8759EB0F1C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8759EB1F1C5220CC00753534 /* Build configuration list for PBXNativeTarget "核心动画 - Quartz2D 绘制基本图形UITests" */;
+			buildPhases = (
+				8759EB0C1C5220CC00753534 /* Sources */,
+				8759EB0D1C5220CC00753534 /* Frameworks */,
+				8759EB0E1C5220CC00753534 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8759EB121C5220CC00753534 /* PBXTargetDependency */,
+			);
+			name = "核心动画 - Quartz2D 绘制基本图形UITests";
+			productName = "核心动画 - Quartz2D 绘制基本图形UITests";
+			productReference = 8759EB101C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8759EAE11C5220CC00753534 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Aotu;
+				TargetAttributes = {
+					8759EAE81C5220CC00753534 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					8759EB041C5220CC00753534 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 8759EAE81C5220CC00753534;
+					};
+					8759EB0F1C5220CC00753534 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 8759EAE81C5220CC00753534;
+					};
+				};
+			};
+			buildConfigurationList = 8759EAE41C5220CC00753534 /* Build configuration list for PBXProject "核心动画 - Quartz2D 绘制基本图形" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8759EAE01C5220CC00753534;
+			productRefGroup = 8759EAEA1C5220CC00753534 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8759EAE81C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形 */,
+				8759EB041C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形Tests */,
+				8759EB0F1C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8759EAE71C5220CC00753534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8759EAFF1C5220CC00753534 /* LaunchScreen.storyboard in Resources */,
+				8759EAFC1C5220CC00753534 /* Assets.xcassets in Resources */,
+				8759EAF71C5220CC00753534 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8759EB031C5220CC00753534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8759EB0E1C5220CC00753534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8759EAE51C5220CC00753534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8759EAF41C5220CC00753534 /* ViewController.m in Sources */,
+				8759EAF11C5220CC00753534 /* AppDelegate.m in Sources */,
+				8759EAFA1C5220CC00753534 /* _______Quartz2D_______.xcdatamodeld in Sources */,
+				8759EAEE1C5220CC00753534 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8759EB011C5220CC00753534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8759EB0A1C5220CC00753534 /* _______Quartz2D_______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8759EB0C1C5220CC00753534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8759EB151C5220CC00753534 /* _______Quartz2D_______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8759EB071C5220CC00753534 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8759EAE81C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形 */;
+			targetProxy = 8759EB061C5220CC00753534 /* PBXContainerItemProxy */;
+		};
+		8759EB121C5220CC00753534 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8759EAE81C5220CC00753534 /* 核心动画 - Quartz2D 绘制基本图形 */;
+			targetProxy = 8759EB111C5220CC00753534 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8759EAF51C5220CC00753534 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8759EAF61C5220CC00753534 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8759EAFD1C5220CC00753534 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8759EAFE1C5220CC00753534 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8759EB171C5220CC00753534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8759EB181C5220CC00753534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8759EB1A1C5220CC00753534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				INFOPLIST_FILE = "核心动画 - Quartz2D 绘制基本图形/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-------Quartz2D-------";
+				PRODUCT_NAME = englshinnnnnnn;
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+			};
+			name = Debug;
+		};
+		8759EB1B1C5220CC00753534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				INFOPLIST_FILE = "核心动画 - Quartz2D 绘制基本图形/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-------Quartz2D-------";
+				PRODUCT_NAME = englshinnnnnnn;
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+			};
+			name = Release;
+		};
+		8759EB1D1C5220CC00753534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "核心动画 - Quartz2D 绘制基本图形Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-------Quartz2D-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/核心动画 - Quartz2D 绘制基本图形.app/核心动画 - Quartz2D 绘制基本图形";
+			};
+			name = Debug;
+		};
+		8759EB1E1C5220CC00753534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "核心动画 - Quartz2D 绘制基本图形Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-------Quartz2D-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/核心动画 - Quartz2D 绘制基本图形.app/核心动画 - Quartz2D 绘制基本图形";
+			};
+			name = Release;
+		};
+		8759EB201C5220CC00753534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "核心动画 - Quartz2D 绘制基本图形UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-------Quartz2D-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "核心动画 - Quartz2D 绘制基本图形";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8759EB211C5220CC00753534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "核心动画 - Quartz2D 绘制基本图形UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.-------Quartz2D-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "核心动画 - Quartz2D 绘制基本图形";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8759EAE41C5220CC00753534 /* Build configuration list for PBXProject "核心动画 - Quartz2D 绘制基本图形" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8759EB171C5220CC00753534 /* Debug */,
+				8759EB181C5220CC00753534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8759EB191C5220CC00753534 /* Build configuration list for PBXNativeTarget "核心动画 - Quartz2D 绘制基本图形" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8759EB1A1C5220CC00753534 /* Debug */,
+				8759EB1B1C5220CC00753534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8759EB1C1C5220CC00753534 /* Build configuration list for PBXNativeTarget "核心动画 - Quartz2D 绘制基本图形Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8759EB1D1C5220CC00753534 /* Debug */,
+				8759EB1E1C5220CC00753534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8759EB1F1C5220CC00753534 /* Build configuration list for PBXNativeTarget "核心动画 - Quartz2D 绘制基本图形UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8759EB201C5220CC00753534 /* Debug */,
+				8759EB211C5220CC00753534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8759EAF81C5220CC00753534 /* _______Quartz2D_______.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8759EAF91C5220CC00753534 /* _______Quartz2D_______.xcdatamodel */,
+			);
+			currentVersion = 8759EAF91C5220CC00753534 /* _______Quartz2D_______.xcdatamodel */;
+			path = "_______Quartz2D_______.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8759EAE11C5220CC00753534 /* Project object */;
+}
