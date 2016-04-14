@@ -268,10 +268,11 @@
 }
 
 //从tem复制到Documents文件夹
- 
+-(BOOL)copyTempFileFormURL:(NSURL*)location toDestination:(NSURL*)destination{
+
     NSError *error;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-//    [fileManager removeItemAtURL:destination error:NULL];
+    [fileManager removeItemAtURL:destination error:NULL];
     [fileManager copyItemAtURL:location toURL:destination error:&error];
     if (error == nil) {
         return true;
