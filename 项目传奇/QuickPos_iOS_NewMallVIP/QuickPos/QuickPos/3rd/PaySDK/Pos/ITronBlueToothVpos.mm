@@ -101,13 +101,29 @@
 
 - (void)discoverBLeDevice:(NSDictionary *)uuidAndName {
     
-    NSLog(@"device is %@", uuidAndName);
-    [self.arrBTDevice addObject:uuidAndName];
+    NSLog(@"device is %@ deviceKind %@", uuidAndName,[uuidAndName class]);
+    NSLog(@"_arrBTDevice %d ,,,, %@",_arrBTDevice.count,_arrBTDevice);
+    
+    NSString *bdm = [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"];
+    
+    NSString *uuidMainKeyStr = [uuidAndName objectForKey:@"mainKey"];
+    NSString *uuidGetBDM = [uuidAndName objectForKey:uuidMainKeyStr];
+    
+    if ([bdm isEqualToString:uuidGetBDM]) {
+        [self.arrBTDevice addObject:uuidAndName];
+    }else{
+        [self.arrBTDevice removeAllObjects];
+    }
+    
+
+    
     
     [cmManager stopSearching];
     if ([self.arrBTDevice count] == 0) {
         return;
     }
+    
+
     
     NSString *uuidString = [uuidAndName objectForKey:@"mainKey"];
     int ret = [cmManager openDevice:uuidString cbDelegate:self timeout:15*1000];
@@ -140,17 +156,18 @@
 }
 
 - (void)discoverComplete{
+    
     if ([self.arrBTDevice count]==0) {
         
 //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"没有发现蓝牙设备,请退出重试。" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
 //        [alert show];
         if ([super.delegate respondsToSelector:@selector(onDeviceKind:)]) {
             [super.delegate onDeviceKind:-1];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"未搜索到匹配的蓝牙" forKey:@"pipiNo"]];
         }
-     [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"2" forKey:@"1"]];
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"蓝牙搜索结束" forKey:@"pipiOver"]];
     }
-   
-    
+    NSLog(@"arrBTDevice ==*** %d",_arrBTDevice.count);
     NSLog(@"蓝牙搜索结束");
     
 }

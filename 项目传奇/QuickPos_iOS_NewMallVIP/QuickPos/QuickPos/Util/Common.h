@@ -30,6 +30,9 @@ typedef void(^cancle)(id cancleBlock);
 
 +(void)showMsgBox3:(NSString *)title msg:(NSString *)msg parentCtrl:(id)ctrl withBlock:(cloceBuleToothBlock)closeBlock withBloclCancle:(cancle)cancleBlock withTag:(NSInteger)tag;
 
++(void)showMsgBox4:(NSString *)title msg:(NSString *)msg parentCtrl:(id)ctrl withBlock:(cloceBuleToothBlock)closeBlock withTag:(NSInteger)tag uuidName:(NSString*)uuidName;
+
+
 + (NSString *)orderAmtFormat:(NSString*)orderAmt;
 + (NSString *)rerverseOrderAmtFormat:(NSString*)orderAmt;
 + (NSString*)bankCardNumSecret:(NSString*)cardNum;
