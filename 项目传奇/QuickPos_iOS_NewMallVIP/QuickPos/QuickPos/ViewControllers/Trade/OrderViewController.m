@@ -125,6 +125,18 @@
 //            self.isBluetooth = @"0";
 //        }
 //    }
+    
+     //提示关闭蓝牙开关
+    [Common showMsgBox3:@"温馨提示" msg:@"使用音频前,请关闭系统蓝牙" parentCtrl:self withBlock:^(id closeBlock) {
+        NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
+        if ([[UIApplication sharedApplication]canOpenURL:url]) {
+            [[UIApplication sharedApplication]openURL:url];
+        }
+    } withBloclCancle:^(id cancleBlock) {
+        
+    } withTag:10099];
+    
+
     self.isBluetooth = @"1";
     
     
@@ -240,6 +252,8 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请选择刷卡器类型?" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"音频" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 self.isBluetooth = @"1";
+                
+
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
                 NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
                 NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
@@ -621,9 +635,18 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     Request *req = [[Request alloc]initWithDelegate:self];
 
-    
+    //关闭系统蓝牙
+    if (alertView.tag == 10099){
+        if (buttonIndex == 0) {
+            //提示关闭蓝牙开关
+            NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
+            if ([[UIApplication sharedApplication]canOpenURL:url]) {
+                [[UIApplication sharedApplication]openURL:url];
+            }
+        }
+    }
     //选择刷卡类型
-    if (alertView.tag == 10085) {
+  else  if (alertView.tag == 10085) {
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
         

@@ -8,16 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^cloceBuleToothBlock)(id closeBlock);
+typedef void(^cancle)(id cancleBlock);
+
+
 @interface Common : NSObject
+
 
 //判断是否为手机号码
 +(BOOL)isPhoneNumber:(NSString*)phone;
+
+
+
 
 //消息框
 +(void)showMsgBox:(NSString*)title msg:(NSString*)msg parentCtrl:(id)ctrl;
 
 //消息框执行
 +(void)showMsgBox2:(NSString*)title msg:(NSString*)msg parentCtrl:(id)ctrl;
+
+
++(void)showMsgBox3:(NSString *)title msg:(NSString *)msg parentCtrl:(id)ctrl withBlock:(cloceBuleToothBlock)closeBlock withBloclCancle:(cancle)cancleBlock withTag:(NSInteger)tag;
 
 + (NSString *)orderAmtFormat:(NSString*)orderAmt;
 + (NSString *)rerverseOrderAmtFormat:(NSString*)orderAmt;

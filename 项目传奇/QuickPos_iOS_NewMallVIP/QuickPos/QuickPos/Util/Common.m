@@ -41,6 +41,8 @@
     
 }
 
+
+
 +(void)showMsgBox2:(NSString*)title msg:(NSString*)msg parentCtrl:(id)ctrl{
     if(iOS8){
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleAlert];
@@ -66,6 +68,33 @@
         
     }
     
+}
+
++(void)showMsgBox3:(NSString *)title msg:(NSString *)msg parentCtrl:(id)ctrl withBlock:(cloceBuleToothBlock)closeBlock withBloclCancle:(cancle)cancleBlock withTag:(NSInteger)tag
+{
+    if(iOS8){
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *defultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            closeBlock(action);
+        }];
+        UIAlertAction *cancleAction =[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            cancleBlock(action);
+        }];
+        
+        
+        [alert addAction:defultAction];
+        [alert addAction:cancleAction];
+
+        [(UIViewController*)ctrl presentViewController:alert animated:YES completion:nil];
+        
+    }else{
+        UIAlertView*alert=[[UIAlertView alloc]initWithTitle:title
+                            message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+        alert.tag = tag;
+        alert.delegate = ctrl;
+        [alert show];
+        
+    }
 }
 
 
