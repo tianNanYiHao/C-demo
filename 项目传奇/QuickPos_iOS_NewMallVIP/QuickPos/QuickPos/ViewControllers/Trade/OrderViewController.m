@@ -252,9 +252,7 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请选择刷卡器类型?" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"音频" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 self.isBluetooth = @"1";
-                
-
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
+//                [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
                 NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
                 NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
                 
@@ -637,7 +635,7 @@
 
     //关闭系统蓝牙
     if (alertView.tag == 10099){
-        if (buttonIndex == 0) {
+        if (buttonIndex == 1) {
             //提示关闭蓝牙开关
             NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
             if ([[UIApplication sharedApplication]canOpenURL:url]) {
@@ -652,7 +650,7 @@
         
         if (buttonIndex == 0) {  //音频
             self.isBluetooth = @"1";
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
             NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
             NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
             
@@ -704,8 +702,6 @@
     else{
         
         if (alertView.tag == CardPayType) {
-            
-            
             if (buttonIndex == 1) {
                 password = [(UITextField*)[alertView textFieldAtIndex:0] text];
                 if (password.length == 0) {
@@ -794,6 +790,7 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"closeLDBluetooth" object:nil];
     
 }
@@ -825,12 +822,17 @@
     sDict = noti.userInfo;
     
     
-    NSString *s = [sDict objectForKey:@"1"];
+    NSString *s = [sDict objectForKey:@"pipiNo"];
+    NSString *s2 = [sDict objectForKey:@"pipiOver"];
     
-    if (noti && [s isEqualToString:@"2"]) {
+    if (noti && [s isEqualToString:@"未搜索到匹配的蓝牙"]) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"closeHUD" object:nil];
+        [Common showMsgBox:@"" msg:@"未搜索到匹配的蓝牙" parentCtrl:self];
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
+    }
+    else if(noti && [s2 isEqualToString:@"蓝牙搜索结束"]){
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"closeHUD" object:nil];
         [Common showMsgBox:@"" msg:@"蓝牙搜索结束" parentCtrl:self];
-
     }
     else{
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"closeHUD" object:nil];

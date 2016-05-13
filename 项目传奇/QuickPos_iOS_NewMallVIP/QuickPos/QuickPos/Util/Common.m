@@ -97,6 +97,37 @@
     }
 }
 
++(void)showMsgBox4:(NSString *)title msg:(NSString *)msg parentCtrl:(id)ctrl withBlock:(cloceBuleToothBlock)closeBlock withTag:(NSInteger)tag uuidName:(NSString*)uuidName{
+    if(iOS8){
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = @"蓝牙绑定码";
+            
+        }];
+        
+        UIAlertAction *defultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            NSString *bdm = [(UITextField*)alert.textFields[0] text];
+            [[NSUserDefaults standardUserDefaults] setObject:bdm forKey:@"uuidName"];
+
+        }];
+        
+        [alert addAction:defultAction];
+        [(UIViewController*)ctrl presentViewController:alert animated:YES completion:nil];
+        
+    }else{
+        UIAlertView*alert=[[UIAlertView alloc]initWithTitle:title
+                                                    message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"确认", nil];
+        alert.tag = tag;
+        alert.delegate = ctrl;
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+        [alert show];
+        
+    }
+    
+}
 
 + (NSString *)orderAmtFormat:(NSString*)orderAmt{
     NSString *newOrderAmt = [NSString stringWithFormat:@"%.2f",orderAmt.doubleValue];

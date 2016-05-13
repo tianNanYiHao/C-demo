@@ -267,6 +267,7 @@ static PosManager *instance;
             break;
     }
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:deviceType] forKey:defDeivecType];
+
     MBPType = YES;
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:v animated:YES];

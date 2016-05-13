@@ -36,7 +36,7 @@
 #import "ADIMageViewController.h"
 #import "FlowRechargeViewController.h"
 
-@interface ConvenientServiceViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, ResponseData,SDCycleScrollViewDelegate,ABCIntroViewDelegate,EAIntroDelegate>
+@interface ConvenientServiceViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, ResponseData,SDCycleScrollViewDelegate,ABCIntroViewDelegate,EAIntroDelegate,UIAlertViewDelegate>
 {
     NSMutableArray *vcArr;
     float contentY;
@@ -92,9 +92,29 @@
         //        [self.view addSubview:self.introView];
         [self showIntroWithCustomView];
         
+//        [Common showMsgBox4:@"欢迎使用" msg:@"请绑定您的蓝牙刷卡器" parentCtrl:self withBlock:nil withTag:100789 uuidName:nil];
+        
+    
+        UIAlertView*alert=[[UIAlertView alloc]initWithTitle:@"欢迎使用"
+                                                    message:@"请绑定您的蓝牙刷卡器" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确认", nil];
+        alert.tag = 100789;
+        alert.delegate = self;
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+        [alert show];
+        
         self.tabBarController.tabBar.hidden = YES;
     }
     
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag == 100789) {
+        NSString *bdm = [NSString stringWithFormat:@"%@",[[alertView textFieldAtIndex:0] text]];
+        [[NSUserDefaults standardUserDefaults] setObject:bdm forKey:@"uuidName"];
+
+
+        
+    }
 }
 - (void)updateVersion{
     //启动更新检查SDK
@@ -104,6 +124,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     contentY = 0;
     self.menuCollectionView.alwaysBounceVertical = YES;
     self.view.backgroundColor = [UIColor whiteColor];
