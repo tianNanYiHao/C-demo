@@ -10,7 +10,7 @@
 #import "CardMachineTableViewCell.h"
 #import "Common.h"
 
-@interface MyCreditCardMachineViewController ()<UITableViewDataSource,UITableViewDelegate,ResponseData>{
+@interface MyCreditCardMachineViewController ()<UITableViewDataSource,UITableViewDelegate,ResponseData,UIAlertViewDelegate>{
     
     NSArray *tableViewArray;//列表数组
     
@@ -32,6 +32,9 @@
     
     NSTimer *timer;//延迟显示
     
+    NSMutableArray *_blueToothNumberSaveArray;  //保存蓝牙识别号的数组
+    
+    
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *myCreditCardMachineTableView;
@@ -50,20 +53,40 @@
     
     self.navigationController.navigationBarHidden = NO;
     
-    tableViewArray = [NSArray array];
+//    tableViewArray = [NSArray array];
     
     self.myCreditCardMachineTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    Request *requst = [[Request alloc]initWithDelegate:self];
-       
-    [requst myCreditCardMachine];
+//    Request *requst = [[Request alloc]initWithDelegate:self];
+    
+//    [requst myCreditCardMachine];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:L(@"MBPLoading")];
     [hud hide:YES afterDelay:1];
-    
     [Common setExtraCellLineHidden:self.myCreditCardMachineTableView];
+    
+    
+    
+    //为蓝牙卡头添加登记
+    UIAlertView*alert=[[UIAlertView alloc]initWithTitle:@"欢迎使用"
+                                                message:@"请绑定您的蓝牙刷卡器" delegate:self cancelButtonTitle:@"已绑定过" otherButtonTitles:@"绑定", nil];
+    alert.tag = 100789;
+    alert.delegate = self;
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    UITextField *t = [alert textFieldAtIndex:0];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"] length]>0) {
+        t.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"];
+    }else{
+        t.placeholder = @"请输入蓝牙刷卡头编号(YL开头)";
+    }
+    [alert show];
+    
+    _blueToothNumberSaveArray = [NSMutableArray arrayWithCapacity:0];
+
    
 }
+
 
 - (void)showMBP{
     
@@ -111,7 +134,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return tableViewArray.count;
+    return _blueToothNumberSaveArray.count;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -126,41 +149,45 @@
     
     CardMachineTableViewCell *MachineCell = (CardMachineTableViewCell *) [tableView dequeueReusableCellWithIdentifier:MachineCellCellIdentifier];
     
-    MachineCell.CardMachineLabel.text = tableViewArray[indexPath.row][@"psam"];
+    MachineCell.CardMachineLabel.text = _blueToothNumberSaveArray[indexPath.row];
     
     
-    NSString *device = tableViewArray[indexPath.row][@"posDevice"];
     
-    posDevice = [device intValue];
-    
-    if(posDevice == 1){
-    
-        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_ic"];
-    
-    
-    }else if (posDevice == 10){
-    
-        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_bt_vpos"];
-    
-    }else if (posDevice == 100){
-        
-        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_audio_vpos"];
-        
-    }else if (posDevice == 1000){
-        
-        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_4k"];
-        
-    }else if (posDevice == 10000){
-        
-        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"newland_ic"];
-        
-    }else if (posDevice == 100000){
-        
-        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_audio"];
-        
-    }
-
-    
+//    MachineCell.CardMachineLabel.text = tableViewArray[indexPath.row][@"psam"];
+//    
+//    
+//    NSString *device = tableViewArray[indexPath.row][@"posDevice"];
+//    
+//    posDevice = [device intValue];
+//    
+//    if(posDevice == 1){
+//    
+//        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_ic"];
+//    
+//    
+//    }else if (posDevice == 10){
+//    
+//        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_bt_vpos"];
+//    
+//    }else if (posDevice == 100){
+//        
+//        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_audio_vpos"];
+//        
+//    }else if (posDevice == 1000){
+//        
+//        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_4k"];
+//        
+//    }else if (posDevice == 10000){
+//        
+//        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"newland_ic"];
+//        
+//    }else if (posDevice == 100000){
+//        
+//        MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"itron_audio"];
+//        
+//    }
+//
+//    
     return MachineCell;
 
     
@@ -168,6 +195,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [[NSUserDefaults standardUserDefaults] setObject:_blueToothNumberSaveArray[indexPath.row] forKey:@"uuidName"];
     
     
 }
@@ -205,9 +233,16 @@
 }
 
 
-
-
-
-
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//是否登记蓝牙刷卡头
+if (alertView.tag == 100789) {
+    if (buttonIndex == 0) {  //已绑定过 直接搜索
+    }else if (buttonIndex == 1){  //去绑定 替换uuidName
+        [[NSUserDefaults standardUserDefaults] setObject:[[alertView textFieldAtIndex:0] text] forKey:@"uuidName"];
+        [_blueToothNumberSaveArray addObject:[[alertView textFieldAtIndex:0] text]];
+       
+    }
+  }
+}
 
 @end

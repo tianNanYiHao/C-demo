@@ -24,6 +24,7 @@
 #import "ITronBlueToothVpos.h"
 #import "LianDiBlueToothVpos.h"
 #import "UPPayPlugin.h"
+#import "PSTAlertController.h"
 
 
 
@@ -126,20 +127,22 @@
 //        }
 //    }
     
-     //提示关闭蓝牙开关
-    [Common showMsgBox3:@"温馨提示" msg:@"使用音频前,请关闭系统蓝牙" parentCtrl:self withBlock:^(id closeBlock) {
+    
+    PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"温馨提示" message:@"使用音频前,请关闭系统蓝牙"];
+    [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"确定" handler:^(PSTAlertAction *action) {
         NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
         if ([[UIApplication sharedApplication]canOpenURL:url]) {
             [[UIApplication sharedApplication]openURL:url];
         }
-    } withBloclCancle:^(id cancleBlock) {
-        
-    } withTag:10099];
-    
+    }]];
+    [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"取消" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
+       
+    }]];
+    [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
 
+    
+    
     self.isBluetooth = @"1";
-    
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideswiperingView) name:@"hideswiperingView" object:nil];
     
 }
@@ -245,55 +248,61 @@
         }
     }else if(self.orderData.orderPayType == CardPayType){
         
-        if (iOS8) { //防止5s奔溃
-            NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-            [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
+        
+        PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:nil message:@"请选择刷卡器类型?"];
+    
+        [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"音频" handler:^(PSTAlertAction *action) {
+            self.isBluetooth = @"1";
+            //                [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
+            NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+            NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
             
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请选择刷卡器类型?" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"音频" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                self.isBluetooth = @"1";
-//                [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
-                NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-                NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
-                
-                if([[PosManager getInstance] getPluggedType])
-                {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        //回到主线程队列,进行UI的刷新
-                        swiperingView.hidden = NO;
-                    });
-                    dispatch_queue_t queue = dispatch_queue_create("firstQueue", DISPATCH_QUEUE_CONCURRENT);
-                    dispatch_async(queue, ^(void) {
-                        [[PosManager getInstance]cswipecardTransLogNo:transLogNo orderId:self.orderData.orderId delegate:self];
-                    });    
-                }else{
-                    [Common showMsgBox:@"" msg:@"未检测到刷卡头,请插入重试" parentCtrl:self];
-                }
- 
-            }];
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:L(@"蓝牙") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-                self.isBluetooth = @"0";
-                self.hub = [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"蓝牙设备搜索中..."];
-                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeHUD:) name:@"closeHUD" object:nil];
-                
-                [[PosManager getInstance] initDeviceWithType:DEVICE_TYPE_BOARD_BLUETOOTH];
-            }];
-            [alert addAction:defaultAction];
-            [alert addAction:cancelAction];
-            [self presentViewController:alert animated:YES completion:nil];
-        }else{
+            if([[PosManager getInstance] getPluggedType])
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //回到主线程队列,进行UI的刷新
+                    swiperingView.hidden = NO;
+                });
+                dispatch_queue_t queue = dispatch_queue_create("firstQueue", DISPATCH_QUEUE_CONCURRENT);
+                dispatch_async(queue, ^(void) {
+                    [[PosManager getInstance]cswipecardTransLogNo:transLogNo orderId:self.orderData.orderId delegate:self];
+                });
+            }else{
+                [Common showMsgBox:@"" msg:@"未检测到刷卡头,请插入重试" parentCtrl:self];
+            }
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"请选择刷卡器类型?"delegate:self cancelButtonTitle:@"音频" otherButtonTitles:@"蓝牙", nil];
-            alert.tag = 10085;
+        }]];
+        
+        
+        [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"蓝牙" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
+            
+            //为蓝牙卡头添加登记
+            UIAlertView*alert=[[UIAlertView alloc]initWithTitle:@"欢迎使用"
+                                                        message:@"请绑定您的蓝牙刷卡器" delegate:self cancelButtonTitle:@"已绑定过" otherButtonTitles:@"绑定", nil];
+            alert.tag = 100789;
             alert.delegate = self;
-            alert.alertViewStyle = UIAlertActionStyleDefault;
+            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            
+            UITextField *t = [alert textFieldAtIndex:0];
+            if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"] length]>0) {
+                t.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"];
+            }else{
+                t.placeholder = @"请输入蓝牙刷卡头编号(YL开头)";
+            }
             [alert show];
-  
-        }
- 
+            
+//            self.isBluetooth = @"0";
+//            self.hub = [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"蓝牙设备搜索中..."];
+//            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeHUD:) name:@"closeHUD" object:nil];
+//            
+//            [[PosManager getInstance] initDeviceWithType:DEVICE_TYPE_BOARD_BLUETOOTH];
+            
+        }]];
+        [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
         
     }else{
-        
         NSLog(@"选择了继续快捷支付");
         UIStoryboard *quick = [UIStoryboard storyboardWithName:@"QuickPay" bundle:nil];
         MyBankListViewController *myBankListCtrl = [quick instantiateViewControllerWithIdentifier:@"MyBankListViewController"];
@@ -632,53 +641,25 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     Request *req = [[Request alloc]initWithDelegate:self];
-
-    //关闭系统蓝牙
-    if (alertView.tag == 10099){
-        if (buttonIndex == 1) {
-            //提示关闭蓝牙开关
-            NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
-            if ([[UIApplication sharedApplication]canOpenURL:url]) {
-                [[UIApplication sharedApplication]openURL:url];
-            }
-        }
-    }
-    //选择刷卡类型
-  else  if (alertView.tag == 10085) {
-        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-        [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
-        
-        if (buttonIndex == 0) {  //音频
-            self.isBluetooth = @"1";
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
-            NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-            NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
-            
-            if([[PosManager getInstance] getPluggedType])
-            {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    //回到主线程队列,进行UI的刷新
-                    swiperingView.hidden = NO;
-                });
-                dispatch_queue_t queue = dispatch_queue_create("firstQueue", DISPATCH_QUEUE_CONCURRENT);
-                dispatch_async(queue, ^(void) {
-                    [[PosManager getInstance]cswipecardTransLogNo:transLogNo orderId:self.orderData.orderId delegate:self];
-                });
-            }else{
-                [Common showMsgBox:@"" msg:@"未检测到刷卡头,请插入重试" parentCtrl:self];
-            }
-        }else{  //蓝牙
-            
-            NSLog(@"11111111111111111111111111111111111111111111111111111111111111111111");
+    
+    //是否登记蓝牙刷卡头
+    if (alertView.tag == 100789) {
+        if (buttonIndex == 0) {  //已绑定过 直接搜索
             self.isBluetooth = @"0";
             self.hub = [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"蓝牙设备搜索中..."];
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeHUD:) name:@"closeHUD" object:nil];
+            [[PosManager getInstance] initDeviceWithType:DEVICE_TYPE_BOARD_BLUETOOTH];
             
+        }else if (buttonIndex == 1){  //去绑定 替换uuidName
+            
+            [[NSUserDefaults standardUserDefaults] setObject:[[alertView textFieldAtIndex:0] text] forKey:@"uuidName"];
+            self.isBluetooth = @"0";
+            self.hub = [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"蓝牙设备搜索中..."];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeHUD:) name:@"closeHUD" object:nil];
             [[PosManager getInstance] initDeviceWithType:DEVICE_TYPE_BOARD_BLUETOOTH];
         }
     }
-  
-    
+
 //    //新增银联SDK快捷支付 tag : 9527
 //    if (alertView.tag == 9527) {
 //        if (buttonIndex == 0) {
@@ -824,19 +805,24 @@
     
     NSString *s = [sDict objectForKey:@"pipiNo"];
     NSString *s2 = [sDict objectForKey:@"pipiOver"];
+    NSString *s3 = [sDict objectForKey:@"pipiTimeOut"];
     
     if (noti && [s isEqualToString:@"未搜索到匹配的蓝牙"]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"closeHUD" object:nil];
-        [Common showMsgBox:@"" msg:@"未搜索到匹配的蓝牙" parentCtrl:self];
-         [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
+        [Common showMsgBox:@"" msg:@"未搜索到匹配的蓝牙,请重新搜索" parentCtrl:self];
+        
     }
     else if(noti && [s2 isEqualToString:@"蓝牙搜索结束"]){
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"closeHUD" object:nil];
         [Common showMsgBox:@"" msg:@"蓝牙搜索结束" parentCtrl:self];
     }
+    else if(noti && [s3 isEqualToString:@"超时"]){
+        [Common showMsgBox:@"" msg:@"蓝牙链接超时" parentCtrl:self];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"closeHUD" object:nil];
+    }
     else{
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"closeHUD" object:nil];
-        [Common showMsgBox:@"" msg:@"蓝牙连接失败,请重试" parentCtrl:self];
+        [Common showMsgBox:@"" msg:@"搜索到设备,但蓝牙连接失败,请重试" parentCtrl:self];
     }
 
 }

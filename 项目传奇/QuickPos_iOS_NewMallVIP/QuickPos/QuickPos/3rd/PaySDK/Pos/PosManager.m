@@ -332,6 +332,7 @@ static PosManager *instance;
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.device == 0 && type == -1) {
             [MBProgressHUD hideHUDForView:v animated:YES];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"未搜索到匹配的蓝牙" forKey:@"pipiNo"]];
             [MBProgressHUD showHUDAddedTo:v WithString:@"识别失败，请重新插入。"];
             pluggedType = NO;
         }
