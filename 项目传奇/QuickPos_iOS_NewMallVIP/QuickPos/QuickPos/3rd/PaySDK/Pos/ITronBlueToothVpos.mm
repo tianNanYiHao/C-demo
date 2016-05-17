@@ -54,7 +54,8 @@
     [mVcom setDebug:YES];
     //    初始化爱刷刷卡头
     [mVcom setCommmunicatinMode:BLE_DianFB];
-    //必须在主线程中执行初始化蓝牙方法。
+ 
+//    //必须在主线程中执行初始化蓝牙方法。
     [self performSelectorOnMainThread:@selector(initBlueTooth) withObject:nil waitUntilDone:YES];
     
 }
@@ -102,43 +103,40 @@
 - (void)discoverBLeDevice:(NSDictionary *)uuidAndName {
     
     NSLog(@"device is %@ deviceKind %@", uuidAndName,[uuidAndName class]);
-    NSLog(@"_arrBTDevice %d ,,,, %@",_arrBTDevice.count,_arrBTDevice);
-    
+   
     NSString *bdm = [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"];
-    
     NSString *uuidMainKeyStr = [uuidAndName objectForKey:@"mainKey"];
     NSString *uuidGetBDM = [uuidAndName objectForKey:uuidMainKeyStr];
     
+    NSLog(@"***** bdm ******* %@",bdm);
+    
     if ([bdm isEqualToString:uuidGetBDM]) {
         [self.arrBTDevice addObject:uuidAndName];
+        
+        int ret = [cmManager openDevice:uuidMainKeyStr cbDelegate:self timeout:15*1000];
+        
+        if (ret == 0) {
+            NSLog(@"蓝牙连接成功");
+            NSLog(@"%d", [cmManager isConnected]);
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"startswipe" object:nil];
+            
+        }else{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil];
+            NSLog(@"蓝牙连接失败");
+        }
+        
     }else{
+       
         [self.arrBTDevice removeAllObjects];
+
     }
-    
+     NSLog(@"_arrBTDevice %d ,,,, %@",_arrBTDevice.count,_arrBTDevice);
 
     
-    
-    [cmManager stopSearching];
     if ([self.arrBTDevice count] == 0) {
         return;
     }
-    
-
-    
-    NSString *uuidString = [uuidAndName objectForKey:@"mainKey"];
-    int ret = [cmManager openDevice:uuidString cbDelegate:self timeout:15*1000];
-    
-    if (ret == 0) {
-        NSLog(@"蓝牙连接成功");
-        NSLog(@"%d", [cmManager isConnected]);
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"startswipe" object:nil];
-        
-    }else{
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil];
-        NSLog(@"蓝牙连接失败");
-    }
-    
+    [cmManager stopSearching];
 }
 
 - (void)discoverOneDevice:(CBPeripheral *)peripheral{
@@ -163,11 +161,13 @@
 //        [alert show];
         if ([super.delegate respondsToSelector:@selector(onDeviceKind:)]) {
             [super.delegate onDeviceKind:-1];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"未搜索到匹配的蓝牙" forKey:@"pipiNo"]];
+            NSLog(@"蓝牙未搜索到,发消息提示框");
         }
-     [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"蓝牙搜索结束" forKey:@"pipiOver"]];
+    }else{
+        //成功的通知 (不发了)
+//         [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"蓝牙搜索结束" forKey:@"pipiOver"]];
+         NSLog(@"arrBTDevice ==*** %d",_arrBTDevice.count);
     }
-    NSLog(@"arrBTDevice ==*** %d",_arrBTDevice.count);
     NSLog(@"蓝牙搜索结束");
     
 }
@@ -246,6 +246,7 @@
 //(超出预定的操作时间，30秒)
 -(void)onTimeout{
     NSLog(@"刷卡器连接超时");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"超时" forKey:@"pipiTimeOut"]];
     [self sendDeviceType:-1];
 }
 
@@ -374,6 +375,7 @@
     
     if ([super.delegate respondsToSelector:@selector(onDeviceKind:)]) {
         [super.delegate onDeviceKind:result];
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"closeHUD" object:nil userInfo:[NSDictionary dictionaryWithObject:@"未搜索到匹配的蓝牙" forKey:@"pipiOverpipiNo"]];
         NSLog(@"%d!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",result);
     }
 }

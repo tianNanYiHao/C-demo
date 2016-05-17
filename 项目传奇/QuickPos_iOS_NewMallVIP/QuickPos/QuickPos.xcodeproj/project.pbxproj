@@ -224,6 +224,7 @@
 		875EFD421C48BDBE001542B8 /* MyAccountGaikuangModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD411C48BDBE001542B8 /* MyAccountGaikuangModel.m */; };
 		875EFD451C48D187001542B8 /* SureNowRedeemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD441C48D187001542B8 /* SureNowRedeemViewController.m */; };
 		875F709B1CB62A6500D06935 /* MyPosMangerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F709A1CB62A6500D06935 /* MyPosMangerViewController.m */; };
+		8764FB531CE974CE00FCC8FF /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8764FB521CE974CE00FCC8FF /* PSTAlertController.m */; };
 		877251BA1C3F6AC800E4185A /* MangePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877251B91C3F6AC800E4185A /* MangePayViewController.m */; };
 		878C43C01C576B5A0047A3F6 /* MyHongbaoWebVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878C43BF1C576B5A0047A3F6 /* MyHongbaoWebVIewController.m */; };
 		878C43C31C5773CA0047A3F6 /* WebAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878C43C21C5773CA0047A3F6 /* WebAgreementViewController.m */; };
@@ -838,6 +839,8 @@
 		875EFD441C48D187001542B8 /* SureNowRedeemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureNowRedeemViewController.m; sourceTree = "<group>"; };
 		875F70991CB62A6500D06935 /* MyPosMangerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPosMangerViewController.h; sourceTree = "<group>"; };
 		875F709A1CB62A6500D06935 /* MyPosMangerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPosMangerViewController.m; sourceTree = "<group>"; };
+		8764FB511CE974CE00FCC8FF /* PSTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAlertController.h; sourceTree = "<group>"; };
+		8764FB521CE974CE00FCC8FF /* PSTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAlertController.m; sourceTree = "<group>"; };
 		877251B81C3F6AC800E4185A /* MangePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MangePayViewController.h; sourceTree = "<group>"; };
 		877251B91C3F6AC800E4185A /* MangePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MangePayViewController.m; sourceTree = "<group>"; };
 		878C43BE1C576B5A0047A3F6 /* MyHongbaoWebVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHongbaoWebVIewController.h; sourceTree = "<group>"; };
@@ -1449,6 +1452,7 @@
 		591BBFC21AEDFE320037199A /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				8764FB501CE974CE00FCC8FF /* PSTAlertController */,
 				D589C79F1CA4E0E900C78BC3 /* EAIntroView */,
 				87CEC9651C86C939007998A0 /* UPPayDemo */,
 				AEF0B6171C7C592700ABF643 /* LandiMPOS */,
@@ -2145,6 +2149,15 @@
 				875EFD411C48BDBE001542B8 /* MyAccountGaikuangModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8764FB501CE974CE00FCC8FF /* PSTAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				8764FB511CE974CE00FCC8FF /* PSTAlertController.h */,
+				8764FB521CE974CE00FCC8FF /* PSTAlertController.m */,
+			);
+			path = PSTAlertController;
 			sourceTree = "<group>";
 		};
 		878C43C41C5788690047A3F6 /* QucikPay */ = {
@@ -2976,6 +2989,7 @@
 				D5E042BF1BDE29EC00677B26 /* UIView+Additions.m in Sources */,
 				591BC0B51AEDFE320037199A /* UIView+IQKeyboardToolbar.m in Sources */,
 				AEE827B21C31118D0099CB70 /* MASConstraint.m in Sources */,
+				8764FB531CE974CE00FCC8FF /* PSTAlertController.m in Sources */,
 				591BC0A61AEDFE320037199A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				AEE827C31C3123640099CB70 /* HotMangeTableViewCell.m in Sources */,
 				591BC0AC1AEDFE320037199A /* UIWebView+AFNetworking.m in Sources */,
