@@ -111,8 +111,9 @@
                 [Tool setobject:array forkey:@"save_blueToothNumberSaveArray"];
                 
                 NSLog(@"%@",[Tool objectforkey:@"save_blueToothNumberSaveArray"]);
-                [_myCreditCardMachineTableView reloadData];
+                
             });
+            [_myCreditCardMachineTableView reloadData];
         }else{
              [MBProgressHUD showHUDAddedTo:self.view WithString:@"蓝牙刷卡头绑定码未填写"];
         }
@@ -270,7 +271,6 @@
         
         NSArray *array = [[NSArray alloc] initWithArray:_blueToothNumberSaveArray];
         [Tool setobject:array forkey:@"save_blueToothNumberSaveArray"];
-        
         
         if (array.count == 0) {
             //如果数组为空 则存储空字符串
