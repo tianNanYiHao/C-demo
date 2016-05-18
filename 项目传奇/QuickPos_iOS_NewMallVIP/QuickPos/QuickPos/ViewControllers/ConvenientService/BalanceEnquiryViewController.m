@@ -70,11 +70,7 @@
     _myBlanceLab.textColor = [Common hexStringToColor:@"#333333"];
     
     
-    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
-    
-    self.isBluetooth = @"0";
-    
+  
     
     PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"" message:@"使用音频前,请关闭系统蓝牙"];
     [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"关闭" handler:^(PSTAlertAction *action) {
@@ -87,6 +83,13 @@
         
     }]];
     [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
+    
+     self.isBluetooth = @"1";
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
+    
+   
+    
 }
 
 - (void)noticePost:(NSNotification *)noti{
