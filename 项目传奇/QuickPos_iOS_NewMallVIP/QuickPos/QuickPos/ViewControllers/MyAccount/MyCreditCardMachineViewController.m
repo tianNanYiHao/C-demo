@@ -9,6 +9,8 @@
 #import "MyCreditCardMachineViewController.h"
 #import "CardMachineTableViewCell.h"
 #import "Common.h"
+#import "PSTAlertController.h"
+#import "PSTAlertController.h"
 
 @interface MyCreditCardMachineViewController ()<UITableViewDataSource,UITableViewDelegate,ResponseData,UIAlertViewDelegate>{
     
@@ -46,8 +48,11 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    self.myCreditCardMachineTableView.scrollEnabled = NO;
+    _blueToothNumberSaveArray = [NSMutableArray arrayWithCapacity:0];
+    self.myCreditCardMachineTableView.scrollEnabled = YES;
+    _myCreditCardMachineTableView.userInteractionEnabled = YES;
+    _myCreditCardMachineTableView.dataSource = self;
+    _myCreditCardMachineTableView.delegate  = self;
     
     self.title = L(@"MyCreditCardMachine");
     
@@ -55,7 +60,7 @@
     
 //    tableViewArray = [NSArray array];
     
-    self.myCreditCardMachineTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.myCreditCardMachineTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 //    Request *requst = [[Request alloc]initWithDelegate:self];
     
@@ -67,27 +72,70 @@
     
     
     
-    //为蓝牙卡头添加登记
-    UIAlertView*alert=[[UIAlertView alloc]initWithTitle:@"欢迎使用"
-                                                message:@"请绑定您的蓝牙刷卡器" delegate:self cancelButtonTitle:@"已绑定过" otherButtonTitles:@"绑定", nil];
-    alert.tag = 100789;
-    alert.delegate = self;
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    
-    UITextField *t = [alert textFieldAtIndex:0];
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"] length]>0) {
-        t.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"];
-    }else{
-        t.placeholder = @"请输入蓝牙刷卡头编号(YL开头)";
-    }
-    [alert show];
-    
-    _blueToothNumberSaveArray = [NSMutableArray arrayWithCapacity:0];
-
    
+    
+    
+
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [rightBtn setTitle:@"添加" forState:UIControlStateNormal];
+    [rightBtn addTarget:self action:@selector(addNumber) forControlEvents:UIControlEventTouchUpInside];
+    rightBtn.frame = CGRectMake(0, 0, 50, 50);
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+
 }
+-(void)addNumber{
+    
+    PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"欢迎使用" message:@"请绑定您的蓝牙刷卡器"];
+    [gotoPageController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"] length]>0) {
+            textField.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"];
+        }else{
+            textField.placeholder = @"请输入蓝牙刷卡头编号(YL开头)";
+        }
+    }];
+    
+    [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"取消" handler:^(PSTAlertAction *action) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_myCreditCardMachineTableView reloadData];
+        });
+    }]];
+    [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"绑定" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
+        if ([action.alertController.textField.text length]>0){
+            [_blueToothNumberSaveArray addObject:action.alertController.textField.text];
+            NSLog(@"==%@",[_blueToothNumberSaveArray lastObject]);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSUserDefaults standardUserDefaults] setObject:action.alertController.textField.text forKey:@"uuidName"];
+                
+                NSArray *array = [[NSArray alloc] initWithArray:_blueToothNumberSaveArray];
+                [Tool setobject:array forkey:@"save_blueToothNumberSaveArray"];
+                
+                NSLog(@"%@",[Tool objectforkey:@"save_blueToothNumberSaveArray"]);
+                [_myCreditCardMachineTableView reloadData];
+            });
+        }else{
+             [MBProgressHUD showHUDAddedTo:self.view WithString:@"蓝牙刷卡头绑定码未填写"];
+        }
+        
+       
+    }]];
+    [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSMutableArray *arr = (NSMutableArray*)[[NSUserDefaults standardUserDefaults] objectForKey:@"save_blueToothNumberSaveArray"];
 
+    if (arr) {
+        _blueToothNumberSaveArray = [[NSMutableArray alloc] initWithArray:arr];
+    }else{
+        
+    }
+    [_myCreditCardMachineTableView reloadData];
 
+}
 - (void)showMBP{
     
     
@@ -148,6 +196,7 @@
     static NSString *MachineCellCellIdentifier = @"CardMachineTableViewCell";
     
     CardMachineTableViewCell *MachineCell = (CardMachineTableViewCell *) [tableView dequeueReusableCellWithIdentifier:MachineCellCellIdentifier];
+    MachineCell.userInteractionEnabled = YES;
     
     MachineCell.CardMachineLabel.text = _blueToothNumberSaveArray[indexPath.row];
     
@@ -192,13 +241,39 @@
 
     
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [[NSUserDefaults standardUserDefaults] setObject:_blueToothNumberSaveArray[indexPath.row] forKey:@"uuidName"];
     
     
+    
+    PSTAlertController *pstaCont = [PSTAlertController alertWithTitle:@"" message:@"绑定成功"];
+    [pstaCont addAction:[PSTAlertAction actionWithTitle:@"去刷卡" handler:^(PSTAlertAction * _Nonnull action) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.tabBarController.selectedIndex = 0;
+        });
+        
+    }]];
+    [pstaCont addAction:[PSTAlertAction actionWithTitle:@"取消" handler:^(PSTAlertAction * _Nonnull action) {
+        
+    }]];
+    [pstaCont showWithSender:nil controller:self animated:YES completion:NULL];
+   
 }
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_blueToothNumberSaveArray removeObjectAtIndex:indexPath.row];
+        NSArray *array = [[NSArray alloc] initWithArray:_blueToothNumberSaveArray];
+        [Tool setobject:array forkey:@"save_blueToothNumberSaveArray"];
+        [_myCreditCardMachineTableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    
+    
+}
+
 
 //  十进制转二进制
 - (NSString *)toBinarySystemWithDecimalSystem:(NSString *)decimal
@@ -232,17 +307,5 @@
     return result;
 }
 
-
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-//是否登记蓝牙刷卡头
-if (alertView.tag == 100789) {
-    if (buttonIndex == 0) {  //已绑定过 直接搜索
-    }else if (buttonIndex == 1){  //去绑定 替换uuidName
-        [[NSUserDefaults standardUserDefaults] setObject:[[alertView textFieldAtIndex:0] text] forKey:@"uuidName"];
-        [_blueToothNumberSaveArray addObject:[[alertView textFieldAtIndex:0] text]];
-       
-    }
-  }
-}
 
 @end
