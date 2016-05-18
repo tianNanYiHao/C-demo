@@ -105,10 +105,8 @@
         if ([action.alertController.textField.text length]>0){
             [_blueToothNumberSaveArray addObject:action.alertController.textField.text];
             NSLog(@"==%@",[_blueToothNumberSaveArray lastObject]);
-            
+            [[NSUserDefaults standardUserDefaults] setObject:action.alertController.textField.text forKey:@"uuidName"];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [[NSUserDefaults standardUserDefaults] setObject:action.alertController.textField.text forKey:@"uuidName"];
-                
                 NSArray *array = [[NSArray alloc] initWithArray:_blueToothNumberSaveArray];
                 [Tool setobject:array forkey:@"save_blueToothNumberSaveArray"];
                 
@@ -198,6 +196,8 @@
     CardMachineTableViewCell *MachineCell = (CardMachineTableViewCell *) [tableView dequeueReusableCellWithIdentifier:MachineCellCellIdentifier];
     MachineCell.userInteractionEnabled = YES;
     
+    MachineCell.CardMachineImageView.image = [UIImage imageNamed:@"22"];
+    
     MachineCell.CardMachineLabel.text = _blueToothNumberSaveArray[indexPath.row];
     
     
@@ -265,9 +265,21 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         [_blueToothNumberSaveArray removeObjectAtIndex:indexPath.row];
+        
         NSArray *array = [[NSArray alloc] initWithArray:_blueToothNumberSaveArray];
         [Tool setobject:array forkey:@"save_blueToothNumberSaveArray"];
+        
+        
+        if (array.count == 0) {
+            //如果数组为空 则存储空字符串
+            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"uuidName"];
+        }else {
+            //重新存储上一条记录
+            [[NSUserDefaults standardUserDefaults] setObject:_blueToothNumberSaveArray[indexPath.row-1] forKey:@"uuidName"];
+        }
+       
         [_myCreditCardMachineTableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     
