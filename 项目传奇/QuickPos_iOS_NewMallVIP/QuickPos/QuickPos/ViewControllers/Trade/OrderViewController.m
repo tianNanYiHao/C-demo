@@ -289,8 +289,7 @@
                 
             }else{
                 
-                
-                PSTAlertController *pstac = [PSTAlertController alertWithTitle:@"" message:@"您还未绑定蓝牙,请至'我的账户绑定'"];
+                PSTAlertController *pstac = [PSTAlertController alertWithTitle:@"" message:@"您还未绑定蓝牙,请至'我的账户'绑定"];
                 [pstac addAction:[PSTAlertAction actionWithTitle:@"确定" handler:^(PSTAlertAction * _Nonnull action) {
                     MyCreditCardMachineViewController *myCreditCardMachineVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCreditCardMachineVC"];
                     myCreditCardMachineVC.hidesBottomBarWhenPushed = YES;
