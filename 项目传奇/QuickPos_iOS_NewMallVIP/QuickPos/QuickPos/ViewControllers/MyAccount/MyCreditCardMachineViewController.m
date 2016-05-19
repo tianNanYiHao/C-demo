@@ -244,7 +244,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];//选中后的反显颜色即刻消失
+
     [[NSUserDefaults standardUserDefaults] setObject:_blueToothNumberSaveArray[indexPath.row] forKey:@"uuidName"];
     
     
