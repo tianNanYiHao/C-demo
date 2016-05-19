@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D9g-Sx-Vox"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHd-qm-5iH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BsK-VS-9TD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBE-dc-JrN">
+                                <rect key="frame" x="27" y="135" width="78" height="30"/>
+                                <state key="normal" title="设置主密钥">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnMainkey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ogs-QF-Q5o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2i-iR-y5y">
+                                <rect key="frame" x="23" y="225" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxR-fp-dYj">
+                                <rect key="frame" x="169" y="135" width="96" height="30"/>
+                                <state key="normal" title="设置工作密钥">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnWorkKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AxU-xe-oic"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEE-vP-5jl">
+                                <rect key="frame" x="27" y="82" width="78" height="29.5"/>
+                                <state key="normal" title="金额+密码">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnAmountPass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1R-xI-Tte"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tj8-dd-ie0">
+                                <rect key="frame" x="168" y="83" width="86" height="29.5"/>
+                                <state key="normal" title="金额+无密码">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnAmountNopass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7I8-J7-JaZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp3-oS-H1Q">
+                                <rect key="frame" x="27" y="108" width="85" height="30.5"/>
+                                <state key="normal" title="无金额+密码">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnNoAmountpass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QcH-ye-TsO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOw-du-r0l">
+                                <rect key="frame" x="168" y="108" width="105" height="29.5"/>
+                                <state key="normal" title="无金额+无密码">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnNoAmountNopass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxt-ju-sAh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hp-3l-aVk">
+                                <rect key="frame" x="71" y="225" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHJ-Vo-xan">
+                                <rect key="frame" x="27" y="55" width="69" height="30"/>
+                                <state key="normal" title="查找设备">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnFoundDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Co3-wa-9f2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T69-gL-gJC">
+                                <rect key="frame" x="23" y="264" width="285" height="62"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlM-aj-7k1">
+                                <rect key="frame" x="169" y="55" width="96" height="30"/>
+                                <state key="normal" title="断开连接设备">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtndisConnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLQ-tn-5h5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7c-QH-kF8">
+                                <rect key="frame" x="27" y="161" width="124" height="29.5"/>
+                                <state key="normal" title="设置商户号终端号">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnTerid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awd-qZ-hif"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ug-6D-iWD">
+                                <rect key="frame" x="169" y="161" width="71" height="28.5"/>
+                                <state key="normal" title="获取MAC">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnMac:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sku-hn-P2W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QG-6r-vlo">
+                                <rect key="frame" x="25" y="189" width="71" height="28.5"/>
+                                <state key="normal" title="取消交易">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Td0-O7-NF8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmC-fr-PdO">
+                                <rect key="frame" x="172" y="189" width="65" height="27"/>
+                                <state key="normal" title="读取电量">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnReadBattery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gE1-t0-4ik"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="ORS-7g-cY2">
+                                <rect key="frame" x="5" y="334" width="309" height="234"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="R7F-2r-843"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uHW-oh-Qiy"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="深圳锦弘霖蓝牙测试_V20160423_V2.3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DDo-zl-bgA" userLabel="深圳锦弘霖蓝牙设备 测试DEMO_v2.2">
+                                <rect key="frame" x="20" y="5" width="262" height="60"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UxR-fp-dYj" firstAttribute="leading" secondItem="AlM-aj-7k1" secondAttribute="leading" id="Fbf-Hy-tMj"/>
+                            <constraint firstItem="UxR-fp-dYj" firstAttribute="leading" secondItem="cmC-fr-PdO" secondAttribute="leading" id="LMS-V1-h9h"/>
+                            <constraint firstItem="UxR-fp-dYj" firstAttribute="leading" secondItem="tj8-dd-ie0" secondAttribute="leading" id="MVO-6o-Ea4"/>
+                            <constraint firstItem="qBE-dc-JrN" firstAttribute="leading" secondItem="mp3-oS-H1Q" secondAttribute="leading" id="Q5m-gq-oRH"/>
+                            <constraint firstItem="UxR-fp-dYj" firstAttribute="leading" secondItem="uOw-du-r0l" secondAttribute="leading" id="hIF-iX-Loy"/>
+                            <constraint firstItem="qBE-dc-JrN" firstAttribute="leading" secondItem="eEE-vP-5jl" secondAttribute="leading" id="zMg-dl-lw2"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="LabTip" destination="5hp-3l-aVk" id="5sR-Iq-OlZ"/>
+                        <outlet property="TextViewTip" destination="T69-gL-gJC" id="sTH-qn-QHQ"/>
+                        <outlet property="devicesTableView" destination="ORS-7g-cY2" id="BSy-hr-77K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="214"/>
+        </scene>
+    </scenes>
+</document>
