@@ -27,7 +27,7 @@
 
 +(void)showMsgBox:(NSString*)title msg:(NSString*)msg parentCtrl:(id)ctrl{
     if(iOS8){
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         }];
         [alert addAction:defaultAction];
