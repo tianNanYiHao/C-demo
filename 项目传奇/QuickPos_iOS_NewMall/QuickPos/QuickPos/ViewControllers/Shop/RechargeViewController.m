@@ -57,6 +57,15 @@
 
 @property (nonatomic, strong) NSString *isAccount;//是否是账户充值的标准
 
+@property (weak, nonatomic) IBOutlet UILabel *choosePayWayLab;
+
+@property (weak, nonatomic) IBOutlet UIView *choosePayWayView;
+
+@property (weak, nonatomic) IBOutlet RadioButton *button7;
+@property (weak, nonatomic) IBOutlet RadioButton *button8;
+@property (nonatomic,strong) NSString *payWay;
+
+
 @end
 
 @implementation RechargeViewController
@@ -72,6 +81,8 @@
     
     if (sender.tag == 44) {
         //刷卡支付
+        _choosePayWayView.hidden = NO;
+        _choosePayWayLab.hidden = NO;
         self.radioBottomView.hidden = YES;
         merchantId = @"0002000002";
         productId = @"0000000000";
@@ -88,6 +99,8 @@
         payType = CardPayType;
     }else if (sender.tag == 66){
         //账户支付
+        _choosePayWayLab.hidden = YES;
+        _choosePayWayView.hidden = YES;
         self.radioBottomView.hidden = YES;
         merchantId = @"0002000002";
         productId = @"0000000004";
@@ -97,6 +110,8 @@
         payType = AccountPayType;
     }else{
         //快捷支付
+        _choosePayWayLab.hidden = YES;
+        _choosePayWayView.hidden = YES;
         self.radioBottomView.hidden = YES;
         merchantId = @"0004000001";
         productId = @"0000000001";
@@ -200,8 +215,13 @@
     
     _button1.groupButtons = @[_button1,_button2,_button3];
     _button4.groupButtons = @[_button4,_button5,_button6];
+    _button7.groupButtons = @[_button7,_button8];
     _button4.selected = YES;
     _button1.selected = YES;
+    _button7.selected = YES;
+    _choosePayWayLab.hidden = NO;
+    _choosePayWayView.hidden = NO;
+    _payWay = @"音频";
     
      self.radioBottomView.hidden = YES;
     
@@ -247,6 +267,21 @@
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     }
+}
+- (IBAction)choosePayWay:(RadioButton*)sender {
+    if (sender.tag == 77) {
+        //音频
+        NSLog(@"音频");
+        _payWay = @"音频";
+        
+        
+    }else{
+        //蓝牙
+        NSLog(@"蓝牙");
+        _payWay = @"蓝牙";
+        
+    }
+    
 }
 
 - (IBAction)helpClick:(id)sender {
@@ -467,6 +502,7 @@
         if (type == REQUSET_ORDER) {
             UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             OrderViewController *shopVc = [self.storyboard instantiateViewControllerWithIdentifier:@"OrderViewController"];
+            shopVc.payWay = _payWay; //当刷卡支付时,设置刷卡方式
             orderData = [[OrderData alloc]initWithData:dict];
             orderData.orderAccount = [AppDelegate getUserBaseData].mobileNo;
             orderData.orderPayType = payType;

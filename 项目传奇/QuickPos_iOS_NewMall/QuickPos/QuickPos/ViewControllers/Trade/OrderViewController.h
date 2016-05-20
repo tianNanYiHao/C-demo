@@ -22,5 +22,5 @@
 @property (nonatomic,strong)HandSignViewController *handSignViewController;
 @property (nonatomic, copy) NSString *printInfo;
 @property (nonatomic,retain)NSObject<getOrderTypeProtocol>*delegate;
-
+@property (nonatomic,strong)NSString *payWay;
 @end

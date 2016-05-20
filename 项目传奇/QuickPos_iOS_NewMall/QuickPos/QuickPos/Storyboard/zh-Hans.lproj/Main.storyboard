@@ -2730,192 +2730,6 @@
             </objects>
             <point key="canvasLocation" x="-1541.5" y="1472.5"/>
         </scene>
-        <!--Recharge View Controller-->
-        <scene sceneID="C7I-e9-m0J">
-            <objects>
-                <viewController storyboardIdentifier="RechargeViewController" id="K43-es-39T" customClass="RechargeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ib9-Zd-Mfd">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="518-io-HKX">
-                                <rect key="frame" x="0.0" y="20" width="320" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值金额" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Ms-mN-OW2">
-                                        <rect key="frame" x="18" y="12" width="72" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入充值金额" minimumFontSize="17" id="BOT-cz-1B4">
-                                        <rect key="frame" x="76" y="8" width="240" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WCJ-wz-9qz">
-                                <rect key="frame" x="20" y="324" width="280" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.40784313729999999" green="0.78823529410000004" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="确认充值">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushToOrder:" destination="juy-gD-Rb1" eventType="touchUpInside" id="ORt-B2-HEb"/>
-                                    <action selector="pushToOrder:" destination="K43-es-39T" eventType="touchUpInside" id="nCu-6D-l67"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" id="mMj-mZ-8Bt">
-                                <rect key="frame" x="0.0" y="117" width="320" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择支付方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y98-Tm-7A7">
-                                        <rect key="frame" x="20" y="3" width="132" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" id="ZkV-cB-jeE">
-                                        <rect key="frame" x="0.0" y="33" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="txb-wj-WJu" customClass="RadioButton">
-                                                <rect key="frame" x="20" y="11" width="75" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="刷卡支付" image="phone_Select_normal">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="phone_Select_press"/>
-                                                <connections>
-                                                    <action selector="typeAction:" destination="K43-es-39T" eventType="touchUpInside" id="VfO-hm-3g7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="55" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mwf-Sv-MU2" customClass="RadioButton">
-                                                <rect key="frame" x="113" y="11" width="89" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="快捷支付" image="phone_Select_normal">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="phone_Select_press"/>
-                                                <connections>
-                                                    <action selector="typeAction:" destination="K43-es-39T" eventType="touchUpInside" id="6Zi-TA-MaY"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mnl-aY-Vls" customClass="RadioButton">
-                                                <rect key="frame" x="209" y="11" width="94" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="账户支付" image="phone_Select_normal">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="phone_Select_press"/>
-                                                <connections>
-                                                    <action selector="typeAction:" destination="K43-es-39T" eventType="touchUpInside" id="NWA-FR-OLB"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" id="EMb-vq-YGH">
-                                        <rect key="frame" x="0.0" y="79" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fO5-td-kyA" customClass="RadioButton">
-                                                <rect key="frame" x="21" y="11" width="48" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="批发" image="phone_Select_normal">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="phone_Select_press"/>
-                                                <connections>
-                                                    <action selector="radioAction:" destination="K43-es-39T" eventType="touchUpInside" id="a8M-PB-i0f"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8rU-LQ-qSE" customClass="RadioButton">
-                                                <rect key="frame" x="120" y="11" width="48" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="零售" image="phone_Select_normal">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="phone_Select_press"/>
-                                                <connections>
-                                                    <action selector="radioAction:" destination="K43-es-39T" eventType="touchUpInside" id="FGI-fQ-5xu"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ROf-KX-qvd" customClass="RadioButton">
-                                                <rect key="frame" x="220" y="11" width="48" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="团购" image="phone_Select_normal">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="phone_Select_press"/>
-                                                <connections>
-                                                    <action selector="radioAction:" destination="K43-es-39T" eventType="touchUpInside" id="gnK-Yh-yan"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="9Oa-Hv-CIt">
-                                <rect key="frame" x="0.0" y="66" width="320" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值账户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T0a-Bn-P6q">
-                                        <rect key="frame" x="18" y="12" width="72" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入充值账户" minimumFontSize="17" id="KYa-Gc-Kg4">
-                                        <rect key="frame" x="76" y="8" width="240" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="bottomView" destination="EMb-vq-YGH" id="RcE-r8-VUm"/>
-                        <outlet property="button1" destination="fO5-td-kyA" id="qsH-2W-M5b"/>
-                        <outlet property="button2" destination="8rU-LQ-qSE" id="bcz-PM-bZ4"/>
-                        <outlet property="button3" destination="ROf-KX-qvd" id="sO4-vH-Z8w"/>
-                        <outlet property="button4" destination="txb-wj-WJu" id="zna-Gi-Mif"/>
-                        <outlet property="button5" destination="Mwf-Sv-MU2" id="PUU-S6-KhH"/>
-                        <outlet property="button6" destination="Mnl-aY-Vls" id="PDI-ej-Z1F"/>
-                        <outlet property="comfirt" destination="WCJ-wz-9qz" id="mlX-S1-oNP"/>
-                        <outlet property="finalPrice" destination="BOT-cz-1B4" id="taA-HN-1XE"/>
-                        <outlet property="phone" destination="KYa-Gc-Kg4" id="MCa-lc-WGu"/>
-                        <outlet property="phoneView" destination="9Oa-Hv-CIt" id="nYG-Qp-HUI"/>
-                        <outlet property="radioBottomView" destination="EMb-vq-YGH" id="KHe-mB-vpQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wm-WX-vTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1180" y="1423"/>
-        </scene>
         <!--掌上商城-->
         <scene sceneID="pX7-ta-yvA">
             <objects>
@@ -5025,28 +4839,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sOf-fe-bKf">
-                                        <rect key="frame" x="116" y="25" width="269.00000043495879" height="21"/>
+                                        <rect key="frame" x="116.00000086358406" y="25" width="269" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705879999999" green="0.3294117647" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lCH-9H-zYX">
-                                        <rect key="frame" x="116.00000043495878" y="97" width="269" height="21"/>
+                                        <rect key="frame" x="116" y="97" width="269.00000086358409" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705879999999" green="0.3294117647" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ofa-7j-RBh">
-                                        <rect key="frame" x="116.00000043495878" y="137" width="269" height="21"/>
+                                        <rect key="frame" x="116.00000086358406" y="137" width="269" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705879999999" green="0.3294117647" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xI6-tN-Ubp">
-                                        <rect key="frame" x="116.00000043495878" y="61" width="269" height="21"/>
+                                        <rect key="frame" x="116.00000086358406" y="61" width="269" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705879999999" green="0.3294117647" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -5852,6 +5666,233 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgb-IQ-02x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640" y="2404"/>
+        </scene>
+        <!--Recharge View Controller-->
+        <scene sceneID="47U-ge-oTt">
+            <objects>
+                <viewController storyboardIdentifier="RechargeViewController" id="h53-7J-uPT" customClass="RechargeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tb-u5-X2O">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="c3h-4L-ca3">
+                                <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值金额" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DdG-iE-m5H">
+                                        <rect key="frame" x="18" y="12" width="72" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入充值金额" minimumFontSize="17" id="s5y-KT-iVK">
+                                        <rect key="frame" x="76" y="8" width="240" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fMj-9a-SLI">
+                                <rect key="frame" x="20" y="324" width="280" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.78823529410000004" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="确认充值">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushToOrder:" destination="h53-7J-uPT" eventType="touchUpInside" id="jtJ-a8-E3a"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="ioy-56-lmp">
+                                <rect key="frame" x="0.0" y="117" width="320" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择支付方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nf0-3X-NYL">
+                                        <rect key="frame" x="20" y="3" width="132" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="rfi-TL-yzh">
+                                        <rect key="frame" x="0.0" y="33" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Te7-uU-UbZ" customClass="RadioButton">
+                                                <rect key="frame" x="20" y="11" width="75" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="刷卡支付" image="phone_Select_normal">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="phone_Select_press"/>
+                                                <connections>
+                                                    <action selector="typeAction:" destination="h53-7J-uPT" eventType="touchUpInside" id="FE6-s2-dvy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="55" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6DL-Ey-gXD" customClass="RadioButton">
+                                                <rect key="frame" x="113" y="11" width="89" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="快捷支付" image="phone_Select_normal">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="phone_Select_press"/>
+                                                <connections>
+                                                    <action selector="typeAction:" destination="h53-7J-uPT" eventType="touchUpInside" id="SWj-ON-1xO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g2W-Dd-989" customClass="RadioButton">
+                                                <rect key="frame" x="209" y="11" width="94" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="账户支付" image="phone_Select_normal">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="phone_Select_press"/>
+                                                <connections>
+                                                    <action selector="typeAction:" destination="h53-7J-uPT" eventType="touchUpInside" id="SWk-Mw-dZ1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择刷卡方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a2v-aN-BMY">
+                                        <rect key="frame" x="20" y="90" width="132" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="r1d-aY-GlF">
+                                        <rect key="frame" x="0.0" y="121" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="77" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vnk-Sj-Qsk" customClass="RadioButton">
+                                                <rect key="frame" x="20" y="11" width="75" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="音频刷卡" image="phone_Select_normal">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="phone_Select_press"/>
+                                                <connections>
+                                                    <action selector="choosePayWay:" destination="h53-7J-uPT" eventType="touchUpInside" id="GNY-vW-n0c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="88" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vdv-3w-cbD" customClass="RadioButton">
+                                                <rect key="frame" x="222" y="11" width="75" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="蓝牙刷卡" image="phone_Select_normal">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="phone_Select_press"/>
+                                                <connections>
+                                                    <action selector="choosePayWay:" destination="h53-7J-uPT" eventType="touchUpInside" id="d5S-lS-WuH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="37o-bo-1vX">
+                                <rect key="frame" x="0.0" y="66" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值账户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EBP-HV-mh5">
+                                        <rect key="frame" x="18" y="12" width="72" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入充值账户" minimumFontSize="17" id="NYA-Vp-OXs">
+                                        <rect key="frame" x="76" y="8" width="240" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="qsC-0T-J1j">
+                                <rect key="frame" x="0.0" y="433" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cQa-te-1Jp" customClass="RadioButton">
+                                        <rect key="frame" x="21" y="11" width="48" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="批发" image="phone_Select_normal">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="phone_Select_press"/>
+                                        <connections>
+                                            <action selector="radioAction:" destination="h53-7J-uPT" eventType="touchUpInside" id="NDm-kF-FHp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XWW-VM-0FQ" customClass="RadioButton">
+                                        <rect key="frame" x="120" y="11" width="48" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="零售" image="phone_Select_normal">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="phone_Select_press"/>
+                                        <connections>
+                                            <action selector="radioAction:" destination="h53-7J-uPT" eventType="touchUpInside" id="SyA-OK-g54"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EIn-48-dP7" customClass="RadioButton">
+                                        <rect key="frame" x="220" y="11" width="48" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="团购" image="phone_Select_normal">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="phone_Select_press"/>
+                                        <connections>
+                                            <action selector="radioAction:" destination="h53-7J-uPT" eventType="touchUpInside" id="g2a-U2-EP1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bottomView" destination="qsC-0T-J1j" id="Mjd-m2-DqI"/>
+                        <outlet property="button1" destination="cQa-te-1Jp" id="Dmp-kB-khR"/>
+                        <outlet property="button2" destination="XWW-VM-0FQ" id="d2y-Je-O0a"/>
+                        <outlet property="button3" destination="EIn-48-dP7" id="nVS-qh-fyg"/>
+                        <outlet property="button4" destination="Te7-uU-UbZ" id="clz-oX-CGj"/>
+                        <outlet property="button5" destination="6DL-Ey-gXD" id="y16-vi-okY"/>
+                        <outlet property="button6" destination="g2W-Dd-989" id="Qo2-ZE-uZl"/>
+                        <outlet property="button7" destination="vnk-Sj-Qsk" id="M2m-FK-SaG"/>
+                        <outlet property="button8" destination="vdv-3w-cbD" id="AK2-87-G3Q"/>
+                        <outlet property="choosePayWayLab" destination="a2v-aN-BMY" id="EDg-PQ-zvu"/>
+                        <outlet property="choosePayWayView" destination="r1d-aY-GlF" id="4on-2A-AWH"/>
+                        <outlet property="comfirt" destination="fMj-9a-SLI" id="egM-mE-AOG"/>
+                        <outlet property="finalPrice" destination="s5y-KT-iVK" id="1TK-B1-yDL"/>
+                        <outlet property="phone" destination="NYA-Vp-OXs" id="bkp-jv-OXy"/>
+                        <outlet property="phoneView" destination="37o-bo-1vX" id="7ws-u1-N4W"/>
+                        <outlet property="radioBottomView" destination="qsC-0T-J1j" id="wx0-lX-j1O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EeU-NU-T39" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1180" y="1423"/>
         </scene>
     </scenes>
     <resources>
