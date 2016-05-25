@@ -94,7 +94,7 @@
 
 -(void)showHUDWithString:(NSString*)message{
     _hud.labelText = message;
-    _hud.delegate = self;
+    [self.view addSubview:_hud];
     [_hud show:YES];
     
 }
@@ -115,16 +115,21 @@
         });
     }]];
     [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"绑定" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
-        if ([action.alertController.textField.text length]>0){
+        NSString *SerialNumber = action.alertController.textField.text;
+        
+        if ([SerialNumber length] < 8) {
+            [MBProgressHUD showHUDAddedTo:self.view WithString:@"请输入正确的蓝牙系列号"];
+            return ;
+        }
+        else if ([action.alertController.textField.text length] == 0){
+            [MBProgressHUD showHUDAddedTo:self.view WithString:@"蓝牙刷卡头绑定码未填写"];
+        }
+        else{
             NSString *deviceID =[NSString stringWithFormat:@"YL%@",action.alertController.textField.text];
             NSString *psamId   = [NSString stringWithFormat:@"8257000%@",action.alertController.textField.text];
             [_req getBuleToothDeviceNumberWithInteger:@"2" deviceId:deviceID psamId:psamId PhoneNumber:nil];
             [self showHUDWithString:@"正在绑定..."];
-            
-        }else{
-             [MBProgressHUD showHUDAddedTo:self.view WithString:@"蓝牙刷卡头绑定码未填写"];
         }
-        
     }]];
     [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
 }

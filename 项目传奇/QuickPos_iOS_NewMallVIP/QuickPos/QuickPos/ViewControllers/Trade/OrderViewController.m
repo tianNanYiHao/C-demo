@@ -72,9 +72,7 @@
     // Do any additional setup after loading the view.
     self.hidesBottomBarWhenPushed = YES;
     
-    _request = [[Request alloc] initWithDelegate:self]; //检测是否已经绑定设备
-    [_request getBuleToothDeviceNumberWithInteger:@"1" deviceId:@"" psamId:@"" PhoneNumber:nil];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在核对您的蓝牙"];
+   
 
     printType = NO;
     self.navigationItem.title = L(@"TheOrderInformation");
@@ -109,22 +107,30 @@
         self.getCodeView.hidden = YES;
     }
     
-    
-    if ([_payWay isEqualToString:@"音频"]) {
-        PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"" message:@"使用音频前,请关闭系统蓝牙"];
-        [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"关闭" handler:^(PSTAlertAction *action) {
-            NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
-            if ([[UIApplication sharedApplication]canOpenURL:url]) {
-                [[UIApplication sharedApplication]openURL:url];
-            }
-        }]];
-        [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"取消" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
-            
-        }]];
-        [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
+    if (self.orderData.orderPayType == CardPayType) {
+        
+        if ([_payWay isEqualToString:@"音频"]) {
+            PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"" message:@"使用音频前,请关闭系统蓝牙"];
+            [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"关闭" handler:^(PSTAlertAction *action) {
+                NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
+                if ([[UIApplication sharedApplication]canOpenURL:url]) {
+                    [[UIApplication sharedApplication]openURL:url];
+                }
+            }]];
+            [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"取消" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
+                
+            }]];
+            [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
+        }
+        else if([_payWay isEqualToString:@"蓝牙"]){
+            _request = [[Request alloc] initWithDelegate:self]; //检测是否已经绑定设备
+            [_request getBuleToothDeviceNumberWithInteger:@"1" deviceId:@"" psamId:@"" PhoneNumber:nil];
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在核对您的蓝牙"];
+        }
+        
     }
     
-    
+   
     
 //    if (self.orderData.orderPayType == CardPayType) {
 //        
@@ -334,23 +340,22 @@
     if (type == REQUEST_GETBULETOOHTHNUMBER) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         NSArray *tsf = [[dict objectForKey:@"data"] objectForKey:@"tsf"];
-        if (tsf.count == 0) {
-            [Common showMsgBox:nil msg:@"您还未绑定蓝牙,请至'我的账户'绑定" parentCtrl:self];
-        }else if([[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"] == nil){
-            
+        if (tsf.count == 0 || [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"] == nil) {
             PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"" message:@"您还未选择蓝牙,请前往'我的刷卡器选择'"];
-
+            
             [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"确认" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
+                
                 MyCreditCardMachineViewController *myCreditCardMachineVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCreditCardMachineVC"];
                 myCreditCardMachineVC.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:myCreditCardMachineVC animated:YES];//我的刷卡器
+                
             }]];
             [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
+  
         }else{
             //
         }
     }
-    
     
     if ([[dict objectForKey:@"respCode"]isEqualToString:@"0002"] || [[dict objectForKey:@"respCode"]isEqualToString:@"0001"])
     {
