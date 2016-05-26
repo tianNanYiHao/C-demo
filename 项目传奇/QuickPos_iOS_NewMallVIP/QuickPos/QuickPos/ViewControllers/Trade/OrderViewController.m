@@ -107,28 +107,7 @@
         self.getCodeView.hidden = YES;
     }
     
-    if (self.orderData.orderPayType == CardPayType) {
-        
-        if ([_payWay isEqualToString:@"音频"]) {
-            PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"" message:@"使用音频前,请关闭系统蓝牙"];
-            [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"关闭" handler:^(PSTAlertAction *action) {
-                NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
-                if ([[UIApplication sharedApplication]canOpenURL:url]) {
-                    [[UIApplication sharedApplication]openURL:url];
-                }
-            }]];
-            [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"取消" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
-                
-            }]];
-            [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
-        }
-        else if([_payWay isEqualToString:@"蓝牙"]){
-            _request = [[Request alloc] initWithDelegate:self]; //检测是否已经绑定设备
-            [_request getBuleToothDeviceNumberWithInteger:@"1" deviceId:@"" psamId:@"" PhoneNumber:nil];
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在核对您的蓝牙"];
-        }
-        
-    }
+  
     
    
     
@@ -178,6 +157,30 @@
 }
 - (void)viewWillAppear:(BOOL)animated
 {
+    if (self.orderData.orderPayType == CardPayType) {
+        
+        if ([_payWay isEqualToString:@"音频"]) {
+            PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"" message:@"使用音频前,请关闭系统蓝牙"];
+            [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"关闭" handler:^(PSTAlertAction *action) {
+                NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
+                if ([[UIApplication sharedApplication]canOpenURL:url]) {
+                    [[UIApplication sharedApplication]openURL:url];
+                }
+            }]];
+            [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"取消" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
+                
+            }]];
+            [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
+        }
+        else if([_payWay isEqualToString:@"蓝牙"]){
+            _request = [[Request alloc] initWithDelegate:self]; //检测是否已经绑定设备
+            [_request getBuleToothDeviceNumberWithInteger:@"1" deviceId:@"" psamId:@"" PhoneNumber:nil];
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在核对您的蓝牙"];
+        }
+        
+    }
+    
+    
     swiperingView.hidden = YES;
 }
 
@@ -310,25 +313,7 @@
         MyBankListViewController *myBankListCtrl = [quick instantiateViewControllerWithIdentifier:@"MyBankListViewController"];
         [myBankListCtrl setOrderData:self.orderData];
         [self.navigationController pushViewController:myBankListCtrl animated:YES];
-        
-//        //快捷支付
-//        //(增加银联SDK 支付方式)
-//        [Tool addAlertwithTitle:@"您好" msg:@"请选择支付方式" cancle:@"继续快捷支付" sure:@"银联在线支付" defultBlock:^(id defult) {
-//            
-//            //defultBlok = sure
-//            NSLog(@"选择了银联在线支付");
-//            Request *r = [[Request alloc] initWithDelegate:self];
-//            [r getTN];
-//            
-//        } cancleBlock:^(id cancle) {
-//            NSLog(@"选择了继续快捷支付");
-//            UIStoryboard *quick = [UIStoryboard storyboardWithName:@"QuickPay" bundle:nil];
-//            MyBankListViewController *myBankListCtrl = [quick instantiateViewControllerWithIdentifier:@"MyBankListViewController"];
-//            [myBankListCtrl setOrderData:self.orderData];
-//            [self.navigationController pushViewController:myBankListCtrl animated:YES];
-//            
-//        } viewController:self tag:9527];
-//
+
     }
 }
 
@@ -451,72 +436,72 @@
 - (void)gobackRootCtrl{
     [self.navigationController popToRootViewControllerAnimated:NO];
 }
--(void)posResponseDataWithCardInfoModelWithLianDi:(CardInfoModel *)cardInfo{
-    //蓝牙支付返回数据
-    if (cardInfo) {
-        NSLog(@"卡信息 ----> %@",cardInfo.cardInfo);
-        cardInfoModel = cardInfo;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //回到主线程队列,进行UI的刷新
-            swiperingView.hidden = YES;
-            if (!cardInfo.hasPassword) {
-                if (iOS8) {
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:L(@"EnterBankCardPassword") message:nil preferredStyle:UIAlertControllerStyleAlert];
-                    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                        textField.placeholder = @"密码";
-                        textField.secureTextEntry = YES;
-                        
-                    }];
-                    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:L(@"Confirm") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                        password = [(UITextField*)[alert.textFields objectAtIndex:0] text];
-                        if (password.length == 0) {
-                            password = @"FFFFFF";
-                        }
-                        hud = [MBProgressHUD showMessag:L(@"IsTrading") toView:[[QuickPosTabBarController getQuickPosTabBarController] view]];
-                        Request *req = [[Request alloc]initWithDelegate:self];
-                        if(self.orderData.mallOrder == YES)
-                        {
-                            [req mallCardPay:cardInfoModel.cardInfo cardPassWord:password iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt payType:@"01"];
-                            
-                        }
-                        else
-                        {
-//                            [req cardPay:cardInfoModel.cardInfo cardPassWord:password iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt  payType:@"01"];
-                        }
-                    }];
-                    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:L(@"cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-                        [hud hide:YES];
-                    }];
-                    [alert addAction:defaultAction];
-                    [alert addAction:cancelAction];
-                    [self presentViewController:alert animated:YES completion:nil];
-                }else{
-                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:L(@"EnterBankCardPassword") message:nil delegate:self cancelButtonTitle:L(@"cancel") otherButtonTitles:L(@"Confirm"), nil];
-                    alert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-                    alert.tag = CardPayType;
-                    [alert show];
-                    
-                }
-                
-            }else{
-                if (cardInfo) {
-                    hud = [MBProgressHUD showMessag:L(@"IsTrading") toView:[[QuickPosTabBarController getQuickPosTabBarController] view]];
-                    Request *req = [[Request alloc]initWithDelegate:self];
-                    if(self.orderData.mallOrder == YES)
-                    {
-                        [req mallCardPay:cardInfoModel.cardInfo cardPassWord:@"FFFFFF" iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt payType:@"01"];
-                    }
-                    else
-                    {
-//                        [req cardPay:cardInfoModel.cardInfo cardPassWord:@"FFFFFF" iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt  payType:@"01"];
-                    }
-                }
-            }
-        });
-        
-    }
-
-}
+//-(void)posResponseDataWithCardInfoModelWithLianDi:(CardInfoModel *)cardInfo{
+//    //蓝牙支付返回数据
+//    if (cardInfo) {
+//        NSLog(@"卡信息 ----> %@",cardInfo.cardInfo);
+//        cardInfoModel = cardInfo;
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            //回到主线程队列,进行UI的刷新
+//            swiperingView.hidden = YES;
+//            if (!cardInfo.hasPassword) {
+//                if (iOS8) {
+//                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:L(@"EnterBankCardPassword") message:nil preferredStyle:UIAlertControllerStyleAlert];
+//                    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+//                        textField.placeholder = @"密码";
+//                        textField.secureTextEntry = YES;
+//                        
+//                    }];
+//                    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:L(@"Confirm") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                        password = [(UITextField*)[alert.textFields objectAtIndex:0] text];
+//                        if (password.length == 0) {
+//                            password = @"FFFFFF";
+//                        }
+//                        hud = [MBProgressHUD showMessag:L(@"IsTrading") toView:[[QuickPosTabBarController getQuickPosTabBarController] view]];
+//                        Request *req = [[Request alloc]initWithDelegate:self];
+//                        if(self.orderData.mallOrder == YES)
+//                        {
+//                            [req mallCardPay:cardInfoModel.cardInfo cardPassWord:password iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt payType:@"01"];
+//                            
+//                        }
+//                        else
+//                        {
+////                            [req cardPay:cardInfoModel.cardInfo cardPassWord:password iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt  payType:@"01"];
+//                        }
+//                    }];
+//                    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:L(@"cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//                        [hud hide:YES];
+//                    }];
+//                    [alert addAction:defaultAction];
+//                    [alert addAction:cancelAction];
+//                    [self presentViewController:alert animated:YES completion:nil];
+//                }else{
+//                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:L(@"EnterBankCardPassword") message:nil delegate:self cancelButtonTitle:L(@"cancel") otherButtonTitles:L(@"Confirm"), nil];
+//                    alert.alertViewStyle = UIAlertViewStyleSecureTextInput;
+//                    alert.tag = CardPayType;
+//                    [alert show];
+//                    
+//                }
+//                
+//            }else{
+//                if (cardInfo) {
+//                    hud = [MBProgressHUD showMessag:L(@"IsTrading") toView:[[QuickPosTabBarController getQuickPosTabBarController] view]];
+//                    Request *req = [[Request alloc]initWithDelegate:self];
+//                    if(self.orderData.mallOrder == YES)
+//                    {
+//                        [req mallCardPay:cardInfoModel.cardInfo cardPassWord:@"FFFFFF" iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt payType:@"01"];
+//                    }
+//                    else
+//                    {
+////                        [req cardPay:cardInfoModel.cardInfo cardPassWord:@"FFFFFF" iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt  payType:@"01"];
+//                    }
+//                }
+//            }
+//        });
+//        
+//    }
+//
+//}
 -(void)posResponseDataWithCardInfoModel:(CardInfoModel *)cardInfo
 {
     
