@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8743832F1CF2F77F00FB8E4D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8743832E1CF2F77F00FB8E4D /* MBProgressHUD.m */; };
+		875FD62D1CEEC07C00FCFFCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FD62C1CEEC07C00FCFFCD /* main.m */; };
+		875FD6301CEEC07C00FCFFCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FD62F1CEEC07C00FCFFCD /* AppDelegate.m */; };
+		875FD6331CEEC07C00FCFFCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FD6321CEEC07C00FCFFCD /* ViewController.m */; };
+		875FD6361CEEC07C00FCFFCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875FD6341CEEC07C00FCFFCD /* Main.storyboard */; };
+		875FD6391CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 875FD6371CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodeld */; };
+		875FD63B1CEEC07C00FCFFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875FD63A1CEEC07C00FCFFCD /* Assets.xcassets */; };
+		875FD63E1CEEC07C00FCFFCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875FD63C1CEEC07C00FCFFCD /* LaunchScreen.storyboard */; };
+		875FD6631CEEC0E900FCFFCD /* DCSwiperAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875FD6621CEEC0E900FCFFCD /* DCSwiperAPI.framework */; };
+		875FD6651CEEC12100FCFFCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875FD6641CEEC12100FCFFCD /* CoreGraphics.framework */; };
+		875FD6671CEEC12F00FCFFCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875FD6661CEEC12F00FCFFCD /* UIKit.framework */; };
+		878894AB1CF5966800DD63C2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 878894A81CF5966800DD63C2 /* Default@2x.png */; };
+		878894AC1CF5966800DD63C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 878894A91CF5966800DD63C2 /* Default-568h@2x.png */; };
+		878894AD1CF5966800DD63C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 878894AA1CF5966800DD63C2 /* Default.png */; };
+		87976B041CF698E8005950E6 /* DCBlueToothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87976B031CF698E8005950E6 /* DCBlueToothManager.m */; };
+		87976B071CF69A6B005950E6 /* nextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87976B061CF69A6B005950E6 /* nextViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8743832D1CF2F77F00FB8E4D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8743832E1CF2F77F00FB8E4D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		875FD6281CEEC07C00FCFFCD /* P27BlueToothPosManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P27BlueToothPosManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		875FD62C1CEEC07C00FCFFCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		875FD62E1CEEC07C00FCFFCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		875FD62F1CEEC07C00FCFFCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		875FD6311CEEC07C00FCFFCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		875FD6321CEEC07C00FCFFCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		875FD6351CEEC07C00FCFFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		875FD6381CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = P27BlueToothPosManager.xcdatamodel; sourceTree = "<group>"; };
+		875FD63A1CEEC07C00FCFFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		875FD63D1CEEC07C00FCFFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		875FD63F1CEEC07C00FCFFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875FD6481CEEC07C00FCFFCD /* P27BlueToothPosManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P27BlueToothPosManagerTests.m; sourceTree = "<group>"; };
+		875FD64A1CEEC07C00FCFFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875FD6531CEEC07C00FCFFCD /* P27BlueToothPosManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P27BlueToothPosManagerUITests.m; sourceTree = "<group>"; };
+		875FD6551CEEC07C00FCFFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875FD6621CEEC0E900FCFFCD /* DCSwiperAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DCSwiperAPI.framework; sourceTree = "<group>"; };
+		875FD6641CEEC12100FCFFCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		875FD6661CEEC12F00FCFFCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		878894A81CF5966800DD63C2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		878894A91CF5966800DD63C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		878894AA1CF5966800DD63C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		87976B021CF698E8005950E6 /* DCBlueToothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBlueToothManager.h; sourceTree = "<group>"; };
+		87976B031CF698E8005950E6 /* DCBlueToothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBlueToothManager.m; sourceTree = "<group>"; };
+		87976B051CF69A6B005950E6 /* nextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nextViewController.h; sourceTree = "<group>"; };
+		87976B061CF69A6B005950E6 /* nextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nextViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		875FD6251CEEC07C00FCFFCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875FD6671CEEC12F00FCFFCD /* UIKit.framework in Frameworks */,
+				875FD6651CEEC12100FCFFCD /* CoreGraphics.framework in Frameworks */,
+				875FD6631CEEC0E900FCFFCD /* DCSwiperAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8743832C1CF2F77700FB8E4D /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				8743832D1CF2F77F00FB8E4D /* MBProgressHUD.h */,
+				8743832E1CF2F77F00FB8E4D /* MBProgressHUD.m */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		875FD61F1CEEC07C00FCFFCD = {
+			isa = PBXGroup;
+			children = (
+				875FD6661CEEC12F00FCFFCD /* UIKit.framework */,
+				875FD6641CEEC12100FCFFCD /* CoreGraphics.framework */,
+				8743832C1CF2F77700FB8E4D /* 3rd */,
+				875FD62A1CEEC07C00FCFFCD /* P27BlueToothPosManager */,
+				875FD6471CEEC07C00FCFFCD /* P27BlueToothPosManagerTests */,
+				875FD6521CEEC07C00FCFFCD /* P27BlueToothPosManagerUITests */,
+				875FD6291CEEC07C00FCFFCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		875FD6291CEEC07C00FCFFCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				875FD6281CEEC07C00FCFFCD /* P27BlueToothPosManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		875FD62A1CEEC07C00FCFFCD /* P27BlueToothPosManager */ = {
+			isa = PBXGroup;
+			children = (
+				875FD62E1CEEC07C00FCFFCD /* AppDelegate.h */,
+				875FD62F1CEEC07C00FCFFCD /* AppDelegate.m */,
+				875FD6311CEEC07C00FCFFCD /* ViewController.h */,
+				875FD6321CEEC07C00FCFFCD /* ViewController.m */,
+				87976B051CF69A6B005950E6 /* nextViewController.h */,
+				87976B061CF69A6B005950E6 /* nextViewController.m */,
+				875FD6611CEEC0C200FCFFCD /* P27BlueToothPos */,
+				875FD6341CEEC07C00FCFFCD /* Main.storyboard */,
+				875FD63A1CEEC07C00FCFFCD /* Assets.xcassets */,
+				875FD63C1CEEC07C00FCFFCD /* LaunchScreen.storyboard */,
+				875FD63F1CEEC07C00FCFFCD /* Info.plist */,
+				875FD6371CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodeld */,
+				875FD62B1CEEC07C00FCFFCD /* Supporting Files */,
+			);
+			path = P27BlueToothPosManager;
+			sourceTree = "<group>";
+		};
+		875FD62B1CEEC07C00FCFFCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				878894A81CF5966800DD63C2 /* Default@2x.png */,
+				878894A91CF5966800DD63C2 /* Default-568h@2x.png */,
+				878894AA1CF5966800DD63C2 /* Default.png */,
+				875FD62C1CEEC07C00FCFFCD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		875FD6471CEEC07C00FCFFCD /* P27BlueToothPosManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				875FD6481CEEC07C00FCFFCD /* P27BlueToothPosManagerTests.m */,
+				875FD64A1CEEC07C00FCFFCD /* Info.plist */,
+			);
+			path = P27BlueToothPosManagerTests;
+			sourceTree = "<group>";
+		};
+		875FD6521CEEC07C00FCFFCD /* P27BlueToothPosManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				875FD6531CEEC07C00FCFFCD /* P27BlueToothPosManagerUITests.m */,
+				875FD6551CEEC07C00FCFFCD /* Info.plist */,
+			);
+			path = P27BlueToothPosManagerUITests;
+			sourceTree = "<group>";
+		};
+		875FD6611CEEC0C200FCFFCD /* P27BlueToothPos */ = {
+			isa = PBXGroup;
+			children = (
+				87976B021CF698E8005950E6 /* DCBlueToothManager.h */,
+				87976B031CF698E8005950E6 /* DCBlueToothManager.m */,
+				875FD6621CEEC0E900FCFFCD /* DCSwiperAPI.framework */,
+			);
+			path = P27BlueToothPos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		875FD6271CEEC07C00FCFFCD /* P27BlueToothPosManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 875FD6581CEEC07C00FCFFCD /* Build configuration list for PBXNativeTarget "P27BlueToothPosManager" */;
+			buildPhases = (
+				875FD6241CEEC07C00FCFFCD /* Sources */,
+				875FD6251CEEC07C00FCFFCD /* Frameworks */,
+				875FD6261CEEC07C00FCFFCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = P27BlueToothPosManager;
+			productName = P27BlueToothPosManager;
+			productReference = 875FD6281CEEC07C00FCFFCD /* P27BlueToothPosManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		875FD6201CEEC07C00FCFFCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Aotu;
+				TargetAttributes = {
+					875FD6271CEEC07C00FCFFCD = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 875FD6231CEEC07C00FCFFCD /* Build configuration list for PBXProject "P27BlueToothPosManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 875FD61F1CEEC07C00FCFFCD;
+			productRefGroup = 875FD6291CEEC07C00FCFFCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				875FD6271CEEC07C00FCFFCD /* P27BlueToothPosManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		875FD6261CEEC07C00FCFFCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878894AB1CF5966800DD63C2 /* Default@2x.png in Resources */,
+				878894AD1CF5966800DD63C2 /* Default.png in Resources */,
+				875FD63E1CEEC07C00FCFFCD /* LaunchScreen.storyboard in Resources */,
+				875FD63B1CEEC07C00FCFFCD /* Assets.xcassets in Resources */,
+				878894AC1CF5966800DD63C2 /* Default-568h@2x.png in Resources */,
+				875FD6361CEEC07C00FCFFCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		875FD6241CEEC07C00FCFFCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875FD6331CEEC07C00FCFFCD /* ViewController.m in Sources */,
+				875FD6301CEEC07C00FCFFCD /* AppDelegate.m in Sources */,
+				8743832F1CF2F77F00FB8E4D /* MBProgressHUD.m in Sources */,
+				87976B041CF698E8005950E6 /* DCBlueToothManager.m in Sources */,
+				875FD62D1CEEC07C00FCFFCD /* main.m in Sources */,
+				87976B071CF69A6B005950E6 /* nextViewController.m in Sources */,
+				875FD6391CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		875FD6341CEEC07C00FCFFCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				875FD6351CEEC07C00FCFFCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		875FD63C1CEEC07C00FCFFCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				875FD63D1CEEC07C00FCFFCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		875FD6561CEEC07C00FCFFCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		875FD6571CEEC07C00FCFFCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		875FD6591CEEC07C00FCFFCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/P27BlueToothPosManager/P27BlueToothPos",
+				);
+				INFOPLIST_FILE = P27BlueToothPosManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qianhaichuanqi.P27BlueToothPosManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+			};
+			name = Debug;
+		};
+		875FD65A1CEEC07C00FCFFCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/P27BlueToothPosManager/P27BlueToothPos",
+				);
+				INFOPLIST_FILE = P27BlueToothPosManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qianhaichuanqi.P27BlueToothPosManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "08b23147-4831-4796-8a14-204e0fd9255c";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		875FD6231CEEC07C00FCFFCD /* Build configuration list for PBXProject "P27BlueToothPosManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				875FD6561CEEC07C00FCFFCD /* Debug */,
+				875FD6571CEEC07C00FCFFCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		875FD6581CEEC07C00FCFFCD /* Build configuration list for PBXNativeTarget "P27BlueToothPosManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				875FD6591CEEC07C00FCFFCD /* Debug */,
+				875FD65A1CEEC07C00FCFFCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		875FD6371CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				875FD6381CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodel */,
+			);
+			currentVersion = 875FD6381CEEC07C00FCFFCD /* P27BlueToothPosManager.xcdatamodel */;
+			path = P27BlueToothPosManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 875FD6201CEEC07C00FCFFCD /* Project object */;
+}

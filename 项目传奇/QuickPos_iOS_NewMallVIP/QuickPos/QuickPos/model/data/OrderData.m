@@ -18,6 +18,8 @@
         self.orderAmt = [dict objectForKey:@"orderAmt"];
         self.orderDesc = [dict objectForKey:@"orderDesc"];
         self.realAmt = [dict objectForKey:@"realAmt"];
+        self.orderTranslogNo = [dict objectForKey:@"transLogNo"];
+        
     }
     return self;
 }

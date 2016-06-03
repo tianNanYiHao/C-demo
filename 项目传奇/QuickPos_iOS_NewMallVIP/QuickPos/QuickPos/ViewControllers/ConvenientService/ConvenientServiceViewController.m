@@ -35,6 +35,7 @@
 #import "MyPosMangerViewController.h"
 #import "ADIMageViewController.h"
 #import "FlowRechargeViewController.h"
+#import "buleTestViewController.h"
 
 @interface ConvenientServiceViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, ResponseData,SDCycleScrollViewDelegate,ABCIntroViewDelegate,EAIntroDelegate,UIAlertViewDelegate>
 {
@@ -233,10 +234,10 @@
     self.menuDataArr = [NSMutableArray array];
     if (!isResult) {
         
-        NSArray *titleArr = @[@"掌上商城",@"账户充值",@"即时取",@"转账汇款",@"水电煤",@"手机充值",@"流量充值",@"克拉充值",@"余额查询",@"红包",@"Pos管理"];
-        NSArray *imageArr = @[@"serve_shopping",@"serve_payment",@"serve_take",@"serve_transfer",@"serve_Waterr",@"serve_phone",@"serve_traffic",@"karaRe",@"serve_query",@"redbag",@"serve_guanli"];
+        NSArray *titleArr = @[@"掌上商城",@"账户充值",@"即时取",@"转账汇款",@"水电煤",@"手机充值",@"流量充值",@"克拉充值",@"余额查询",@"红包",@"Pos管理",@"新蓝牙"];
+        NSArray *imageArr = @[@"serve_shopping",@"serve_payment",@"serve_take",@"serve_transfer",@"serve_Waterr",@"serve_phone",@"serve_traffic",@"karaRe",@"serve_query",@"redbag",@"serve_guanli",@"22"];
         NSArray *noteArr = @[@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@""];
-        NSArray *channelArr = @[@"0001",@"0002",@"0003",@"0004",@"0005",@"0006",@"0007",@"0008",@"0009",@"00111",@"00112"];
+        NSArray *channelArr = @[@"0001",@"0002",@"0003",@"0004",@"0005",@"0006",@"0007",@"0008",@"0009",@"00111",@"00112",@"00113"];
         
         
         for(int index = 0;index < titleArr.count; index++){
@@ -350,6 +351,15 @@
             vc111.hidesBottomBarWhenPushed = YES;
             
             [vcArr addObject:vc111];
+            
+        }
+        else if ([channelID isEqualToString:@"00113"]){
+            UIStoryboard* mainStoryboard1 = [UIStoryboard storyboardWithName:@"QuickPay" bundle:nil];
+            buleTestViewController *vc113 = [mainStoryboard1 instantiateViewControllerWithIdentifier:@"buleTestViewController"];
+            
+            vc113.hidesBottomBarWhenPushed = YES;
+            
+            [vcArr addObject:vc113];
             
         }
 //        else if([channelID isEqualToString:@"00112"]){

@@ -106,7 +106,7 @@
     PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"欢迎使用" message:@"请绑定您的蓝牙刷卡器"];
     [gotoPageController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
          textField.placeholder = @"请输入蓝牙刷卡头编号(YL开头)";
-        textField.keyboardType = UIKeyboardTypeNumberPad;
+//        textField.keyboardType = UIKeyboardTypeNumberPad;
     }];
     
     [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"取消" handler:^(PSTAlertAction *action) {
@@ -125,9 +125,11 @@
             [MBProgressHUD showHUDAddedTo:self.view WithString:@"蓝牙刷卡头绑定码未填写"];
         }
         else{
-            NSString *deviceID =[NSString stringWithFormat:@"YL%@",action.alertController.textField.text];
-            NSString *psamId   = [NSString stringWithFormat:@"8257000%@",action.alertController.textField.text];
-            [_req getBuleToothDeviceNumberWithInteger:@"2" deviceId:deviceID psamId:psamId PhoneNumber:nil];
+            NSString *deviceID = action.alertController.textField.text;
+            NSString *psamId  = [deviceID substringFromIndex:2];
+            
+            NSString *psamIdSure   = [NSString stringWithFormat:@"8257000%@",psamId];
+            [_req getBuleToothDeviceNumberWithInteger:@"2" deviceId:deviceID psamId:psamIdSure PhoneNumber:nil];
             [self showHUDWithString:@"正在绑定..."];
         }
     }]];

@@ -26,10 +26,11 @@
 #import "UPPayPlugin.h"
 #import "PSTAlertController.h"
 #import "MyCreditCardMachineViewController.h"
+#import "DCBlueToothManager.h"
 
 
 
-@interface OrderViewController ()<ResponseData,PosResponse,UIAlertViewDelegate,HandSignActionDelegate,CSwiperStateChangedListener,LianDiBlueToothVposDelegate,UPPayPluginDelegate,ResponseData>{
+@interface OrderViewController ()<ResponseData,PosResponse,UIAlertViewDelegate,HandSignActionDelegate,CSwiperStateChangedListener,LianDiBlueToothVposDelegate,UPPayPluginDelegate,ResponseData,DCBlueToothManagerDelegate>{
     CardInfoModel *cardInfoModel;
     NSString *password;
     UIImage *takImg;
@@ -60,6 +61,8 @@
 @property (nonatomic, strong)vcom *mVcom;
 @property (nonatomic, strong) NSString *isBluetooth;
 @property (nonatomic, strong) LianDiBlueToothVpos *lianDiBlueVC;
+
+@property (nonatomic,strong) DCBlueToothManager *dcBlueToothManager;
 @end
 
 @implementation OrderViewController
@@ -107,42 +110,24 @@
         self.getCodeView.hidden = YES;
     }
     
-  
-    
-   
-    
-//    if (self.orderData.orderPayType == CardPayType) {
-//        
-//        if (iOS8) { //防止5s奔溃
-//            NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-//            [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
-//            
-//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请选择刷卡器类型?" preferredStyle:UIAlertControllerStyleAlert];
-//            
-//            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"音频" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//                self.isBluetooth = @"1";
-//                
-//            }];
-//            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:L(@"蓝牙") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-//                self.isBluetooth = @"0";
-//                
-//            }];
-//            [alert addAction:defaultAction];
-//            [alert addAction:cancelAction];
-//            [self presentViewController:alert animated:YES completion:nil];
-//        }else
-//        {
-//            NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-//            [center addObserver:self selector:@selector(noticePost:) name:@"startswipe" object:nil];
-//            self.isBluetooth = @"0";
-//        }
-//    }
-    
+
     self.isBluetooth = @"1";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideswiperingView) name:@"hideswiperingView" object:nil];
     
-}
 
+    
+    //动联蓝牙通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noticePostDCBlue:) name:@"startswipe" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popViewController) name:@"popview" object:nil];
+    
+
+
+    
+}
+-(void)popViewController{
+    [self.navigationController popViewControllerAnimated:YES];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"popview" object:nil];
+}
 - (void)hideswiperingView{
     swiperingView.hidden = NO;
 }
@@ -172,7 +157,7 @@
             }]];
             [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
         }
-        else if([_payWay isEqualToString:@"蓝牙"]){
+        else if([_payWay isEqualToString:@"蓝牙"] || [_payWay isEqualToString:@"动联蓝牙"]){
             _request = [[Request alloc] initWithDelegate:self]; //检测是否已经绑定设备
             [_request getBuleToothDeviceNumberWithInteger:@"1" deviceId:@"" psamId:@"" PhoneNumber:nil];
             [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在核对您的蓝牙"];
@@ -306,7 +291,25 @@
                     [[PosManager getInstance] initDeviceWithType:DEVICE_TYPE_BOARD_BLUETOOTH];
                     
                 }
-       }
+        }else if ([_payWay isEqualToString:@"动联蓝牙"]){
+            if([[PosManager getInstance].pos hasHeadset]){  //如果插入刷卡头 也会启动蓝牙 为避免
+                [Common showMsgBox:@"您选择了蓝牙刷卡方式" msg:@"检测到您插入了音频,请拔出音频重试" parentCtrl:self];
+            }else{
+                
+                _dcBlueToothManager = [DCBlueToothManager getDCBlueToothManager];
+                _dcBlueToothManager.viewController = self;
+                _dcBlueToothManager.delegate = self;
+                _dcBlueToothManager.orderId = self.orderData.orderId;
+                _dcBlueToothManager.transLogo = self.orderData.orderTranslogNo;
+                _dcBlueToothManager.cash = (NSInteger)self.orderData.orderAmt;
+                [_dcBlueToothManager searchDCBlueTooth];
+    
+//                NSLog(@"-=-=-=-=-=orderId...%@-=-=-=-=-=-transLogo...%@=-=-=-=-=-=-=cash...%@=-=-=-=-=-=-",self.orderData.orderId,self.orderData.orderTranslogNo,self.orderData.orderAmt);
+            }
+        }
+        
+        
+        
     }else{
         NSLog(@"选择了继续快捷支付");
         UIStoryboard *quick = [UIStoryboard storyboardWithName:@"QuickPay" bundle:nil];
@@ -645,6 +648,67 @@
     
 }
 
+#pragma mark - DCBlueToothManagerDelegate 动联蓝牙代理
+-(void)dcBlueToothManagerResponseByCardInfo:(NSDictionary *)cardInfo withType:(NSInteger)type{
+    
+    Request *req = [[Request alloc]initWithDelegate:self];
+    
+    NSString *enc = [NSString new];
+    NSString *pan   = [NSString new];
+    NSString *expireDate = [NSString new];
+    NSString *psamNo = [NSString new];
+
+    //ic卡返回
+    if (type == ICCard) {
+        enc = [cardInfo objectForKey:@"encIC"];
+        pan   = [cardInfo objectForKey:@"pan"];
+        expireDate = [cardInfo objectForKey:@"expireDate"];
+        psamNo = [cardInfo objectForKey:@"psamNo"];
+        
+    }
+    else if (type == TrackCard){
+        enc = [cardInfo objectForKey:@"encTrack"];
+        pan   = [cardInfo objectForKey:@"pan"];
+        expireDate = [cardInfo objectForKey:@"expireDate"];
+        psamNo = [cardInfo objectForKey:@"psamNo"];
+    }
+    
+        
+        PSTAlertController *psta = [PSTAlertController alertWithTitle:L(@"EnterBankCardPassword") message:nil];
+        [psta addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = @"密码";
+            textField.secureTextEntry = YES;
+        }];
+        
+        [psta addAction:[PSTAlertAction actionWithTitle:L(@"Confirm") handler:^(PSTAlertAction * _Nonnull action) {
+            
+            password = action.alertController.textField.text;
+            if (password.length == 0) {
+                password = @"FFFFFF";
+            }
+            hud = [MBProgressHUD showMessag:L(@"IsTrading") toView:[[QuickPosTabBarController getQuickPosTabBarController] view]];
+            
+            if(self.orderData.mallOrder == YES)
+            {
+                [req mallCardPay:cardInfoModel.cardInfo cardPassWord:password iccardInfo:cardInfoModel.data55 ICCardSerial:cardInfoModel.sequensNo ICCardValidDate:cardInfoModel.expiryDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt payType:@"01"];
+                
+            }
+            else
+            {
+                [req cardPay:enc cardPassWord:password iccardInfo:@"" ICCardSerial:@"" ICCardValidDate:expireDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt  payType:@"01"];
+            }
+            
+        }]];
+        
+        [psta addAction:[PSTAlertAction actionWithTitle:L(@"cancel")  handler:^(PSTAlertAction * _Nonnull action) {
+            [hud hide:YES];
+            [_dcBlueToothManager cancleSwipeCard]; //取消刷卡(断开连接)
+        }]];
+        
+        [psta showWithSender:nil controller:self animated:YES completion:NULL];
+    
+}
+
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     Request *req = [[Request alloc]initWithDelegate:self];
@@ -777,6 +841,9 @@
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    
+    
+//      [_dcBlueToothManager disConnectDCBlueTooth]; //断开连接
 
     
      [[NSNotificationCenter defaultCenter] postNotificationName:@"closeBluetooth" object:nil];
@@ -834,5 +901,20 @@
     }
 
 }
+
+- (void)noticePostDCBlue:(NSNotification *)noti{
+    NSDictionary *dict = [[NSDictionary alloc] init];
+    dict = noti.userInfo;
+    NSString *showSwiper = [dict objectForKey:@"showSwipe"];
+    
+    if ([showSwiper isEqualToString:@"yes"]) {
+        swiperingView.hidden = NO;
+    }else if ([showSwiper isEqualToString:@"no"]){
+        swiperingView.hidden = YES;
+    }
+    
+    
+}
+
 
 @end

@@ -17,6 +17,7 @@
 @property(nonatomic,strong)NSString *realAmt;//实际交易金额
 @property(nonatomic,strong)NSString *orderAccount;//交易账号
 @property(nonatomic,assign)NSUInteger orderPayType;//账户支付 刷卡支付
+@property(nonatomic,strong)NSString *orderTranslogNo;  //交易流水号
 @property(nonatomic,strong)NSString *merchantId;
 @property(nonatomic,strong)NSString *productId;
 

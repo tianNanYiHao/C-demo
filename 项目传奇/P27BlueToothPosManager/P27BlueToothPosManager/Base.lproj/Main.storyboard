@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="viewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHa-Ij-dEb">
+                                <rect key="frame" x="14" y="13" width="292" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.8157068266348424" blue="0.5936226912571545" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="搜索设备">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZw-J2-Xn5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAa-gF-MAx">
+                                <rect key="frame" x="14" y="57" width="292" height="30"/>
+                                <color key="backgroundColor" red="0.59293666218369923" green="0.81392536435300278" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="连接设备">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PN-jl-CCb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzR-eA-m7A">
+                                <rect key="frame" x="14" y="102" width="292" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.59793015469034461" blue="0.64232050892130799" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="获取设备信息">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getBTdeviceInfomation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Md-0h-7F4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3am-Mc-P4T">
+                                <rect key="frame" x="14" y="145" width="292" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.36018164020555887" blue="0.23473164773585597" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="刷卡">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="swipingCardWithBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6C-nj-Ajv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEW-x9-qck">
+                                <rect key="frame" x="14" y="278" width="292" height="30"/>
+                                <color key="backgroundColor" red="0.78554530315985704" green="1" blue="0.40506818341216344" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="获取电量">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getBatteryWithBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cao-CV-aF1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88h-XH-lmq">
+                                <rect key="frame" x="14" y="324" width="292" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.64304044700303309" blue="0.93618702813497467" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="停止搜索">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopSearchBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMz-RW-evT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2J-h7-qRg">
+                                <rect key="frame" x="14" y="190" width="292" height="30"/>
+                                <color key="backgroundColor" red="0.34885988344329266" green="0.35189047598783363" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="取消刷卡">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelSwipingCardWithBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OL8-00-sGX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I6-Ci-8kw">
+                                <rect key="frame" x="14" y="235" width="292" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.94542330815973252" blue="0.1503173342614661" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="获取卡号">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCardNumWithBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lze-MQ-Xef"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2I-4h-S8S">
+                                <rect key="frame" x="14" y="368" width="292" height="30"/>
+                                <color key="backgroundColor" red="0.21569759091609708" green="1" blue="0.80353082898022721" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="断开连接">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="disconnectBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OL7-I6-UP6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="345"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="YCi-Ay-fAu">
+            <objects>
+                <viewController storyboardIdentifier="nextVIewController1" id="enx-6Q-0LC" customClass="nextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xko-XJ-c7S"/>
+                        <viewControllerLayoutGuide type="bottom" id="iLJ-8I-uIL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NoF-jP-keh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWb-Qj-fsd">
+                                <rect key="frame" x="63" y="118" width="195" height="30"/>
+                                <state key="normal" title="获取DCBlueToothManger"/>
+                                <connections>
+                                    <action selector="getDCBluetoothManger:" destination="enx-6Q-0LC" eventType="touchUpInside" id="xdb-zl-Vpz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ekZ-0j-g4q"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZl-S0-CpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="351"/>
+        </scene>
+    </scenes>
+</document>

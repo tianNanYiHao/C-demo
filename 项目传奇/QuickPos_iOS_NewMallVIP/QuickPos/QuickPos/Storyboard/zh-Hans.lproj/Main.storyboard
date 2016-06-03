@@ -374,7 +374,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FDZ-ha-98H">
-                                        <rect key="frame" x="59.999997570406705" y="15" width="175" height="19"/>
+                                        <rect key="frame" x="59.999996896311806" y="15" width="175" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1021,28 +1021,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PoN-AA-AGe">
-                                        <rect key="frame" x="116" y="25" width="269" height="21"/>
+                                        <rect key="frame" x="116.00000086358406" y="25" width="269" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705882352939" green="0.32941176470588235" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="obo-o1-Wvs">
-                                        <rect key="frame" x="116" y="97" width="269" height="21"/>
+                                        <rect key="frame" x="116.00000086358418" y="97" width="269" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705882352939" green="0.32941176470588235" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gGR-4t-Ncb">
-                                        <rect key="frame" x="116" y="137" width="269" height="21"/>
+                                        <rect key="frame" x="116.00000086358406" y="137" width="269" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705882352939" green="0.32941176470588235" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aSG-bX-x9n">
-                                        <rect key="frame" x="116" y="61" width="269" height="21"/>
+                                        <rect key="frame" x="116.00000086358406" y="61" width="269" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.31764705882352939" green="0.32941176470588235" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6738,15 +6738,27 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="88" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eBa-I0-5A0" customClass="RadioButton">
-                                                <rect key="frame" x="222" y="11" width="75" height="22"/>
+                                                <rect key="frame" x="113" y="11" width="75" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="蓝牙刷卡" image="phone_Select_normal">
+                                                <state key="normal" title="艾创蓝牙" image="phone_Select_normal">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="selected" image="phone_Select_press"/>
                                                 <connections>
                                                     <action selector="choosePayWay:" destination="tDr-wE-1Hi" eventType="touchUpInside" id="7cc-4S-16T"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ncq-0y-3rD" customClass="RadioButton">
+                                                <rect key="frame" x="205" y="11" width="75" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="动联蓝牙" image="phone_Select_normal">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="phone_Select_press"/>
+                                                <connections>
+                                                    <action selector="choosePayWay:" destination="tDr-wE-1Hi" eventType="touchUpInside" id="dCK-Fc-ntE"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -6833,6 +6845,7 @@
                         <outlet property="button6" destination="ffB-mS-XqJ" id="hvM-ld-4Hg"/>
                         <outlet property="button7" destination="yyD-tw-Dpn" id="LJj-mI-P6C"/>
                         <outlet property="button8" destination="eBa-I0-5A0" id="Jwo-Sq-kx9"/>
+                        <outlet property="button9" destination="ncq-0y-3rD" id="W2m-pb-X5x"/>
                         <outlet property="choosePayWayLab" destination="ZGW-ui-YHG" id="tLh-qn-zry"/>
                         <outlet property="choosePayWayView" destination="Opn-eM-pcy" id="bKP-Iq-8LF"/>
                         <outlet property="comfirt" destination="1d5-Nk-si6" id="0jp-ni-PVW"/>

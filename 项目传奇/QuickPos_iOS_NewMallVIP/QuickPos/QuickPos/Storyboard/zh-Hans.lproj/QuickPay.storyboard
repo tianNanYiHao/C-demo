@@ -22,6 +22,29 @@
             </objects>
             <point key="canvasLocation" x="-281" y="168"/>
         </scene>
+        <!--Bule Test View Controller-->
+        <scene sceneID="99n-CY-XMT">
+            <objects>
+                <viewController storyboardIdentifier="buleTestViewController" id="m9H-Ta-fzR" customClass="buleTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eH-N1-umB">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" id="gyc-LV-Qen">
+                                <rect key="frame" x="40" y="236" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="swiperingView" destination="gyc-LV-Qen" id="U6f-ze-ubL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNj-xM-Ony" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="806"/>
+        </scene>
         <!--我的银行卡-->
         <scene sceneID="AeB-Dc-DfW">
             <objects>
@@ -462,6 +485,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="22" width="40" height="40"/>
         <image name="bankcard_back" width="300" height="71"/>
         <image name="phone_help" width="21" height="21"/>
     </resources>
