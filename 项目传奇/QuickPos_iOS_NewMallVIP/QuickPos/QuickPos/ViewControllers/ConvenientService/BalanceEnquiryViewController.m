@@ -367,6 +367,27 @@
 
 - (void)responseWithDict:(NSDictionary *)dict requestType:(NSInteger)type{
     [hud hide:YES];
+    
+    if (type == REQUEST_GETBULETOOHTHNUMBER) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        NSArray *tsf = [[dict objectForKey:@"data"] objectForKey:@"tsf"];
+        if (tsf.count == 0 || [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"] == nil) {
+            PSTAlertController *gotoPageController = [PSTAlertController alertWithTitle:@"" message:@"您还未选择蓝牙,请前往'我的刷卡器选择'"];
+            
+            [gotoPageController addAction:[PSTAlertAction actionWithTitle:@"确认" style:PSTAlertActionStyleCancel handler:^(PSTAlertAction *action) {
+                
+                MyCreditCardMachineViewController *myCreditCardMachineVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCreditCardMachineVC"];
+                myCreditCardMachineVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:myCreditCardMachineVC animated:YES];//我的刷卡器
+                
+            }]];
+            [gotoPageController showWithSender:nil controller:self animated:YES completion:NULL];
+            
+        }else{
+            //
+        }
+    }
+    
     if ([[dict objectForKey:@"respCode"]isEqualToString:@"0000"]) {
         if (type == REQUSET_CARDBALANCE) {
             self.cardNum.text = [NSString stringWithFormat:@"%.2f",[[dict objectForKey:@"balance"] doubleValue]/100];

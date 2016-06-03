@@ -72,6 +72,8 @@
 
 @property (weak, nonatomic) IBOutlet RadioButton *button7;
 @property (weak, nonatomic) IBOutlet RadioButton *button8;
+@property (weak, nonatomic) IBOutlet RadioButton *button9;
+
 @property (nonatomic,strong) NSString *payWay;
 
 
@@ -269,7 +271,7 @@
     _button4.groupButtons = @[_button4,_button5,_button6];
     
     
-    _button7.groupButtons = @[_button7,_button8];
+    _button7.groupButtons = @[_button7,_button8,_button9];
   
     _button4.selected = YES;
     _button1.selected = YES;
@@ -332,10 +334,15 @@
         _payWay = @"音频";
         
         
-    }else{
+    }else if(sender.tag == 88){
         //蓝牙
         NSLog(@"蓝牙");
         _payWay = @"蓝牙";
+        
+    }else if(sender.tag ==99){
+        //蓝牙
+        NSLog(@"动联系蓝牙");
+        _payWay = @"动联蓝牙";
         
     }
     

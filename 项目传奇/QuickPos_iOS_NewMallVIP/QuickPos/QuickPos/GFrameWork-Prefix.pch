@@ -58,8 +58,8 @@
 //#define BASE_URL            @"http://58.247.63.210:7003/unifiedAction.do"//外网 (内外测试)
 
 //#define BASE_URL            @"https://app2.imobpay.com/unifiedAction.do"//生产
-//#define BASE_URL @"http://112.65.206.146:7071/unifiedAction.do"
-#define BASE_URL @"http://192.168.1.183:7001/unifiedAction.do"//测试
+#define BASE_URL @"http://112.65.206.146:7071/unifiedAction.do"
+//#define BASE_URL @"http://192.168.1.183:7001/unifiedAction.do"//测试
 //#define BASE_URL            @"http://27.115.40.250:7001/unifiedAction.do"//外网
 //#define BASE_URL              @"http://192.168.1.183:7001/jfpay_prepose.do"//测试
 
