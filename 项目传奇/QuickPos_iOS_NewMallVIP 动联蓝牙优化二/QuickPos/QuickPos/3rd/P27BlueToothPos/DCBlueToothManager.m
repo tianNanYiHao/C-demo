@@ -13,7 +13,12 @@
 #define DEVICEBACKINFO @"deviceBackInfo"
 #define UUIDNAME   [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"]
 
-//目前还未解决 第一次连接以后 关闭蓝牙设备 第二次再连接,HUD不会在5秒内小时 页面因此不能退回
+
+/*
+切换蓝牙的问题:
+如果有 超时,有刷卡错误等操作,那么 切换蓝牙就会导致瞬联 旧的蓝牙名
+如果在旧蓝牙断开的情况下, 可以连上新蓝牙
+*/
 
 
 @interface DCBlueToothManager ()<DCSwiperAPIDelegate,MBProgressHUDDelegate>
