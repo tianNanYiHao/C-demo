@@ -86,7 +86,7 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
     if (_swipeAgain) {
         //先检测一下蓝牙状态
         //是重新刷卡
-        [_dcSwiper startPOS:_orderId transLogo:_transLogo cash:_cash transactType:4];  //刷卡
+        [_dcSwiper cancelPinInput];//取消刷卡 (复位)
         
     }else{
         if (_BTNameArray.count>0) {
@@ -115,6 +115,7 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
 -(void)cancleSwipeCard{
 //    _deviceBackInfo = @"cancaleSwipeCard";
     //取消刷卡(则断开连接)
+
     [self popViewGoBackWithMessage:@"您取消了刷卡"];
 }
 //返回上级页面对内调用
@@ -149,16 +150,20 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
         
     }
     else if([_isMatched isEqualToString:@"NO"]){
-        
-        if (_FirstSearchType == FirstSearch) {   //为防止多次调用 这里只让第一次调用
-            _swipeAgain = NO;      //断开后重置
-            [self endHUD];
-            [self showHUDWithString:@"未搜索到绑定的蓝牙,即将退回"];
-            [self endHUDWithAfterDelay:1.5];
-            [self performSelector:@selector(stopSearchDCBlueToothWithTimeOutToPopviewController) withObject:nil afterDelay:1.5];
-            _FirstSearchType = NotFirstSearch;
-        }
+        if ([_dcSwiper isBTConnected]) {  //如果蓝牙已经连接 则不要提示
+            
+        }else{
+            if (_FirstSearchType == FirstSearch) {   //为防止多次调用 这里只让第一次调用
+                _swipeAgain = NO;      //断开后重置
+                [self endHUD];
+                [self showHUDWithString:@"未搜索到绑定的蓝牙,即将退回"];
+                [self endHUDWithAfterDelay:1.5];
+                [self performSelector:@selector(stopSearchDCBlueToothWithTimeOutToPopviewController) withObject:nil afterDelay:1.5];
+                _FirstSearchType = NotFirstSearch;
+            }
 
+        }
+       
     }
 }
 -(void)stopSearchDCBlueToothWithTimeOutToPopviewController{
@@ -214,9 +219,7 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
 //    [self showAlertView:@"设备连接成功" messgae:peripheral.name];
 
     NSLog(@"-=-=-=-=-=orderId...%@-=-=-=-=-=-transLogo...%@=-=-=-=-=-=-=cash...%d=-=-=-=-=-=-",_orderId,_transLogo,_cash);
-    //刷卡
-    [_dcSwiper startPOS:_orderId transLogo:_transLogo cash:_cash transactType:4];  //刷卡
-    
+    [_dcSwiper cancelPinInput];//取消刷卡 (先复位 再刷卡)
   
     
 }
@@ -225,9 +228,7 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
 {
     NSLog(@"+++++++++++++设备断开");
 //    [self showAlertView:@"设备已经断开" messgae:peripheral.name];
-    
-//   [_dcSwiper cancelPinInput];//取消刷卡
-    
+
      _swipeAgain = NO;  //主动或被动检测断蓝牙设备断开后 必须重新搜索
      [self endHUD];
      [[NSNotificationCenter defaultCenter] postNotificationName:@"startswipe" object:nil userInfo:[NSDictionary dictionaryWithObject:@"no" forKey:@"showSwipe"]];
@@ -264,7 +265,7 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
 //当设备即将刷卡时,等待刷卡的反馈
 - (void)onWaitingForCard
 {
-      [self endHUD]; //隐藏 '蓝牙搜索中'HUD
+    
     NSLog(@"+++++++++++++刷卡前提示:请刷卡");
 //    [self showAlertView:@"刷卡提示" messgae:@"请刷卡！"];
     //此处修改ui界面的变化  提示请刷卡
@@ -313,8 +314,13 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
 
 //当取消刷卡时反馈
 -(void)onDCEMVPOSCancel{
+    [self endHUD]; //隐藏 '蓝牙搜索中'HUD
     //@"取消/复位"
-    [self showAlertView:@"复位成功" messgae:@"您已取消刷卡"];
+//    [self showHUDWithString:@"复位成功"];
+    
+    //刷卡前,都要让蓝牙复位!
+    [_dcSwiper startPOS:_orderId transLogo:_transLogo cash:_cash transactType:4];  //刷卡
+    
 }
 
 
