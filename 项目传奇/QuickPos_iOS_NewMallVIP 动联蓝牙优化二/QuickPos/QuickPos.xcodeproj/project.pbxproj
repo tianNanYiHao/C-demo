@@ -237,8 +237,6 @@
 		878F204A1C34BDF600565176 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 878F20461C34BDF600565176 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		878F204B1C34BDF600565176 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 878F20471C34BDF600565176 /* README.md */; };
 		878F20501C34BE0200565176 /* GTMBase66.m in Sources */ = {isa = PBXBuildFile; fileRef = 878F204E1C34BE0200565176 /* GTMBase66.m */; };
-		87976B0C1CF6BDAB005950E6 /* DCBlueToothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87976B0A1CF6BDAB005950E6 /* DCBlueToothManager.m */; };
-		87976B0D1CF6BDAB005950E6 /* DCSwiperAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87976B0B1CF6BDAB005950E6 /* DCSwiperAPI.framework */; };
 		87976B101CF6C1D4005950E6 /* buleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87976B0F1CF6C1D4005950E6 /* buleTestViewController.m */; };
 		87A0243F1CB79DF40075EE70 /* ADIMageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A0243E1CB79DF40075EE70 /* ADIMageViewController.m */; };
 		87C145D21CBCF25C002F68A9 /* WebView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C145D11CBCF25C002F68A9 /* WebView+Alert.m */; };
@@ -248,6 +246,8 @@
 		87C9DB651CF42480007992E3 /* MyCreditCardMachineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C9DB641CF42480007992E3 /* MyCreditCardMachineModel.m */; };
 		87CEC2E41C3CF5CC0049D579 /* NewProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEC2E31C3CF5CC0049D579 /* NewProductDetailsViewController.m */; };
 		87CEC9691C86C95F007998A0 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CEC9681C86C95F007998A0 /* libUPPayPlugin.a */; };
+		87D126EB1D050EDA00F66C45 /* DCBlueToothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D126E91D050EDA00F66C45 /* DCBlueToothManager.m */; };
+		87D126EC1D050EDA00F66C45 /* DCSwiperAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D126EA1D050EDA00F66C45 /* DCSwiperAPI.framework */; };
 		87E0DDDF1C46273A0072C7C1 /* SureBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0DDDE1C46273A0072C7C1 /* SureBuyViewController.m */; };
 		87E0DDE81C463C2A0072C7C1 /* SureBuyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0DDE61C463C2A0072C7C1 /* SureBuyTableViewCell.m */; };
 		87E0DDE91C463C2A0072C7C1 /* SureBuyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87E0DDE71C463C2A0072C7C1 /* SureBuyTableViewCell.xib */; };
@@ -867,9 +867,6 @@
 		878F204D1C34BE0200565176 /* GTMBase66.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase66.h; sourceTree = "<group>"; };
 		878F204E1C34BE0200565176 /* GTMBase66.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase66.m; sourceTree = "<group>"; };
 		878F204F1C34BE0200565176 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		87976B091CF6BDAB005950E6 /* DCBlueToothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBlueToothManager.h; sourceTree = "<group>"; };
-		87976B0A1CF6BDAB005950E6 /* DCBlueToothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBlueToothManager.m; sourceTree = "<group>"; };
-		87976B0B1CF6BDAB005950E6 /* DCSwiperAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DCSwiperAPI.framework; sourceTree = "<group>"; };
 		87976B0E1CF6C1D4005950E6 /* buleTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buleTestViewController.h; sourceTree = "<group>"; };
 		87976B0F1CF6C1D4005950E6 /* buleTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buleTestViewController.m; sourceTree = "<group>"; };
 		87A0243D1CB79DF40075EE70 /* ADIMageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADIMageViewController.h; sourceTree = "<group>"; };
@@ -889,6 +886,9 @@
 		87CEC9661C86C957007998A0 /* UPPayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPlugin.h; sourceTree = "<group>"; };
 		87CEC9671C86C957007998A0 /* UPPayPluginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPluginDelegate.h; sourceTree = "<group>"; };
 		87CEC9681C86C95F007998A0 /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
+		87D126E81D050EDA00F66C45 /* DCBlueToothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBlueToothManager.h; sourceTree = "<group>"; };
+		87D126E91D050EDA00F66C45 /* DCBlueToothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBlueToothManager.m; sourceTree = "<group>"; };
+		87D126EA1D050EDA00F66C45 /* DCSwiperAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DCSwiperAPI.framework; sourceTree = "<group>"; };
 		87D6F01D1BDE2A32001E3147 /* CommenDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommenDef.h; sourceTree = "<group>"; };
 		87E0DDDD1C46273A0072C7C1 /* SureBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureBuyViewController.h; sourceTree = "<group>"; };
 		87E0DDDE1C46273A0072C7C1 /* SureBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureBuyViewController.m; sourceTree = "<group>"; };
@@ -1182,7 +1182,7 @@
 				AEC0B5B71C47965B00B19A08 /* libstdc++.tbd in Frameworks */,
 				AEC0B5B51C47963F00B19A08 /* libz.tbd in Frameworks */,
 				C3696F001AC1134A003B04B4 /* AVFoundation.framework in Frameworks */,
-				87976B0D1CF6BDAB005950E6 /* DCSwiperAPI.framework in Frameworks */,
+				87D126EC1D050EDA00F66C45 /* DCSwiperAPI.framework in Frameworks */,
 				AEC0B5961C47942C00B19A08 /* libUMSocial_Sdk_Comment_4.4.a in Frameworks */,
 				D5AE63FE1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a in Frameworks */,
 				D599F2271BCCB843006D5F6B /* MediaPlayer.framework in Frameworks */,
@@ -1228,7 +1228,7 @@
 		325CBCB11AEE1BC400D924D5 /* PaySDK */ = {
 			isa = PBXGroup;
 			children = (
-				87976B081CF6BDAB005950E6 /* P27BlueToothPos */,
+				87D126E71D050EDA00F66C45 /* P27BlueToothPos */,
 				325CBCB21AEE1BC400D924D5 /* include */,
 				325CBCB61AEE1BC400D924D5 /* Pos */,
 			);
@@ -2215,17 +2215,6 @@
 			path = gtmbase64;
 			sourceTree = "<group>";
 		};
-		87976B081CF6BDAB005950E6 /* P27BlueToothPos */ = {
-			isa = PBXGroup;
-			children = (
-				87976B091CF6BDAB005950E6 /* DCBlueToothManager.h */,
-				87976B0A1CF6BDAB005950E6 /* DCBlueToothManager.m */,
-				87976B0B1CF6BDAB005950E6 /* DCSwiperAPI.framework */,
-			);
-			name = P27BlueToothPos;
-			path = ../P27BlueToothPos;
-			sourceTree = "<group>";
-		};
 		87CEC9651C86C939007998A0 /* UPPayDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2234,6 +2223,16 @@
 				87CEC9681C86C95F007998A0 /* libUPPayPlugin.a */,
 			);
 			path = UPPayDemo;
+			sourceTree = "<group>";
+		};
+		87D126E71D050EDA00F66C45 /* P27BlueToothPos */ = {
+			isa = PBXGroup;
+			children = (
+				87D126E81D050EDA00F66C45 /* DCBlueToothManager.h */,
+				87D126E91D050EDA00F66C45 /* DCBlueToothManager.m */,
+				87D126EA1D050EDA00F66C45 /* DCSwiperAPI.framework */,
+			);
+			path = P27BlueToothPos;
 			sourceTree = "<group>";
 		};
 		87D6F01C1BDE2A32001E3147 /* include */ = {
@@ -2993,6 +2992,7 @@
 				D5E042B21BDE25DC00677B26 /* MJRefreshBackGifFooter.m in Sources */,
 				591BC3A21AEDFE6A0037199A /* ShoppingCartTableViewCell.m in Sources */,
 				591BC0B91AEDFE320037199A /* Toast+UIView.m in Sources */,
+				87D126EB1D050EDA00F66C45 /* DCBlueToothManager.m in Sources */,
 				591BC35D1AEDFE6A0037199A /* PayViewController.m in Sources */,
 				AEE827BE1C3122FB0099CB70 /* RedeemTableViewCell.m in Sources */,
 				591BC3721AEDFE6A0037199A /* BankListTableViewCell.m in Sources */,
@@ -3200,7 +3200,6 @@
 				591BC37E1AEDFE6A0037199A /* MyAccountTableViewCell.m in Sources */,
 				591BC0A81AEDFE320037199A /* UIButton+AFNetworking.m in Sources */,
 				591BC0AB1AEDFE320037199A /* UIRefreshControl+AFNetworking.m in Sources */,
-				87976B0C1CF6BDAB005950E6 /* DCBlueToothManager.m in Sources */,
 				591BC0B41AEDFE320037199A /* UIView+Hierarchy.m in Sources */,
 				591BC0B21AEDFE320037199A /* IQToolbar.m in Sources */,
 				591BC35C1AEDFE6A0037199A /* NoteViewController.m in Sources */,
@@ -3380,6 +3379,7 @@
 					"$(PROJECT_DIR)/QuickPos/3rd",
 					"$(PROJECT_DIR)/QuickPos/3rd/UMSocial_Sdk_4.4/TencentOpenAPI",
 					"$(PROJECT_DIR)/QuickPos/3rd/P27BlueToothPos",
+					"$(PROJECT_DIR)/QuickPos/3rd/PaySDK/P27BlueToothPos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickPos/GFrameWork-Prefix.pch";
@@ -3435,6 +3435,7 @@
 					"$(PROJECT_DIR)/QuickPos/3rd",
 					"$(PROJECT_DIR)/QuickPos/3rd/UMSocial_Sdk_4.4/TencentOpenAPI",
 					"$(PROJECT_DIR)/QuickPos/3rd/P27BlueToothPos",
+					"$(PROJECT_DIR)/QuickPos/3rd/PaySDK/P27BlueToothPos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickPos/GFrameWork-Prefix.pch";
