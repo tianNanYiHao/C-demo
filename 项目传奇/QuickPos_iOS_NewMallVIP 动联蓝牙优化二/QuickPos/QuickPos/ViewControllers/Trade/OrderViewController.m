@@ -118,16 +118,12 @@
     
     //动联蓝牙通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noticePostDCBlue:) name:@"startswipe" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popViewController) name:@"popview" object:nil];
     
 
 
     
 }
--(void)popViewController{
-    [self.navigationController popViewControllerAnimated:YES];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"popview" object:nil];
-}
+
 - (void)hideswiperingView{
     swiperingView.hidden = NO;
 }
