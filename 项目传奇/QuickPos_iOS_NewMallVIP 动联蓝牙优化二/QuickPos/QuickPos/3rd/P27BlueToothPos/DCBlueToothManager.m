@@ -248,8 +248,7 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
             //一旦得到异常反馈 均断开了连接,
             _deviceBackInfo = DEVICEBACKINFO; //重新初始
             //退回下订单页面 (主动断开连接 则使用通知来popview)
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"popview" object:nil userInfo:nil];
-//            [_viewController.navigationController popViewControllerAnimated:YES];
+            [_viewController.navigationController popViewControllerAnimated:YES];
         }]];
         [gotoPageController showWithSender:nil controller:_viewController animated:YES completion:NULL];
     }
