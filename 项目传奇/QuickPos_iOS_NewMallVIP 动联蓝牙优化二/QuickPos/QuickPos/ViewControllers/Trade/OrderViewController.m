@@ -691,7 +691,7 @@
             }
             else
             {
-                [req cardPay:enc cardPassWord:password iccardInfo:@"" ICCardSerial:@"" ICCardValidDate:expireDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt  payType:@"01"];
+                [req cardPay:enc cardPassWord:password iccardInfo:enc ICCardSerial:@"" ICCardValidDate:expireDate merchantId:self.orderData.merchantId productId:self.orderData.productId orderId:self.orderData.orderId encodeType:@"bankpassword" orderAmt:self.orderData.orderAmt  payType:@"01"];
             }
             
         }]];
