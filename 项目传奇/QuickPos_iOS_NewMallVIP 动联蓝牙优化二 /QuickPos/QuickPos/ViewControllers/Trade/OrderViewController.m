@@ -292,11 +292,14 @@
                 [Common showMsgBox:@"您选择了蓝牙刷卡方式" msg:@"检测到您插入了音频,请拔出音频重试" parentCtrl:self];
             }else{
                 
+                NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+                NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
+                
                 _dcBlueToothManager = [DCBlueToothManager getDCBlueToothManager];
                 _dcBlueToothManager.viewController = self;
                 _dcBlueToothManager.delegate = self;
                 _dcBlueToothManager.orderId = self.orderData.orderId;
-                _dcBlueToothManager.transLogo = self.orderData.orderTranslogNo;
+                _dcBlueToothManager.transLogo = transLogNo;
                 _dcBlueToothManager.cash = (NSInteger)self.orderData.orderAmt;
                 [_dcBlueToothManager searchDCBlueTooth];
     

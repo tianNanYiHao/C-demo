@@ -323,7 +323,7 @@ static DCBlueToothManager *_dcBlueToothManager = nil;
 //    [self showHUDWithString:@"复位成功"];
     
     //刷卡前,都要让蓝牙复位!
-    [_dcSwiper startPOS:_orderId transLogo:_transLogo cash:_cash transactType:4];  //刷卡
+    [_dcSwiper startPOS:_orderId transLogo:_transLogo cash:_cash transactType:DCEMVTransactionType_Payment];  //刷卡
     
 }
 
