@@ -220,6 +220,7 @@
 		59C850441AD520BF00F9343A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C850431AD520BF00F9343A /* MapKit.framework */; };
 		59D460341AF20C5500BA60C3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D460331AF20C5500BA60C3 /* WebViewController.m */; };
 		870C69C21C5B5E8F00402D7C /* BigHongBaoViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 870C69C11C5B5E8F00402D7C /* BigHongBaoViewControl.m */; };
+		871492D71D0E8CE700CACB28 /* DCSwiperAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871492D61D0E8CE700CACB28 /* DCSwiperAPI.framework */; };
 		875EFD3E1C48A31D001542B8 /* MyAccountGaikuangCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD3D1C48A31D001542B8 /* MyAccountGaikuangCell.m */; };
 		875EFD421C48BDBE001542B8 /* MyAccountGaikuangModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD411C48BDBE001542B8 /* MyAccountGaikuangModel.m */; };
 		875EFD451C48D187001542B8 /* SureNowRedeemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD441C48D187001542B8 /* SureNowRedeemViewController.m */; };
@@ -248,7 +249,6 @@
 		87CEC9691C86C95F007998A0 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CEC9681C86C95F007998A0 /* libUPPayPlugin.a */; };
 		87D126EB1D050EDA00F66C45 /* DCBlueToothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D126E91D050EDA00F66C45 /* DCBlueToothManager.m */; };
 		87D127B31D06A9FA00F66C45 /* DCBTDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D127B21D06A9FA00F66C45 /* DCBTDataModel.m */; };
-		87D127CD1D08179100F66C45 /* DCSwiperAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D127CC1D08179100F66C45 /* DCSwiperAPI.framework */; };
 		87E0DDDF1C46273A0072C7C1 /* SureBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0DDDE1C46273A0072C7C1 /* SureBuyViewController.m */; };
 		87E0DDE81C463C2A0072C7C1 /* SureBuyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0DDE61C463C2A0072C7C1 /* SureBuyTableViewCell.m */; };
 		87E0DDE91C463C2A0072C7C1 /* SureBuyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87E0DDE71C463C2A0072C7C1 /* SureBuyTableViewCell.xib */; };
@@ -836,6 +836,7 @@
 		59E7A3461ABBC6330020F3C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		870C69C01C5B5E8F00402D7C /* BigHongBaoViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigHongBaoViewControl.h; sourceTree = "<group>"; };
 		870C69C11C5B5E8F00402D7C /* BigHongBaoViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigHongBaoViewControl.m; sourceTree = "<group>"; };
+		871492D61D0E8CE700CACB28 /* DCSwiperAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DCSwiperAPI.framework; sourceTree = "<group>"; };
 		875EFD3C1C48A31D001542B8 /* MyAccountGaikuangCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountGaikuangCell.h; sourceTree = "<group>"; };
 		875EFD3D1C48A31D001542B8 /* MyAccountGaikuangCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountGaikuangCell.m; sourceTree = "<group>"; };
 		875EFD401C48BDBE001542B8 /* MyAccountGaikuangModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountGaikuangModel.h; sourceTree = "<group>"; };
@@ -891,7 +892,6 @@
 		87D126E91D050EDA00F66C45 /* DCBlueToothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBlueToothManager.m; sourceTree = "<group>"; };
 		87D127B11D06A9FA00F66C45 /* DCBTDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBTDataModel.h; sourceTree = "<group>"; };
 		87D127B21D06A9FA00F66C45 /* DCBTDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBTDataModel.m; sourceTree = "<group>"; };
-		87D127CC1D08179100F66C45 /* DCSwiperAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DCSwiperAPI.framework; sourceTree = "<group>"; };
 		87D6F01D1BDE2A32001E3147 /* CommenDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommenDef.h; sourceTree = "<group>"; };
 		87E0DDDD1C46273A0072C7C1 /* SureBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureBuyViewController.h; sourceTree = "<group>"; };
 		87E0DDDE1C46273A0072C7C1 /* SureBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureBuyViewController.m; sourceTree = "<group>"; };
@@ -1185,7 +1185,7 @@
 				AEC0B5B71C47965B00B19A08 /* libstdc++.tbd in Frameworks */,
 				AEC0B5B51C47963F00B19A08 /* libz.tbd in Frameworks */,
 				C3696F001AC1134A003B04B4 /* AVFoundation.framework in Frameworks */,
-				87D127CD1D08179100F66C45 /* DCSwiperAPI.framework in Frameworks */,
+				871492D71D0E8CE700CACB28 /* DCSwiperAPI.framework in Frameworks */,
 				AEC0B5961C47942C00B19A08 /* libUMSocial_Sdk_Comment_4.4.a in Frameworks */,
 				D5AE63FE1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a in Frameworks */,
 				D599F2271BCCB843006D5F6B /* MediaPlayer.framework in Frameworks */,
@@ -2235,7 +2235,7 @@
 				87D127B21D06A9FA00F66C45 /* DCBTDataModel.m */,
 				87D126E81D050EDA00F66C45 /* DCBlueToothManager.h */,
 				87D126E91D050EDA00F66C45 /* DCBlueToothManager.m */,
-				87D127CC1D08179100F66C45 /* DCSwiperAPI.framework */,
+				871492D61D0E8CE700CACB28 /* DCSwiperAPI.framework */,
 			);
 			path = P27BlueToothPos;
 			sourceTree = "<group>";
