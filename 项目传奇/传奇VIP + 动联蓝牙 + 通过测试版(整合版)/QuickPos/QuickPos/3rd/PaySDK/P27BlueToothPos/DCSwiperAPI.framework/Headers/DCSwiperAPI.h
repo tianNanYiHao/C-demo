@@ -45,12 +45,13 @@ typedef enum {
     
 } DCEMVState;
 
+//蓝牙状态
 typedef enum
 {
-    STATE_ACTIVE = 0,
-    STATE_IDLE = 1,
-    STATE_BUSY = 2,
-    STATE_UNACTIVE = -1
+    STATE_ACTIVE = 0,//活跃的
+    STATE_IDLE = 1,//闲置的
+    STATE_BUSY = 2,//繁忙的
+    STATE_UNACTIVE = -1//非活跃状态
 }DeviceBlueState;
 
 
@@ -194,7 +195,7 @@ typedef enum
 
 @interface DCSwiperAPI : NSObject
 {
-    int intDeviceBlueState;
+    int intDeviceBlueState;//当前蓝牙状态
 }
 
 @property(nonatomic,weak) id<DCSwiperAPIDelegate> delegate;
@@ -209,14 +210,12 @@ typedef enum
  */
 - (NSString *)getApiVersion;
 
-
 /**
  *  SDK初始化
  *
  *  @return
  */
 + (DCSwiperAPI *)sharedDCEMV;
-
 
 /**
  *  获取设备状态
@@ -225,18 +224,15 @@ typedef enum
  */
 - (DCEMVState)getDCEMVState;
 
-
 /**
  *  获取设备信息
  */
 - (void)getDeviceInfo;
 
-
 /**
  *  获取设备电量
  */
 - (void)getDeviceElectric;
-
 
 /**
  *  获取银行卡卡号
@@ -248,11 +244,10 @@ typedef enum
  *
  *  @param orderId      订单号 16位字符
  *  @param transLogo    流水号 6位字符
- *  @param cash         交易金额
+ *  @param cash         交易金额 元为单位，最低0.01
  *  @param transactType 交易类型
  */
-- (void)startPOS:(NSString *)orderId transLogo:(NSString *)transLogo cash:(NSInteger)cash transactType:(DCEMVTransactionType)transactType;
-
+- (void)startPOS:(NSString *)orderId transLogo:(NSString *)transLogo cash:(double)cash transactType:(DCEMVTransactionType)transactType;
 
 /**
  *  取消交易/复位
@@ -277,14 +272,12 @@ typedef enum
  */
 -(void)stopScanBlueDevice;
 
-
 /**
  *  连接蓝牙对象
  *
  *  @param peripheral
  */
 -(void)connectBluetoothDevice:(CBPeripheral *)peripheral;
-
 
 /**
  *  断开蓝牙连接
@@ -304,6 +297,7 @@ typedef enum
  *  @param pinKey、（32位密钥 + 8位checkValue = 40位）
  */
 -(void)updateKey:(NSString *)pinKey;
+
 
 
 
