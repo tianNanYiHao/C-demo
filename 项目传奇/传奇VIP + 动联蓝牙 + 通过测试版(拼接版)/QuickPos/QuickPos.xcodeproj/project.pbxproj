@@ -220,7 +220,6 @@
 		59C850441AD520BF00F9343A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C850431AD520BF00F9343A /* MapKit.framework */; };
 		59D460341AF20C5500BA60C3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D460331AF20C5500BA60C3 /* WebViewController.m */; };
 		870C69C21C5B5E8F00402D7C /* BigHongBaoViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 870C69C11C5B5E8F00402D7C /* BigHongBaoViewControl.m */; };
-		871492D71D0E8CE700CACB28 /* DCSwiperAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871492D61D0E8CE700CACB28 /* DCSwiperAPI.framework */; };
 		875EFD3E1C48A31D001542B8 /* MyAccountGaikuangCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD3D1C48A31D001542B8 /* MyAccountGaikuangCell.m */; };
 		875EFD421C48BDBE001542B8 /* MyAccountGaikuangModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD411C48BDBE001542B8 /* MyAccountGaikuangModel.m */; };
 		875EFD451C48D187001542B8 /* SureNowRedeemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875EFD441C48D187001542B8 /* SureNowRedeemViewController.m */; };
@@ -253,6 +252,7 @@
 		87E0DDE81C463C2A0072C7C1 /* SureBuyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0DDE61C463C2A0072C7C1 /* SureBuyTableViewCell.m */; };
 		87E0DDE91C463C2A0072C7C1 /* SureBuyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87E0DDE71C463C2A0072C7C1 /* SureBuyTableViewCell.xib */; };
 		87E0DDEC1C4640FD0072C7C1 /* hongBaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0DDEB1C4640FD0072C7C1 /* hongBaoModel.m */; };
+		87E9893D1D0FAF0D00ABF1A7 /* DCSwiperAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E9893C1D0FAF0D00ABF1A7 /* DCSwiperAPI.framework */; };
 		87EAAF621C058A72006CD886 /* TransferAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EAAF611C058A72006CD886 /* TransferAccountViewController.m */; };
 		87FA24361BF1E3F400BA935B /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FA24351BF1E3F400BA935B /* Tool.m */; };
 		87FA24391BF1E75800BA935B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FA24381BF1E75800BA935B /* Foundation+Log.m */; };
@@ -836,7 +836,6 @@
 		59E7A3461ABBC6330020F3C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		870C69C01C5B5E8F00402D7C /* BigHongBaoViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigHongBaoViewControl.h; sourceTree = "<group>"; };
 		870C69C11C5B5E8F00402D7C /* BigHongBaoViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigHongBaoViewControl.m; sourceTree = "<group>"; };
-		871492D61D0E8CE700CACB28 /* DCSwiperAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DCSwiperAPI.framework; sourceTree = "<group>"; };
 		875EFD3C1C48A31D001542B8 /* MyAccountGaikuangCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountGaikuangCell.h; sourceTree = "<group>"; };
 		875EFD3D1C48A31D001542B8 /* MyAccountGaikuangCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountGaikuangCell.m; sourceTree = "<group>"; };
 		875EFD401C48BDBE001542B8 /* MyAccountGaikuangModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountGaikuangModel.h; sourceTree = "<group>"; };
@@ -900,6 +899,7 @@
 		87E0DDE71C463C2A0072C7C1 /* SureBuyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureBuyTableViewCell.xib; sourceTree = "<group>"; };
 		87E0DDEA1C4640FD0072C7C1 /* hongBaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hongBaoModel.h; sourceTree = "<group>"; };
 		87E0DDEB1C4640FD0072C7C1 /* hongBaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hongBaoModel.m; sourceTree = "<group>"; };
+		87E9893C1D0FAF0D00ABF1A7 /* DCSwiperAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DCSwiperAPI.framework; sourceTree = "<group>"; };
 		87EAAF601C058A72006CD886 /* TransferAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferAccountViewController.h; sourceTree = "<group>"; };
 		87EAAF611C058A72006CD886 /* TransferAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferAccountViewController.m; sourceTree = "<group>"; };
 		87FA24341BF1E3F400BA935B /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
@@ -1185,7 +1185,7 @@
 				AEC0B5B71C47965B00B19A08 /* libstdc++.tbd in Frameworks */,
 				AEC0B5B51C47963F00B19A08 /* libz.tbd in Frameworks */,
 				C3696F001AC1134A003B04B4 /* AVFoundation.framework in Frameworks */,
-				871492D71D0E8CE700CACB28 /* DCSwiperAPI.framework in Frameworks */,
+				87E9893D1D0FAF0D00ABF1A7 /* DCSwiperAPI.framework in Frameworks */,
 				AEC0B5961C47942C00B19A08 /* libUMSocial_Sdk_Comment_4.4.a in Frameworks */,
 				D5AE63FE1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a in Frameworks */,
 				D599F2271BCCB843006D5F6B /* MediaPlayer.framework in Frameworks */,
@@ -2235,7 +2235,7 @@
 				87D127B21D06A9FA00F66C45 /* DCBTDataModel.m */,
 				87D126E81D050EDA00F66C45 /* DCBlueToothManager.h */,
 				87D126E91D050EDA00F66C45 /* DCBlueToothManager.m */,
-				871492D61D0E8CE700CACB28 /* DCSwiperAPI.framework */,
+				87E9893C1D0FAF0D00ABF1A7 /* DCSwiperAPI.framework */,
 			);
 			path = P27BlueToothPos;
 			sourceTree = "<group>";

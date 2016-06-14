@@ -244,10 +244,10 @@ typedef enum
  *
  *  @param orderId      订单号 16位字符
  *  @param transLogo    流水号 6位字符
- *  @param cash         交易金额
+ *  @param cash         交易金额 元为单位，最低0.01
  *  @param transactType 交易类型
  */
-- (void)startPOS:(NSString *)orderId transLogo:(NSString *)transLogo cash:(NSInteger)cash transactType:(DCEMVTransactionType)transactType;
+- (void)startPOS:(NSString *)orderId transLogo:(NSString *)transLogo cash:(double)cash transactType:(DCEMVTransactionType)transactType;
 
 /**
  *  取消交易/复位
