@@ -107,7 +107,7 @@
     NSString *bdm = [[NSUserDefaults standardUserDefaults] objectForKey:@"uuidName"];
     NSString *uuidMainKeyStr = [uuidAndName objectForKey:@"mainKey"];
     NSString *uuidGetBDM = [uuidAndName objectForKey:uuidMainKeyStr];
-    bdm = @"AC00097429";
+    
     
     
     NSLog(@"***** bdm ******* %@",bdm);
@@ -582,6 +582,7 @@
     }else if (_status == -1){
         
     }else if (_status == 0){
+        
         if (![self deviceFindWith:vs]) {
             //获取psam卡号
             NSString *psam = [mVcom HexValue:vs->psamno  Len:vs->psamnoLen];
@@ -595,6 +596,7 @@
             //        NSString *trackPlain = [mVcom HexValue:vs->trackPlaintext Len:vs->trackPlaintextLen];
             //获取磁道密文
             NSString *trackEncode = [mVcom HexValue:vs->trackEncryption Len:vs->trackEncryptionLen];
+            
             NSString *cardNo = [mVcom HexValue:vs->cardPlaintext Len:vs->cardPlaintextLen];
             //获取mac
             NSString *mac = [mVcom HexValue:vs->mac Len:vs->maclen];

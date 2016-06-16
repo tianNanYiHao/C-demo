@@ -23,7 +23,6 @@
 		325CBCE81AEE1BC400D924D5 /* NLICCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 325CBCCE1AEE1BC400D924D5 /* NLICCard.m */; };
 		325CBCE91AEE1BC400D924D5 /* Pos.m in Sources */ = {isa = PBXBuildFile; fileRef = 325CBCD01AEE1BC400D924D5 /* Pos.m */; };
 		325CBCEA1AEE1BC400D924D5 /* PosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 325CBCD21AEE1BC400D924D5 /* PosManager.m */; };
-		325CBCEB1AEE1BC400D924D5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 325CBCDA1AEE1BC400D924D5 /* libvoclib.a */; };
 		325CBCEE1AEE1C1D00D924D5 /* libSystemPrivacySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 325CBCED1AEE1C1D00D924D5 /* libSystemPrivacySDK.a */; };
 		325CBCFD1AF0AE4600D924D5 /* TransactionDetailsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 325CBCFC1AF0AE4600D924D5 /* TransactionDetailsData.m */; };
 		32F3A8311AD5285600763B72 /* coolblack.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 32F3A8301AD5285600763B72 /* coolblack.TTF */; };
@@ -241,6 +240,8 @@
 		87A0243F1CB79DF40075EE70 /* ADIMageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A0243E1CB79DF40075EE70 /* ADIMageViewController.m */; };
 		87C145D21CBCF25C002F68A9 /* WebView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C145D11CBCF25C002F68A9 /* WebView+Alert.m */; };
 		87C749A21D12540C00236EA6 /* ITronBlueToothDFBVpos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87C749A11D12540C00236EA6 /* ITronBlueToothDFBVpos.mm */; };
+		87C749A41D126DCB00236EA6 /* libReliableBurstData_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C749A31D126DCB00236EA6 /* libReliableBurstData_arm64.a */; };
+		87C749A61D1277CA00236EA6 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C749A51D1277CA00236EA6 /* libvoclib.a */; };
 		87C75C551C477BEE00DA465F /* SureRedeemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C75C541C477BEE00DA465F /* SureRedeemViewController.m */; };
 		87C75C581C47A14900DA465F /* HoldingDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C75C571C47A14900DA465F /* HoldingDetailModel.m */; };
 		87C75C5B1C47ADE500DA465F /* HoldingEveryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C75C5A1C47ADE500DA465F /* HoldingEveryModel.m */; };
@@ -367,7 +368,6 @@
 		D5AE0EAF1BC90C7E0094CE5E /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AE0EA61BC90C7E0094CE5E /* SDCycleScrollView.m */; };
 		D5AE0EB01BC90C7E0094CE5E /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AE0EA81BC90C7E0094CE5E /* UIView+SDExtension.m */; };
 		D5AE39BD1BCB549500D7E11A /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AE39BC1BCB549500D7E11A /* SettingViewController.m */; };
-		D5AE63FE1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AE63FD1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a */; };
 		D5B09C0C1BCE371C00AC4881 /* MyAccount2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B09C0A1BCE371C00AC4881 /* MyAccount2TableViewCell.m */; };
 		D5B09C0D1BCE371C00AC4881 /* MyAccount2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B09C0B1BCE371C00AC4881 /* MyAccount2TableViewCell.xib */; };
 		D5B1561A1C7D547A00D670B6 /* LianDiBlueToothVpos.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B156191C7D547A00D670B6 /* LianDiBlueToothVpos.m */; };
@@ -454,7 +454,6 @@
 		325CBCD71AEE1BC400D924D5 /* DeviceSearchListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSearchListener.h; sourceTree = "<group>"; };
 		325CBCD81AEE1BC400D924D5 /* HandleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleData.h; sourceTree = "<group>"; };
 		325CBCD91AEE1BC400D924D5 /* ItronCommunicationManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItronCommunicationManagerBase.h; sourceTree = "<group>"; };
-		325CBCDA1AEE1BC400D924D5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoclib.a; sourceTree = "<group>"; };
 		325CBCDB1AEE1BC400D924D5 /* vcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcom.h; sourceTree = "<group>"; };
 		325CBCED1AEE1C1D00D924D5 /* libSystemPrivacySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSystemPrivacySDK.a; sourceTree = "<group>"; };
 		325CBCFB1AF0AE4600D924D5 /* TransactionDetailsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDetailsData.h; sourceTree = "<group>"; };
@@ -876,6 +875,8 @@
 		87C145D11CBCF25C002F68A9 /* WebView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WebView+Alert.m"; sourceTree = "<group>"; };
 		87C749A01D12540C00236EA6 /* ITronBlueToothDFBVpos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITronBlueToothDFBVpos.h; sourceTree = "<group>"; };
 		87C749A11D12540C00236EA6 /* ITronBlueToothDFBVpos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ITronBlueToothDFBVpos.mm; sourceTree = "<group>"; };
+		87C749A31D126DCB00236EA6 /* libReliableBurstData_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libReliableBurstData_arm64.a; sourceTree = "<group>"; };
+		87C749A51D1277CA00236EA6 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoclib.a; sourceTree = "<group>"; };
 		87C75C531C477BEE00DA465F /* SureRedeemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureRedeemViewController.h; sourceTree = "<group>"; };
 		87C75C541C477BEE00DA465F /* SureRedeemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureRedeemViewController.m; sourceTree = "<group>"; };
 		87C75C561C47A14900DA465F /* HoldingDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldingDetailModel.h; sourceTree = "<group>"; };
@@ -1096,7 +1097,6 @@
 		D5AE0EA81BC90C7E0094CE5E /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		D5AE39BB1BCB549500D7E11A /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		D5AE39BC1BCB549500D7E11A /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		D5AE63FD1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libReliableBurstData_arm64.a; sourceTree = "<group>"; };
 		D5B09C091BCE371C00AC4881 /* MyAccount2TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccount2TableViewCell.h; sourceTree = "<group>"; };
 		D5B09C0A1BCE371C00AC4881 /* MyAccount2TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccount2TableViewCell.m; sourceTree = "<group>"; };
 		D5B09C0B1BCE371C00AC4881 /* MyAccount2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccount2TableViewCell.xib; sourceTree = "<group>"; };
@@ -1181,13 +1181,13 @@
 				C36E386E1ABA5FEC0004BE78 /* MobileCoreServices.framework in Frameworks */,
 				87CEC9691C86C95F007998A0 /* libUPPayPlugin.a in Frameworks */,
 				D5FF110F1C62E6C900E011DE /* JavaScriptCore.framework in Frameworks */,
+				87C749A41D126DCB00236EA6 /* libReliableBurstData_arm64.a in Frameworks */,
 				AEC0B5B91C47966E00B19A08 /* libiconv.tbd in Frameworks */,
 				AEC0B5B71C47965B00B19A08 /* libstdc++.tbd in Frameworks */,
 				AEC0B5B51C47963F00B19A08 /* libz.tbd in Frameworks */,
 				C3696F001AC1134A003B04B4 /* AVFoundation.framework in Frameworks */,
 				87D126EC1D050EDA00F66C45 /* DCSwiperAPI.framework in Frameworks */,
 				AEC0B5961C47942C00B19A08 /* libUMSocial_Sdk_Comment_4.4.a in Frameworks */,
-				D5AE63FE1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a in Frameworks */,
 				D599F2271BCCB843006D5F6B /* MediaPlayer.framework in Frameworks */,
 				D599F2251BCCB82C006D5F6B /* libsqlite3.tbd in Frameworks */,
 				AEC0B5A61C47944800B19A08 /* TencentOpenAPI.framework in Frameworks */,
@@ -1205,8 +1205,8 @@
 				AEC0B5951C47942C00B19A08 /* libUMSocial_Sdk_4.4.a in Frameworks */,
 				AEC0B5A51C47944800B19A08 /* libSocialQQ.a in Frameworks */,
 				325CBCEE1AEE1C1D00D924D5 /* libSystemPrivacySDK.a in Frameworks */,
+				87C749A61D1277CA00236EA6 /* libvoclib.a in Frameworks */,
 				D599F21C1BCCB787006D5F6B /* BmobSDK.framework in Frameworks */,
-				325CBCEB1AEE1BC400D924D5 /* libvoclib.a in Frameworks */,
 				325CBCE61AEE1BC400D924D5 /* MESDK.framework in Frameworks */,
 				59C850441AD520BF00F9343A /* MapKit.framework in Frameworks */,
 				59C850421AD5204B00F9343A /* CoreLocation.framework in Frameworks */,
@@ -1311,7 +1311,7 @@
 				325CBCD71AEE1BC400D924D5 /* DeviceSearchListener.h */,
 				325CBCD81AEE1BC400D924D5 /* HandleData.h */,
 				325CBCD91AEE1BC400D924D5 /* ItronCommunicationManagerBase.h */,
-				325CBCDA1AEE1BC400D924D5 /* libvoclib.a */,
+				87C749A51D1277CA00236EA6 /* libvoclib.a */,
 				325CBCDB1AEE1BC400D924D5 /* vcom.h */,
 			);
 			path = voclib;
@@ -2263,7 +2263,7 @@
 				AEC0B5B81C47966E00B19A08 /* libiconv.tbd */,
 				AEC0B5B61C47965B00B19A08 /* libstdc++.tbd */,
 				AEC0B5B41C47963F00B19A08 /* libz.tbd */,
-				D5AE63FD1BFEEF1A00501AD8 /* libReliableBurstData_arm64.a */,
+				87C749A31D126DCB00236EA6 /* libReliableBurstData_arm64.a */,
 				D599F2261BCCB843006D5F6B /* MediaPlayer.framework */,
 				D599F2241BCCB82C006D5F6B /* libsqlite3.tbd */,
 				D599F2221BCCB819006D5F6B /* libicucore.tbd */,
