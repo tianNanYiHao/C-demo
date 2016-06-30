@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8785474A1D24AF820038D43E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 878547491D24AF820038D43E /* main.m */; };
+		8785474D1D24AF820038D43E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8785474C1D24AF820038D43E /* AppDelegate.m */; };
+		878547501D24AF820038D43E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8785474F1D24AF820038D43E /* ViewController.m */; };
+		878547531D24AF820038D43E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878547511D24AF820038D43E /* Main.storyboard */; };
+		878547561D24AF820038D43E /* _________.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 878547541D24AF820038D43E /* _________.xcdatamodeld */; };
+		878547581D24AF820038D43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878547571D24AF820038D43E /* Assets.xcassets */; };
+		8785475B1D24AF820038D43E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878547591D24AF820038D43E /* LaunchScreen.storyboard */; };
+		878547661D24AF820038D43E /* _________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 878547651D24AF820038D43E /* _________Tests.m */; };
+		878547711D24AF820038D43E /* _________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 878547701D24AF820038D43E /* _________UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		878547621D24AF820038D43E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8785473D1D24AF820038D43E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 878547441D24AF820038D43E;
+			remoteInfo = "声音震动+相机权限";
+		};
+		8785476D1D24AF820038D43E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8785473D1D24AF820038D43E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 878547441D24AF820038D43E;
+			remoteInfo = "声音震动+相机权限";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		878547451D24AF820038D43E /* soundDIVarateCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soundDIVarateCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		878547491D24AF820038D43E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8785474B1D24AF820038D43E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8785474C1D24AF820038D43E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8785474E1D24AF820038D43E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8785474F1D24AF820038D43E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		878547521D24AF820038D43E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		878547551D24AF820038D43E /* _________.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "_________.xcdatamodel"; sourceTree = "<group>"; };
+		878547571D24AF820038D43E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8785475A1D24AF820038D43E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8785475C1D24AF820038D43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		878547611D24AF820038D43E /* 声音震动+相机权限Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "声音震动+相机权限Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		878547651D24AF820038D43E /* _________Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_________Tests.m"; sourceTree = "<group>"; };
+		878547671D24AF820038D43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8785476C1D24AF820038D43E /* 声音震动+相机权限UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "声音震动+相机权限UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		878547701D24AF820038D43E /* _________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_________UITests.m"; sourceTree = "<group>"; };
+		878547721D24AF820038D43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		878547421D24AF820038D43E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785475E1D24AF820038D43E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		878547691D24AF820038D43E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8785473C1D24AF820038D43E = {
+			isa = PBXGroup;
+			children = (
+				878547471D24AF820038D43E /* 声音震动+相机权限 */,
+				878547641D24AF820038D43E /* 声音震动+相机权限Tests */,
+				8785476F1D24AF820038D43E /* 声音震动+相机权限UITests */,
+				878547461D24AF820038D43E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		878547461D24AF820038D43E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				878547451D24AF820038D43E /* soundDIVarateCamera.app */,
+				878547611D24AF820038D43E /* 声音震动+相机权限Tests.xctest */,
+				8785476C1D24AF820038D43E /* 声音震动+相机权限UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		878547471D24AF820038D43E /* 声音震动+相机权限 */ = {
+			isa = PBXGroup;
+			children = (
+				8785474B1D24AF820038D43E /* AppDelegate.h */,
+				8785474C1D24AF820038D43E /* AppDelegate.m */,
+				8785474E1D24AF820038D43E /* ViewController.h */,
+				8785474F1D24AF820038D43E /* ViewController.m */,
+				878547511D24AF820038D43E /* Main.storyboard */,
+				878547571D24AF820038D43E /* Assets.xcassets */,
+				878547591D24AF820038D43E /* LaunchScreen.storyboard */,
+				8785475C1D24AF820038D43E /* Info.plist */,
+				878547541D24AF820038D43E /* _________.xcdatamodeld */,
+				878547481D24AF820038D43E /* Supporting Files */,
+			);
+			path = "声音震动+相机权限";
+			sourceTree = "<group>";
+		};
+		878547481D24AF820038D43E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				878547491D24AF820038D43E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		878547641D24AF820038D43E /* 声音震动+相机权限Tests */ = {
+			isa = PBXGroup;
+			children = (
+				878547651D24AF820038D43E /* _________Tests.m */,
+				878547671D24AF820038D43E /* Info.plist */,
+			);
+			path = "声音震动+相机权限Tests";
+			sourceTree = "<group>";
+		};
+		8785476F1D24AF820038D43E /* 声音震动+相机权限UITests */ = {
+			isa = PBXGroup;
+			children = (
+				878547701D24AF820038D43E /* _________UITests.m */,
+				878547721D24AF820038D43E /* Info.plist */,
+			);
+			path = "声音震动+相机权限UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		878547441D24AF820038D43E /* 声音震动+相机权限 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 878547751D24AF820038D43E /* Build configuration list for PBXNativeTarget "声音震动+相机权限" */;
+			buildPhases = (
+				878547411D24AF820038D43E /* Sources */,
+				878547421D24AF820038D43E /* Frameworks */,
+				878547431D24AF820038D43E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "声音震动+相机权限";
+			productName = "声音震动+相机权限";
+			productReference = 878547451D24AF820038D43E /* soundDIVarateCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		878547601D24AF820038D43E /* 声音震动+相机权限Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 878547781D24AF820038D43E /* Build configuration list for PBXNativeTarget "声音震动+相机权限Tests" */;
+			buildPhases = (
+				8785475D1D24AF820038D43E /* Sources */,
+				8785475E1D24AF820038D43E /* Frameworks */,
+				8785475F1D24AF820038D43E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				878547631D24AF820038D43E /* PBXTargetDependency */,
+			);
+			name = "声音震动+相机权限Tests";
+			productName = "声音震动+相机权限Tests";
+			productReference = 878547611D24AF820038D43E /* 声音震动+相机权限Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8785476B1D24AF820038D43E /* 声音震动+相机权限UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8785477B1D24AF820038D43E /* Build configuration list for PBXNativeTarget "声音震动+相机权限UITests" */;
+			buildPhases = (
+				878547681D24AF820038D43E /* Sources */,
+				878547691D24AF820038D43E /* Frameworks */,
+				8785476A1D24AF820038D43E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8785476E1D24AF820038D43E /* PBXTargetDependency */,
+			);
+			name = "声音震动+相机权限UITests";
+			productName = "声音震动+相机权限UITests";
+			productReference = 8785476C1D24AF820038D43E /* 声音震动+相机权限UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8785473D1D24AF820038D43E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Aotu;
+				TargetAttributes = {
+					878547441D24AF820038D43E = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					878547601D24AF820038D43E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 878547441D24AF820038D43E;
+					};
+					8785476B1D24AF820038D43E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 878547441D24AF820038D43E;
+					};
+				};
+			};
+			buildConfigurationList = 878547401D24AF820038D43E /* Build configuration list for PBXProject "声音震动+相机权限" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8785473C1D24AF820038D43E;
+			productRefGroup = 878547461D24AF820038D43E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				878547441D24AF820038D43E /* 声音震动+相机权限 */,
+				878547601D24AF820038D43E /* 声音震动+相机权限Tests */,
+				8785476B1D24AF820038D43E /* 声音震动+相机权限UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		878547431D24AF820038D43E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785475B1D24AF820038D43E /* LaunchScreen.storyboard in Resources */,
+				878547581D24AF820038D43E /* Assets.xcassets in Resources */,
+				878547531D24AF820038D43E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785475F1D24AF820038D43E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785476A1D24AF820038D43E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		878547411D24AF820038D43E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878547501D24AF820038D43E /* ViewController.m in Sources */,
+				878547561D24AF820038D43E /* _________.xcdatamodeld in Sources */,
+				8785474D1D24AF820038D43E /* AppDelegate.m in Sources */,
+				8785474A1D24AF820038D43E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785475D1D24AF820038D43E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878547661D24AF820038D43E /* _________Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		878547681D24AF820038D43E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878547711D24AF820038D43E /* _________UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		878547631D24AF820038D43E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 878547441D24AF820038D43E /* 声音震动+相机权限 */;
+			targetProxy = 878547621D24AF820038D43E /* PBXContainerItemProxy */;
+		};
+		8785476E1D24AF820038D43E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 878547441D24AF820038D43E /* 声音震动+相机权限 */;
+			targetProxy = 8785476D1D24AF820038D43E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		878547511D24AF820038D43E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				878547521D24AF820038D43E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		878547591D24AF820038D43E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8785475A1D24AF820038D43E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		878547731D24AF820038D43E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "8b88d28d-62d4-4005-81c5-74be1ee6d9c7";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		878547741D24AF820038D43E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "8b88d28d-62d4-4005-81c5-74be1ee6d9c7";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		878547761D24AF820038D43E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				INFOPLIST_FILE = "声音震动+相机权限/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.---------";
+				PRODUCT_NAME = soundDIVarateCamera;
+				PROVISIONING_PROFILE = "8b88d28d-62d4-4005-81c5-74be1ee6d9c7";
+			};
+			name = Debug;
+		};
+		878547771D24AF820038D43E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				INFOPLIST_FILE = "声音震动+相机权限/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.---------";
+				PRODUCT_NAME = soundDIVarateCamera;
+				PROVISIONING_PROFILE = "8b88d28d-62d4-4005-81c5-74be1ee6d9c7";
+			};
+			name = Release;
+		};
+		878547791D24AF820038D43E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "声音震动+相机权限Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.---------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/声音震动+相机权限.app/声音震动+相机权限";
+			};
+			name = Debug;
+		};
+		8785477A1D24AF820038D43E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "声音震动+相机权限Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.---------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/声音震动+相机权限.app/声音震动+相机权限";
+			};
+			name = Release;
+		};
+		8785477C1D24AF820038D43E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "声音震动+相机权限UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.---------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "声音震动+相机权限";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8785477D1D24AF820038D43E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "声音震动+相机权限UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "qianhaichuanqi.---------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "声音震动+相机权限";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		878547401D24AF820038D43E /* Build configuration list for PBXProject "声音震动+相机权限" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878547731D24AF820038D43E /* Debug */,
+				878547741D24AF820038D43E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		878547751D24AF820038D43E /* Build configuration list for PBXNativeTarget "声音震动+相机权限" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878547761D24AF820038D43E /* Debug */,
+				878547771D24AF820038D43E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		878547781D24AF820038D43E /* Build configuration list for PBXNativeTarget "声音震动+相机权限Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878547791D24AF820038D43E /* Debug */,
+				8785477A1D24AF820038D43E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8785477B1D24AF820038D43E /* Build configuration list for PBXNativeTarget "声音震动+相机权限UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8785477C1D24AF820038D43E /* Debug */,
+				8785477D1D24AF820038D43E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		878547541D24AF820038D43E /* _________.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				878547551D24AF820038D43E /* _________.xcdatamodel */,
+			);
+			currentVersion = 878547551D24AF820038D43E /* _________.xcdatamodel */;
+			path = "_________.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8785473D1D24AF820038D43E /* Project object */;
+}
