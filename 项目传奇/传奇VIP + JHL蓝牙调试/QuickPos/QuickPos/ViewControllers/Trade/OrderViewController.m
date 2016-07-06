@@ -122,9 +122,15 @@
     //动联蓝牙通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noticePostDCBlue:) name:@"startswipe" object:nil];
     
-
+    //JHL蓝牙通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startswipeByJHL) name:@"startswipeByJHL" object:nil];
+    
 
     
+}
+-(void)startswipeByJHL{
+    swiperingView.hidden = NO;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"startswipeByJHL" object:nil];
 }
 
 - (void)hideswiperingView{
@@ -319,9 +325,12 @@
                 NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
                 NSString *transLogNo = [NSString stringWithFormat:@"%06d",[[user objectForKey:@"transLogNo"] integerValue]];
                 
-                _manager = [[JHLBTPosVManager alloc] init];
-                [self addChildViewController:_manager];
-                [self.view addSubview:_manager.view];
+                //0x01(金+密) 0x02(金+无密) ...
+                _manager = [[JHLBTPosVManager alloc] initwithType:0x02 withAmount:self.orderData.orderAmt];
+                _manager.viewController = self;
+                
+                //带键盘mpos JHLM601512005592
+                //无键盘pos  JHLA801605009887
                 [[NSUserDefaults standardUserDefaults] setObject:@"JHLA801605009887" forKey:@"uuidName"];
 
                
