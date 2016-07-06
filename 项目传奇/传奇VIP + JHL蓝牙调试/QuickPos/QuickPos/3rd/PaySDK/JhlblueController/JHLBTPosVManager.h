@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface JHLBTPosVManager : UIViewController
+enum{
+    timeOutType1,   //一般情况下超时 
+    timeOutType2,   //手机设备未开启蓝牙超时
+    
+};
+@interface JHLBTPosVManager : NSObject
 
 @property (nonatomic,strong) UIViewController *viewController;
 
+
+-(instancetype)initwithType:(int)type withAmount:(NSString*)amount;
 @end
