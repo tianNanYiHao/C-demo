@@ -1,0 +1,68 @@
+//
+//  PrefixHeader.pch
+//  SFoofSave
+//
+//  Created by Lff on 16/8/3.
+//  Copyright © 2016年 Lff. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+#define iOS7 [[[UIDevice currentDevice] systemVersion]floatValue]>=7
+#define iOS8 [[[UIDevice currentDevice] systemVersion]floatValue]>=8
+#define iOS6 [[[UIDevice currentDevice] systemVersion]floatValue]<=7
+
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : 0)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : 0)
+#define iPhone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : 0)
+#define addHeight 88
+
+
+#define boundsWidth self.view.bounds.size.width
+#define boundsHeight self.view.bounds.size.height
+
+
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "MBProgressHUD.h"
+
+
+#import "UIDevice+iOS7AndIphone5.h"
+#import "AFNetworking.h"
+#import "NSJSONSerialization+Json.h"
+#import "MyAppDelegate.h"
+#import "Request.h"
+//#import "UserBaseData.h"
+#import "Utils.h"
+#import "PSTAlertController.h"
+#import "DDMenuController.h"
+
+
+
+//#import "BankCardData.h"
+#import "UIScrollView+MJRefresh.h"
+#import "UIImageView+WebCache.h"
+
+//#import "CommenDef.h"
+#import "Request.h"
+#import "MJRefresh.h"
+#import "Common.h"
+#import "Masonry.h"
+#import "MyAppDelegate.h"
+#import "UIView+ChangeFrame.h"
+
+
+#endif
+
+
+
