@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Lff. All rights reserved.
 //
 
+#define customBlue [UIColor colorWithRed:69/255.0 green:120/255.0 blue:245/255.0 alpha:1]
+#define customGray [UIColor colorWithRed:238/255.0 green:238/255.0 blue:245/255.0 alpha:1]
+#define customLineBlue [UIColor colorWithRed:151/255.0 green:170/255.0 blue:245/255.0 alpha:1]
 #import "LFFPickerVIew.h"
 
 @interface LFFPickerVIew()
@@ -33,17 +36,17 @@
 - (void)awakeFromNib{
     _showView.layer.masksToBounds = YES;
     _showView.layer.borderWidth = 1;
-    _showView.layer.borderColor = [UIColor redColor].CGColor;
+    _showView.layer.borderColor = customBlue.CGColor;
     _showView.layer.cornerRadius = 5;
     
     _goBackBtn.layer.masksToBounds = YES;
     _goBackBtn.layer.borderWidth = 1;
-    _goBackBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _goBackBtn.layer.borderColor = customGray.CGColor;
     _goBackBtn.layer.cornerRadius = 5;
     
     
     _sureBtn.layer.masksToBounds = YES;
-    _sureBtn.layer.borderColor = [UIColor blueColor].CGColor;
+    _sureBtn.layer.borderColor = customBlue.CGColor;
     _sureBtn.layer.borderWidth = 1.0;
     _sureBtn.layer.cornerRadius = 5;
     
@@ -90,16 +93,18 @@
 }
 
 
-
-
 //触及页面灰色部分,页面消失
 - (IBAction)hiddenBtn:(id)sender {
+    if ([_delegate respondsToSelector:@selector(changeAlphaHiden)]) {
+        [_delegate changeAlphaHiden];
+        
+    }
+    
 }
 
 
 //回到今天 按钮
 - (IBAction)goBackToday:(id)sender {
-    
     //执行按钮动画
     [self animationByCustom:sender];
     //执行滚轮动画
@@ -110,7 +115,17 @@
 //确认按钮
 - (IBAction)sureBtn:(id)sender {
     [self animationByCustom:sender];
-    NSLog(@"%@",_timeTitleLab.text);
+    if (_Timetype == 1) {
+        if ([_delegate respondsToSelector:@selector(changeAlphaHiden:)]) {
+            [_delegate changeAlphaHiden:_timeTitleLab.text];
+        }
+    }else if (_Timetype == 2){
+        if ([_delegate respondsToSelector:@selector(changeAlphaHiden:)]) {
+            [_delegate changeAlphaHiden:_timeTitleLab.text];
+        }
+    }
+    
+  
 }
 
 - (void)changeValue:(UIDatePicker*)sender{

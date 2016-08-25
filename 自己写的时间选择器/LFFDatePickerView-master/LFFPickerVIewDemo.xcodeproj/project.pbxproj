@@ -15,11 +15,11 @@
 		BF52C4CB1D6AFA3E00CF1DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF52C4C91D6AFA3E00CF1DEC /* LaunchScreen.storyboard */; };
 		BF52C4D61D6AFA3E00CF1DEC /* LFFPickerVIewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52C4D51D6AFA3E00CF1DEC /* LFFPickerVIewDemoTests.m */; };
 		BF52C4E11D6AFA3E00CF1DEC /* LFFPickerVIewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52C4E01D6AFA3E00CF1DEC /* LFFPickerVIewDemoUITests.m */; };
-		BF52C4F21D6AFA5700CF1DEC /* LFFPickerVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52C4F01D6AFA5700CF1DEC /* LFFPickerVIew.m */; };
-		BF52C4F31D6AFA5700CF1DEC /* LFFPickerVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF52C4F11D6AFA5700CF1DEC /* LFFPickerVIew.xib */; };
 		BF6722D11D6BF2110015F3EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6722CE1D6BF2110015F3EF /* Default-568h@2x.png */; };
 		BF6722D21D6BF2110015F3EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6722CF1D6BF2110015F3EF /* Default.png */; };
 		BF6722D31D6BF2110015F3EF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6722D01D6BF2110015F3EF /* Default@2x.png */; };
+		BFB3A9EC1D6EDEBC0082022F /* LFFPickerVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3A9EA1D6EDEBC0082022F /* LFFPickerVIew.m */; };
+		BFB3A9ED1D6EDEBC0082022F /* LFFPickerVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB3A9EB1D6EDEBC0082022F /* LFFPickerVIew.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +56,12 @@
 		BF52C4DC1D6AFA3E00CF1DEC /* LFFPickerVIewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LFFPickerVIewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF52C4E01D6AFA3E00CF1DEC /* LFFPickerVIewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFFPickerVIewDemoUITests.m; sourceTree = "<group>"; };
 		BF52C4E21D6AFA3E00CF1DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF52C4EF1D6AFA5700CF1DEC /* LFFPickerVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFPickerVIew.h; sourceTree = "<group>"; };
-		BF52C4F01D6AFA5700CF1DEC /* LFFPickerVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFPickerVIew.m; sourceTree = "<group>"; };
-		BF52C4F11D6AFA5700CF1DEC /* LFFPickerVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFPickerVIew.xib; sourceTree = "<group>"; };
 		BF6722CE1D6BF2110015F3EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF6722CF1D6BF2110015F3EF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BF6722D01D6BF2110015F3EF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BFB3A9E91D6EDEBC0082022F /* LFFPickerVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFPickerVIew.h; sourceTree = "<group>"; };
+		BFB3A9EA1D6EDEBC0082022F /* LFFPickerVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFPickerVIew.m; sourceTree = "<group>"; };
+		BFB3A9EB1D6EDEBC0082022F /* LFFPickerVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFPickerVIew.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		BF52C4BA1D6AFA3E00CF1DEC /* LFFPickerVIewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BF52C4EE1D6AFA5700CF1DEC /* LFFDatePicker */,
+				BFB3A9E81D6EDEBC0082022F /* LFFDatePicker */,
 				BF52C4BE1D6AFA3E00CF1DEC /* AppDelegate.h */,
 				BF52C4BF1D6AFA3E00CF1DEC /* AppDelegate.m */,
 				BF52C4C11D6AFA3E00CF1DEC /* ViewController.h */,
@@ -155,12 +155,12 @@
 			path = LFFPickerVIewDemoUITests;
 			sourceTree = "<group>";
 		};
-		BF52C4EE1D6AFA5700CF1DEC /* LFFDatePicker */ = {
+		BFB3A9E81D6EDEBC0082022F /* LFFDatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				BF52C4EF1D6AFA5700CF1DEC /* LFFPickerVIew.h */,
-				BF52C4F01D6AFA5700CF1DEC /* LFFPickerVIew.m */,
-				BF52C4F11D6AFA5700CF1DEC /* LFFPickerVIew.xib */,
+				BFB3A9E91D6EDEBC0082022F /* LFFPickerVIew.h */,
+				BFB3A9EA1D6EDEBC0082022F /* LFFPickerVIew.m */,
+				BFB3A9EB1D6EDEBC0082022F /* LFFPickerVIew.xib */,
 			);
 			path = LFFDatePicker;
 			sourceTree = "<group>";
@@ -270,11 +270,11 @@
 			files = (
 				BF52C4CB1D6AFA3E00CF1DEC /* LaunchScreen.storyboard in Resources */,
 				BF6722D21D6BF2110015F3EF /* Default.png in Resources */,
+				BFB3A9ED1D6EDEBC0082022F /* LFFPickerVIew.xib in Resources */,
 				BF52C4C81D6AFA3E00CF1DEC /* Assets.xcassets in Resources */,
 				BF52C4C61D6AFA3E00CF1DEC /* Main.storyboard in Resources */,
 				BF6722D11D6BF2110015F3EF /* Default-568h@2x.png in Resources */,
 				BF6722D31D6BF2110015F3EF /* Default@2x.png in Resources */,
-				BF52C4F31D6AFA5700CF1DEC /* LFFPickerVIew.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +302,7 @@
 				BF52C4C31D6AFA3E00CF1DEC /* ViewController.m in Sources */,
 				BF52C4C01D6AFA3E00CF1DEC /* AppDelegate.m in Sources */,
 				BF52C4BD1D6AFA3E00CF1DEC /* main.m in Sources */,
-				BF52C4F21D6AFA5700CF1DEC /* LFFPickerVIew.m in Sources */,
+				BFB3A9EC1D6EDEBC0082022F /* LFFPickerVIew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
