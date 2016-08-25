@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:LFFExcellView.xcodeproj">
+      location = "self:FengurUWDatePickerDemo.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,18 +1,18 @@
 //
-//  LFFExcellViewTests.m
-//  LFFExcellViewTests
+//  FengurUWDatePickerDemoTests.m
+//  FengurUWDatePickerDemoTests
 //
-//  Created by Lff on 16/8/18.
-//  Copyright © 2016年 Lff. All rights reserved.
+//  Created by 王智超 on 15/11/4.
+//  Copyright © 2015年 UWFengur. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface LFFExcellViewTests : XCTestCase
+@interface FengurUWDatePickerDemoTests : XCTestCase
 
 @end
 
-@implementation LFFExcellViewTests
+@implementation FengurUWDatePickerDemoTests
 
 - (void)setUp {
     [super setUp];
@@ -37,3 +37,6 @@
 }
 
 @end
+// 版权属于原作者
+// http://code4app.com (cn) http://code4app.net (en)
+// 发布代码于最专业的源码分享网站: Code4App.com
