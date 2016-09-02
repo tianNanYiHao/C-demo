@@ -53,3 +53,27 @@ fastlane/report.xml
 fastlane/screenshots
 
 加载HTML5 及交互/jsTest/
+
+# .gitignore_global
+####################################
+######## OS generated files ########
+####################################
+.DS_Store
+.DS_Store?
+*.swp
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+####################################
+############# packages #############
+####################################
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.tar
+
