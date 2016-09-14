@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  kissXML
+//
+//  Created by Lff on 16/9/13.
+//  Copyright © 2016年 Lff. All rights reserved.
+//
+
+
+
+// 版本识别标识
+#define APPUSER             @"bmjfsh"
+
+#define SIGN                @"1sml1e47mdq3m6l8bci5rm0ffjekfjx3"
+
+#include <UIKit/UIKit.h>
+#include "XML.h"
+
+
+
+
