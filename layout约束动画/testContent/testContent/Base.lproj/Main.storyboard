@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testContent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-rk-dLV" userLabel="容器">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-BK-QVa"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="QJf-fO-j8e"/>
+                                </subviews>
+                                <color key="backgroundColor" red="0.089856537080000007" green="0.72731920809999995" blue="0.26498380890000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7ma-Wf-zfP"/>
+                                    <constraint firstItem="7dj-BK-QVa" firstAttribute="top" secondItem="kgr-rk-dLV" secondAttribute="top" id="Kmp-0m-urd"/>
+                                    <constraint firstItem="QJf-fO-j8e" firstAttribute="height" secondItem="kgr-rk-dLV" secondAttribute="height" id="Ktc-9j-IJ6"/>
+                                    <constraint firstItem="QJf-fO-j8e" firstAttribute="width" secondItem="kgr-rk-dLV" secondAttribute="width" id="SIr-j8-wVx"/>
+                                    <constraint firstItem="QJf-fO-j8e" firstAttribute="top" secondItem="kgr-rk-dLV" secondAttribute="top" id="ZgC-rG-zaw"/>
+                                    <constraint firstItem="QJf-fO-j8e" firstAttribute="centerX" secondItem="kgr-rk-dLV" secondAttribute="centerX" id="a7z-Kt-Neo"/>
+                                    <constraint firstAttribute="height" constant="300" id="lqK-aM-jOi"/>
+                                    <constraint firstAttribute="trailing" secondItem="7dj-BK-QVa" secondAttribute="trailing" id="rbp-Lv-Du8"/>
+                                    <constraint firstItem="7dj-BK-QVa" firstAttribute="leading" secondItem="kgr-rk-dLV" secondAttribute="leading" id="vd0-a7-2Oa"/>
+                                    <constraint firstAttribute="bottom" secondItem="7dj-BK-QVa" secondAttribute="bottom" id="yJI-HZ-aTg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kgr-rk-dLV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2Qy-kE-9kY"/>
+                            <constraint firstItem="kgr-rk-dLV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vpk-xv-A3b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contenHeightCons" destination="lqK-aM-jOi" id="f9k-Ve-AZX"/>
+                        <outlet property="contentView" destination="kgr-rk-dLV" id="7Eh-5m-KcR"/>
+                        <outlet property="scanView" destination="QJf-fO-j8e" id="4VE-ii-GiT"/>
+                        <outlet property="scanlineCons" destination="ZgC-rG-zaw" id="5Bb-Ay-K7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="107"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>
