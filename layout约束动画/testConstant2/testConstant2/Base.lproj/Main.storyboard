@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ngw-ZI-xXR"/>
+                        <viewControllerLayoutGuide type="bottom" id="OF1-20-p2N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Cu-XR-nNy">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="ZNB-91-kHI"/>
+                                </subviews>
+                                <color key="backgroundColor" red="0.089856537080000007" green="0.72731920809999995" blue="0.26498380890000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZNB-91-kHI" firstAttribute="leading" secondItem="0Cu-XR-nNy" secondAttribute="leading" id="ARO-fL-eXO"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZNB-91-kHI" secondAttribute="trailing" id="Hky-fR-Ox8"/>
+                                    <constraint firstAttribute="height" constant="300" id="Jz0-du-nMu"/>
+                                    <constraint firstAttribute="width" constant="300" id="eIY-Ya-ark"/>
+                                    <constraint firstItem="ZNB-91-kHI" firstAttribute="top" secondItem="0Cu-XR-nNy" secondAttribute="top" id="yEF-qP-flU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Cu-XR-nNy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9hu-M1-9hq"/>
+                            <constraint firstItem="0Cu-XR-nNy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XKS-k8-x45"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chongjiboView" destination="ZNB-91-kHI" id="aXq-ue-W41"/>
+                        <outlet property="left" destination="Hky-fR-Ox8" id="Yq7-K7-vC6"/>
+                        <outlet property="topCons" destination="yEF-qP-flU" id="2OP-1h-q0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165.60000000000002" y="-259.52023988005999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>
