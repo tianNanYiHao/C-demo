@@ -32,4 +32,12 @@
 
 
 
+/**
+ 刷新数据
+ 
+ @param numberArr 数据数组
+ */
+-(void)sdCircleViewSetNumberArrayDate:(NSArray*)numberArr;
+
+
 @end
