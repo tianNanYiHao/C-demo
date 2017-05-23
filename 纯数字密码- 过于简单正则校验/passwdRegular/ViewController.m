@@ -25,6 +25,9 @@
     BOOL a = [UITextField passWdTooSimple:_textfiled.text];
     if (a == NO) {
         NSLog(@"xxxxxxx");
+        //http://backbase.iteye.com/blog/686267
+
+        
     }
     
     
