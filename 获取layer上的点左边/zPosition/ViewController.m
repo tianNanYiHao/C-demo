@@ -24,6 +24,8 @@
     _blueLayer = [CALayer layer];
     _blueLayer.frame = CGRectMake(0, 0, 100, 100);
     _blueLayer.backgroundColor = [UIColor blueColor].CGColor;
+    _blueLayer.shadowOpacity = 0.7f;
+    _blueLayer.shadowOffset = CGSizeMake(10, 10);
     
     [_viewOne.layer addSublayer:_blueLayer];
     
