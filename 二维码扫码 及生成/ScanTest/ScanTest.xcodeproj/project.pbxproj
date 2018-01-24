@@ -1801,6 +1801,7 @@
 				TargetAttributes = {
 					87C91E241D22639E00C46F52 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = CYP2Q7U7L3;
 					};
 					87C91E401D22639F00C46F52 = {
 						CreatedOnToolsVersion = 7.1;
@@ -2257,15 +2258,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenbin Wang (3V6DGQV6ZF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wenbin Wang (3V6DGQV6ZF)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = ScanTest/PrefixHeader.pch;
 				INFOPLIST_FILE = ScanTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qianhaichuanqi.ScanTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.sandbao12312;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ba030a12-99c3-466f-8e38-038dfbd73c8c";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
 			};
 			name = Debug;
 		};
@@ -2273,15 +2277,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenbin Wang (3V6DGQV6ZF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wenbin Wang (3V6DGQV6ZF)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = ScanTest/PrefixHeader.pch;
 				INFOPLIST_FILE = ScanTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qianhaichuanqi.ScanTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.sandbao12312;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ba030a12-99c3-466f-8e38-038dfbd73c8c";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
 			};
 			name = Release;
 		};
